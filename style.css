@@ -17,13 +17,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
 
 /* Body */
 body {
-  
-  /* Gradient Background */
-  background:
-  linear-gradient(to bottom, var(--bg-pink), var(--bg-blue))
-  ;
 	
-  /* Fonts */
+	/* Gradient Background */
+	background: linear-gradient(var(--bg-pink), var(--bg-blue));
+	
+	/* Fonts */
 	font-family: BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	line-height: 1.6;
 	color: #333;
@@ -108,21 +106,19 @@ nav {
   line-height: 1.2;
 }
 
-/* Vertical Lines */
-.ver-line {
+/* Horizontal Lines */
+.hr-line {
 	background-color: #555;
 	height: 2px;
-	width: calc(100% - 30px);
-	margin: 0 15px;
 	border-radius: 1px;
+	margin: 0 15px;
 }
 
-.ver-line-2 {
-	background-color: #444;
+.hr-line-2 {
+	background-color: #555;
 	height: 2px;
-	width: calc(100% - 40px);
-	margin: 0 20px;
 	border-radius: 1px;
+	margin: 0 20px;
 }
 
 /* Footer */
