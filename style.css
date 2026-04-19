@@ -38,12 +38,12 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 1rem 1.5rem;
 }
 
-h1 { font-size: 1.5em; }
-h2 { font-size: 1.17em; }
-h3 { font-size: 1em; }
-h4 { font-size: 0.83em; }
-h5 { font-size: 0.67em; }
-h6 { font-size: 0.6em; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.17rem; }
+h3 { font-size: 1rem; }
+h4 { font-size: 0.83rem; }
+h5 { font-size: 0.67rem; }
+h6 { font-size: 0.6rem; }
 
 p, ul, ol, li {
 	margin: 0.5rem 1.5rem;
@@ -74,6 +74,11 @@ section {
 .icon-text svg {
 	width: 1.25em;
 	height: 1.25em;
+}
+
+.decodr-logo {
+  height: 2rem;
+  width: auto;
 }
 
 /* Links */
