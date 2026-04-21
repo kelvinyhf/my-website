@@ -1,6 +1,6 @@
-<div align="center">
-  <img src="/assets/images/decodr-logo.png" width="200" height="50" alt="Decodr Logo">
-</div>
+<h1 align="center">
+  <img src="/assets/images/decodr-logo.png" width="240" height="60" alt="Decodr Logo">
+</h1>
 
 A **simple**, **responsive** website made by me to introduce myself and store my cool stuff!
 
