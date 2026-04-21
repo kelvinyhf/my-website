@@ -1,12 +1,6 @@
 <div align="center">
-  <a href="decodr.pages.dev">
-    <img src="/assets/images/decodr-logo.png" width="200" height="50" alt="Decodr Logo">
-  </a>
+  <img src="/assets/images/decodr-logo.png" width="200" height="50" alt="Decodr Logo">
 </div>
-
-<h1 align=“center”>
-  My Personal Website
-</h1>
 
 A **simple**, **responsive** website made by me to introduce myself and store my cool stuff!
 
