@@ -1,7 +1,4 @@
-<h1 align="center">
-  <img src="/assets/images/decodr-logo.png" width="240" height="60" alt="Decodr Logo">
-</h1>
-
+# My Personal Website
 A **simple**, **responsive** website made by me to introduce myself and store my cool stuff!
 
 ![GitHub Stars](https://img.shields.io/github/stars/decodr-hf/my-website)
