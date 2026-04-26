@@ -7,8 +7,8 @@
 
 /* Colors */
 :root {
-	--bg-pink: #fef5ff;
-	--bg-blue: #f9ffff;
+	--pri-pink: #f9dcff; --pri-blue: #dcf3ff;
+	--sec-pink: #fef5ff; --sec-blue: #f9ffff;
 }
 
 /* Hide Scroll Bar */
@@ -18,9 +18,16 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
 /* Body */
 body {
 	
-	/* Gradient Background */
-	background: linear-gradient(var(--bg-pink), var(--bg-blue));
-	
+	/* Background */
+	background-image:
+	linear-gradient(90deg, #ffffff80 2px, transparent 2px),
+    linear-gradient(#ffffff80 2px, transparent 2px),
+	linear-gradient(var(--sec-pink), var(--sec-blue));
+	background-repeat: repeat, repeat, no-repeat;
+	background-size: 50px 50px, 50px 50px, cover;
+	background-attachment: scroll, scroll, fixed;
+	background-position: center;
+
 	/* Fonts */
 	font-family: BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	line-height: 1.6;
