@@ -67,30 +67,50 @@ section {
   width: auto;
 }
 
+.menu-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 /* Links */
 a {
 	text-decoration: none;
 	font-weight: 500;
 }
 
-.social-link {
-	display: inline-block;
-	margin: 0.5rem;
-	width: 30px;
-	height: 30px;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+
+.social-links a {
+  width: 30px;
+  height: 30px;
 }
 
 /* Navigation Bar */
 nav {
-	position: sticky;
-	width: 100%;
-	top: 0;
-	padding: 0.75rem 1rem;
-	z-index: 999;
-	line-height: 0;
-	background-color: rgba(255, 255, 255, 0.9);
+  
+  /* Styles */
+  background-color: rgba(255, 255, 255, 0.9);
 	backdrop-filter: blur(5px);
 	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+	padding: 0.75rem 1.25rem;
+	
+  /* Sticky Bar */
+	position: sticky;
+	width: 100%;
+	z-index: 999;
+	top: 0;
+	
+	/* Flexbox Display */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
 }
 
 /* Horizontal Lines */
