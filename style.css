@@ -67,10 +67,9 @@ section {
   width: auto;
 }
 
-.menu-logo {
-  width: 1.5rem;
-  height: 1.5rem;
-}
+.lg-logo { width: 1.75rem; height: 1.75rem; }
+.md-logo { width: 1.5rem; height: 1.5rem; }
+.sm-logo { width: 1.25rem; height: 1.25rem; }
 
 /* Links */
 a {
@@ -84,11 +83,6 @@ a {
   gap: 20px;
   align-items: center;
   margin: 0.75rem 0;
-}
-
-.social-links a {
-  width: 30px;
-  height: 30px;
 }
 
 /* Navigation Bar */
