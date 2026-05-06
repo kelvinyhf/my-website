@@ -7,10 +7,12 @@
 
 /* Colors */
 :root {
-	--primary-grape: #f3d9fa;
-	--primary-blue: #d0ebff;
-	--secondary-grape: #f8f0fc;
-	--secondary-blue: #e7f5ff;
+	--grape-1: #f3d9fa;
+	--purple-1: #e1e2fd;
+	--blue-1: #d0ebff;
+	--grape-2: #f8f0fc;
+	--purple-2: #eff3fd;
+	--blue-2: #e7f5ff;
 }
 
 /* Hide Scroll Bar */
@@ -24,7 +26,7 @@ body {
 	background-image:
 	linear-gradient(90deg, #ffffff26 3px, transparent 3px),
 	linear-gradient(#ffffff26 3px, transparent 3px),
-	linear-gradient(var(--secondary-grape), var(--secondary-blue));
+	linear-gradient(var(--grape-2), var(--blue-2));
 	background-repeat: repeat, repeat, no-repeat;
 	background-size: 50px 50px, 50px 50px, cover;
 	background-attachment: scroll, scroll, fixed;
