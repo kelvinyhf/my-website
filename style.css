@@ -5,14 +5,19 @@
 	box-sizing: border-box;
 }
 
-/* Colors */
 :root {
+  
+  /* Colors */
 	--grape-1: #f3d9fa;
 	--purple-1: #e1e2fd;
 	--blue-1: #d0ebff;
 	--grape-2: #f8f0fc;
 	--purple-2: #eff3fd;
 	--blue-2: #e7f5ff;
+	
+	/* Variables */
+	--nav-opacity: 0;
+	
 }
 
 /* Hide Scroll Bar */
@@ -93,12 +98,14 @@ a {
 nav {
   
   /* Styles */
-  background-color: rgba(255, 255, 255, 0.9);
-	backdrop-filter: blur(5px);
-	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, calc(var(--nav-opacity) * 0.9));
+  -webkit-backdrop-filter: blur(calc(var(--nav-opacity) * 5px));
+	backdrop-filter: blur(calc(var(--nav-opacity) * 5px));
+	box-shadow: 0 3px 0 rgba(0, 0, 0, calc(var(--nav-opacity) * 0.05));
 	padding: 0.75rem 1.25rem;
 	
   /* Sticky Bar */
+  position: -webkit-sticky;
 	position: sticky;
 	width: 100%;
 	z-index: 999;
