@@ -1,3 +1,6 @@
+/* Libraries */
+@import "/assets/libraries/open-color.css";
+
 /* Reset Default Styles */
 * {
 	margin: 0;
@@ -5,20 +8,9 @@
 	box-sizing: border-box;
 }
 
+/* Variables */
 :root {
-  
-  /* Colors */
-	--grape-1: #f3d9fa;
-	--grape-blue-1: #e1e2fd;
-	--blue-1: #d0ebff;
-	
-	--grape-0: #f8f0fc;
-	--grape-blue-0: #eff3fd;
-	--blue-0: #e7f5ff;
-	
-	/* Variables */
 	--nav-opacity: 0;
-	
 }
 
 /* Hide Scroll Bar */
@@ -33,7 +25,7 @@ body {
 	linear-gradient(90deg, #ffffff33 3px, transparent 3px),
 	linear-gradient(#ffffff33 3px, transparent 3px),
 	linear-gradient(#ffffff80, #ffffff80),
-	linear-gradient(var(--grape-0), var(--blue-0));
+	linear-gradient(var(--oc-grape-0), var(--oc-blue-0));
 	background-repeat: repeat, repeat, no-repeat, no-repeat;
 	background-size: 50px 50px, 50px 50px, cover, cover;
 	background-position: center;
@@ -81,25 +73,24 @@ a {
 }
 
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  margin: 0.75rem 0;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	align-items: center;
+	margin: 0.75rem 0;
 }
 
 /* Navigation Bar */
 nav {
-  
-  /* Styles */
-  background-color: rgba(255, 255, 255, calc(var(--nav-opacity) * 0.9));
-  -webkit-backdrop-filter: blur(calc(var(--nav-opacity) * 5px));
+	/* Styles */
+	background-color: rgba(255, 255, 255, calc(var(--nav-opacity) * 0.9));
+	-webkit-backdrop-filter: blur(calc(var(--nav-opacity) * 5px));
 	backdrop-filter: blur(calc(var(--nav-opacity) * 5px));
 	box-shadow: 0 3px 0 rgba(0, 0, 0, calc(var(--nav-opacity) * 0.05));
 	padding: 0.75rem 1.25rem;
 	
-  /* Sticky Bar */
-  position: -webkit-sticky;
+	/* Sticky Bar */
+	position: -webkit-sticky;
 	position: sticky;
 	width: 100%;
 	z-index: 999;
