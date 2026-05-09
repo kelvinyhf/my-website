@@ -9,11 +9,12 @@
   
   /* Colors */
 	--grape-1: #f3d9fa;
-	--purple-1: #e1e2fd;
+	--grape-blue-1: #e1e2fd;
 	--blue-1: #d0ebff;
-	--grape-2: #f8f0fc;
-	--purple-2: #eff3fd;
-	--blue-2: #e7f5ff;
+	
+	--grape-0: #f8f0fc;
+	--grape-blue-0: #eff3fd;
+	--blue-0: #e7f5ff;
 	
 	/* Variables */
 	--nav-opacity: 0;
@@ -29,12 +30,12 @@ body {
 	
 	/* Background */
 	background-image:
-	linear-gradient(90deg, #ffffff26 3px, transparent 3px),
-	linear-gradient(#ffffff26 3px, transparent 3px),
-	linear-gradient(var(--grape-2), var(--blue-2));
-	background-repeat: repeat, repeat, no-repeat;
-	background-size: 50px 50px, 50px 50px, cover;
-	background-attachment: scroll, scroll, fixed;
+	linear-gradient(90deg, #ffffff33 3px, transparent 3px),
+	linear-gradient(#ffffff33 3px, transparent 3px),
+	linear-gradient(#ffffff80, #ffffff80),
+	linear-gradient(var(--grape-0), var(--blue-0));
+	background-repeat: repeat, repeat, no-repeat, no-repeat;
+	background-size: 50px 50px, 50px 50px, cover, cover;
 	background-position: center;
 
 	/* Fonts */
@@ -43,7 +44,7 @@ body {
 	color: #333;
 	
 	/* Tests */
-	min-height: 150vh;
+	min-height: 300vh;
 	
 }
 
@@ -51,24 +52,17 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	line-height: 1.2;
-	margin: 1rem 1.5rem;
+	padding: 1rem 1.5rem;
+	background-color: #ffffffbf;
 }
 
 h1 { font-size: 1.4rem; }
 h2 { font-size: 1.3rem; }
 h3, h4, h5, h6 { font-size: 1.2rem; }
-
-p, ul, ol, li {
-	margin: 0.5rem 1.5rem;
-}
-
-ul { list-style-type: square; }
-.no-margin { margin: 0; }
+p { margin: 0.5rem 1.5rem; }
 
 /* Sections */
-section {
-	margin-bottom: 3rem;
-}
+section { padding: 0.5rem 0; }
 
 /* Images */
 .decodr-logo {
