@@ -14,26 +14,28 @@
 }
 
 /* Hide Scroll Bar */
-html, body { scrollbar-width: none; -ms-overflow-style: none; }
-html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
+html, body {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+	display: none;
+}
 
 /* Body */
 body {
 	
 	/* Background */
-	background-image:
-	linear-gradient(90deg, #ffffff33 3px, transparent 3px),
-	linear-gradient(#ffffff33 3px, transparent 3px),
-	linear-gradient(#ffffff80, #ffffff80),
-	linear-gradient(var(--oc-grape-0), var(--oc-blue-0));
-	background-repeat: repeat, repeat, no-repeat, no-repeat;
-	background-size: 50px 50px, 50px 50px, cover, cover;
-	background-position: center;
+	background:
+	linear-gradient(90deg, #ffffff33 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(#ffffff33 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(#ffffff40, #ffffff40) center / cover no-repeat,
+	linear-gradient(var(--oc-grape-0), var(--oc-blue-0)) center / cover no-repeat;
 
 	/* Fonts */
 	font-family: BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	line-height: 1.6;
-	color: #333;
+	color: var(--oc-gray-8);
 	
 	/* Tests */
 	min-height: 300vh;
@@ -42,29 +44,63 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 600;
-	line-height: 1.2;
-	padding: 1rem 1.5rem;
-	background-color: #ffffffbf;
+	font-size: 1.4rem;
+	margin: 0.75rem 1.5rem;
 }
 
-h1 { font-size: 1.4rem; }
-h2 { font-size: 1.3rem; }
-h3, h4, h5, h6 { font-size: 1.2rem; }
-p { margin: 0.5rem 1.5rem; }
+p {
+	margin: 0.5rem 1.5rem;
+}
 
 /* Sections */
-section { padding: 0.5rem 0; }
+section {
+	padding: 0.5rem 0;
+}
+
+/* First Section */
+.first-section {
+	min-height: 62.5vh;
+	border-bottom: 5px solid #ffffff;
+}
+
+.first-section h1 {
+	font-family: monospace;
+	padding: 1.5rem;
+}
+
+.first-section h1 span {
+	display: block;
+}
+
+.greeting {
+	font-size: 1.25rem;
+	color: var(--oc-gray-6);
+}
+
+.name {
+	font-size: 1.75rem;
+}
 
 /* Images */
 .decodr-logo {
-  height: 2rem;
-  width: auto;
+	width: auto;
+	height: 2rem;
 }
 
-.lg-logo { width: 1.75rem; height: 1.75rem; }
-.md-logo { width: 1.5rem; height: 1.5rem; }
-.sm-logo { width: 1.25rem; height: 1.25rem; }
+.lg-logo {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+.md-logo {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.sm-logo {
+	width: 1.25rem;
+	height: 1.25rem;
+}
 
 /* Links */
 a {
@@ -82,6 +118,7 @@ a {
 
 /* Navigation Bar */
 nav {
+	
 	/* Styles */
 	background-color: rgba(255, 255, 255, calc(var(--nav-opacity) * 0.9));
 	-webkit-backdrop-filter: blur(calc(var(--nav-opacity) * 5px));
@@ -103,14 +140,6 @@ nav {
 	
 }
 
-/* Horizontal Lines */
-.hr-line {
-	background-color: #555;
-	height: 2px;
-	border-radius: 1px;
-	margin: 0 15px;
-}
-
 /* Footer */
 footer {
 	padding: 1rem;
@@ -118,6 +147,6 @@ footer {
 }
 
 footer p {
-	font-size: 10px;
-	color: #aaa;
+	font-size: 0.65rem;
+	color: var(--oc-gray-5);
 }
