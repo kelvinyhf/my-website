@@ -112,11 +112,6 @@ section:first-of-type h1 span {
 }
 
 /* Images */
-.decodr-logo {
-	width: auto;
-	height: 2rem;
-}
-
 .lg-logo {
 	width: 1.75rem;
 	height: 1.75rem;
@@ -164,9 +159,18 @@ nav {
 	
 	/* Flexbox Display */
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	
+}
+
+.page-title {
+	margin: 0 0 0 0.75rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.menu-btn {
+	margin-left: auto; 
 }
 
 /* Footer */
