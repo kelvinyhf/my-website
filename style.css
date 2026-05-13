@@ -91,7 +91,7 @@ section:first-of-type h1 span {
 
 .name {
 	font-size: 2rem;
-	background: linear-gradient(var(--oc-grape-4), var(--oc-blue-4));
+	background: linear-gradient(var(--oc-grape-3), var(--oc-blue-3));
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -108,6 +108,7 @@ section:first-of-type h1 span {
 }
 
 .intro p {
+  color: var(--oc-gray-7);
 	font-weight: 600;
 }
 
@@ -159,18 +160,15 @@ nav {
 	
 	/* Flexbox Display */
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	
 }
 
-.page-title {
-	margin: 0 0 0 0.75rem;
-	font-size: 1.1rem;
-	font-weight: 600;
-}
-
-.menu-btn {
-	margin-left: auto; 
+.logo {
+  width: 3rem;
+  height: auto;
+  margin: 0.15rem;
 }
 
 /* Footer */
