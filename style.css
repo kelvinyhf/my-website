@@ -138,8 +138,7 @@ section:first-of-type h1 span {
 
 /* Links */
 a {
-	text-decoration: none;
-	font-weight: 500;
+  color: var(--blue-8);
 }
 
 .social-links {
@@ -173,10 +172,18 @@ nav {
 	
 }
 
-.logo {
-  width: 3rem;
-  height: auto;
-  margin: 0.15rem;
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gray-12);
+  font-family: monospace;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+nav svg {
+  display: block;
 }
 
 /* Footer */
