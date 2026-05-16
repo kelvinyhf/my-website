@@ -44,9 +44,34 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
-	font-size: 1.4rem;
-	margin: 0.75rem 1.5rem;
+h2 {
+  background-color: #ffffff99;
+	font-size: 1.3rem;
+	padding: 0.75rem 1.5rem;
+	margin-bottom: 1rem;
+}
+
+h3 {
+  display: inline;
+  background: linear-gradient(#0000001a, #0000001a) no-repeat 0% 100% / 100% 50%;
+  font-size: 1.15rem;
+  padding: 0 0.25rem;
+  margin: 0.5rem 1.25rem;
+}
+
+.first-h2 {
+	color: var(--purple-11);
+	border-bottom: 3px solid var(--purple-3);
+}
+
+.second-h2 {
+	color: var(--iris-11);
+	border-bottom: 3px solid var(--iris-3);
+}
+
+.third-h2 {
+	color: var(--blue-11);
+	border-bottom: 3px solid var(--blue-3);
 }
 
 p {
@@ -55,7 +80,7 @@ p {
 
 /* Sections */
 section {
-	padding: 0.5rem 0;
+	padding: 1rem 0;
 }
 
 /* First Section */
@@ -69,7 +94,9 @@ section:first-of-type {
 }
 
 section:first-of-type h1 {
-	padding: 1rem 1rem 0 1rem;
+  font-size: 1.4rem;
+  padding: 1rem 1rem 0 1rem;
+  margin: 0.75rem 1.5rem;
 }
 
 section:first-of-type h1 span {
@@ -109,8 +136,8 @@ section:first-of-type h1 span {
   position: absolute;
   width: 150px;
   height: 150px;
-  bottom: -20px;
-  right: -20px;
+  bottom: -30px;
+  right: -30px;
   transform: rotate(-15deg);
   z-index: -1;
 }
