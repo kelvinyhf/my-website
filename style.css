@@ -104,7 +104,7 @@ section:first-of-type h1 span {
 
 .intro::after {
   content: "";
-  mask: url("assets/images/icons/file.svg") bottom right / contain no-repeat;
+  mask: url("assets/images/card-icons/file.svg") bottom right / contain no-repeat;
   background-color: #0000000d;
   position: absolute;
   width: 150px;
