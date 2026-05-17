@@ -157,6 +157,10 @@ section:first-of-type h1 span {
 }
 
 /* Images */
+svg {
+  display: block;
+}
+
 .lg-logo {
 	width: 1.75rem;
 	height: 1.75rem;
@@ -231,10 +235,6 @@ nav a {
   font-family: "Roboto Mono", monospace;
   font-size: 1.25rem;
   text-decoration: none;
-}
-
-nav svg {
-  display: block;
 }
 
 /* Footer */
