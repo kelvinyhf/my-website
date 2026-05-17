@@ -34,7 +34,7 @@ body {
 	background-color: var(--iris-2);
 
 	/* Fonts */
-	font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-family: "Inter", sans-serif;
 	line-height: 1.6;
 	color: var(--gray-12);
 	
@@ -78,9 +78,17 @@ p {
 	margin: 0.5rem 1.5rem;
 }
 
+code {
+	font-family: "Roboto Mono", monospace;
+}
+
 /* Sections */
 section {
 	padding: 1rem 0;
+}
+
+.h3-section {
+  padding-bottom: 1.5rem;
 }
 
 /* First Section */
@@ -90,7 +98,7 @@ section:first-of-type {
 	linear-gradient(#ffffff33 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(var(--purple-3), var(--blue-3)) center / cover no-repeat;
 	border-bottom: 5px solid #ffffff;
-	font-family: monospace;
+	font-family: "Roboto Mono", monospace;
 }
 
 section:first-of-type h1 {
@@ -117,6 +125,7 @@ section:first-of-type h1 span {
 	filter: drop-shadow(-3px 3px 0px #0000001a);
 }
 
+/* Intro Card */
 .intro {
 	position: relative;
 	overflow: hidden;
@@ -165,7 +174,22 @@ section:first-of-type h1 span {
 
 /* Links */
 a {
-  color: var(--blue-8);
+  color: var(--blue-9);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--iris-9);
+}
+
+a:hover, a:active {
+  color: var(--blue-11);
+  text-decoration: underline;
+}
+
+a:visited:hover, a:visited:active {
+  color: var(--iris-11);
+  text-decoration: underline;
 }
 
 .social-links {
@@ -204,7 +228,7 @@ nav a {
   align-items: center;
   gap: 0.75rem;
   color: var(--gray-12);
-  font-family: monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.25rem;
   text-decoration: none;
 }
