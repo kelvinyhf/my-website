@@ -1,5 +1,22 @@
-window.addEventListener("scroll", () => {
-  const scrollThreshold = 750;
-  const ratio = Math.max(0, Math.min(window.scrollY / scrollThreshold, 1));
-  document.documentElement.style.setProperty("--nav-opacity", ratio);
-});
+// tsParticles
+if (window.tsParticles) {
+  tsParticles.load({
+    id: "tsparticles",
+    options: {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 15 },
+        shape: { type: "square" },
+        color: { value: "#ffffff" },
+        opacity: { value: 0.75 },
+        size: { value: { min: 3, max: 6 } },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "bottom",
+          outModes: { default: "out" }
+        }
+      }
+    }
+  });
+}

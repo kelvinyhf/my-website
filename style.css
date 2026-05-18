@@ -106,6 +106,8 @@ section {
 
 /* First Section */
 section:first-of-type {
+	position: relative;
+	overflow: hidden;
 	background:
 	linear-gradient(90deg, #ffffff33 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(#ffffff33 3px, transparent 3px) center / 50px 50px repeat,
@@ -136,6 +138,21 @@ section:first-of-type h1 span {
 	background-clip: text;
 	color: transparent;
 	filter: drop-shadow(-3px 3px 0px #0000001a);
+}
+
+/* tsParticles */
+#tsparticles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.content {
+	position: relative;
+	z-index: 2;
 }
 
 /* Intro Card */
@@ -204,7 +221,7 @@ a:visited:hover, a:visited:active {
 nav {
 	
 	/* Styles */
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.9);
 	-webkit-backdrop-filter: blur(5px);
 	backdrop-filter: blur(5px);
 	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
