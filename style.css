@@ -14,6 +14,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -31,7 +32,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 body {
 	
 	/* Background */
-	background-color: var(--iris-2);
+	background:
+	linear-gradient(90deg, #ffffff26 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(#ffffff26 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(var(--iris-2), var(--iris-2)) center / cover no-repeat;
 
 	/* Fonts */
 	font-family: "Inter", sans-serif;
@@ -141,7 +145,7 @@ section:first-of-type h1 span {
 }
 
 /* tsParticles */
-#tsparticles {
+#tsParticles {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -163,7 +167,10 @@ section:first-of-type h1 span {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 	margin: 2rem 2rem 3rem 2rem;
 	padding: 0.75rem 0.25rem;
-	transition: all 0.3s ease-out;
+	transition:
+	background-color 0.3s ease-out,
+	box-shadow 0.3s ease-out,
+	transform 0.3s ease-out;
 }
 
 .intro p {
@@ -245,18 +252,9 @@ a:visited:hover, a:visited:active {
 nav {
 	
 	/* Styles */
-	background-color: rgba(255, 255, 255, 0.9);
-	-webkit-backdrop-filter: blur(5px);
-	backdrop-filter: blur(5px);
-	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+	background-color: #ffffff;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
 	padding: 0.75rem 1.25rem;
-	
-	/* Sticky Bar */
-	position: -webkit-sticky;
-	position: sticky;
-	width: 100%;
-	z-index: 999;
-	top: 0;
 	
 	/* Flexbox Display */
 	display: flex;

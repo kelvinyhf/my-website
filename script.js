@@ -1,7 +1,7 @@
 // tsParticles
 if (window.tsParticles) {
   tsParticles.load({
-    id: "tsparticles",
+    id: "tsParticles",
     options: {
       fullScreen: { enable: false },
       particles: {
