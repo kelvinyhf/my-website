@@ -23,6 +23,7 @@ h3 {
 	border-bottom: 3px solid var(--blue-4);
 }
 
+/* Highlights */
 .gray-hl {
 	display: inline;
 	background: linear-gradient(var(--gray-5), var(--gray-5)) no-repeat 0% 100% / 100% 50%;
@@ -60,26 +61,10 @@ section:first-of-type {
 }
 
 section:first-of-type h1 {
-	padding: 1rem 1rem 0 1rem;
-	margin: 0.75rem 1.5rem;
-}
-
-section:first-of-type h1 span {
-	display: block;
-}
-
-.greetings {
-	font-size: 1.3rem;
-	color: var(--gray-8);
-}
-
-.name {
-	font-size: 2rem;
-	background: linear-gradient(var(--purple-7), var(--blue-7));
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	filter: drop-shadow(-3px 3px 0px #0000001a);
+	display: inline;
+	color: var(--gray-11);
+	background: linear-gradient(90deg, var(--purple-5), var(--blue-5)) no-repeat 0% 85% / 100% 30%;
+	padding: 0 0.25rem;
 }
 
 /* tsParticles */
@@ -103,7 +88,7 @@ section:first-of-type h1 span {
 	border: 3px solid #ffffff;
 	border-radius: 1rem;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-	margin: 2rem 2rem 3rem 2rem;
+	margin: 2rem 2rem 4rem 2rem;
 	padding: 0.75rem 0.25rem;
 	transition:
 	background-color 0.3s ease-out,

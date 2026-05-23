@@ -23,18 +23,13 @@ p, blockquote, ul, ol, li, label, input, button, select {
 
 /* Body */
 body {
-  
-	/* Background */
 	background:
 	linear-gradient(90deg, #ffffff26 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(#ffffff26 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(var(--iris-2), var(--iris-2)) center / cover no-repeat;
-
-	/* Fonts */
 	font-family: "Inter", sans-serif;
 	line-height: 1.6;
 	color: var(--gray-12);
-	
 }
 
 /* Typography */
@@ -103,8 +98,9 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: rgba(255, 255, 255, 0.75);
-	padding: 1rem 1.75rem;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.0);
+	padding: 1.5rem;
 }
 
 header a {
