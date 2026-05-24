@@ -127,14 +127,6 @@ section:first-of-type h1 {
 	}
 }
 
-@media (hover: none) {
-	.cards:active {
-		background-color: var(--white-a5);
-		box-shadow: 0 calc(5px + 0.2rem) 20px var(--black-a1);
-		transform: translateY(-0.4rem);
-	}
-}
-
 /* Cursor */
 section:first-of-type, nav {
 	-webkit-user-select: none;

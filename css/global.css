@@ -110,10 +110,22 @@ header {
 	padding: 1.5rem;
 }
 
-header a {
-	display: block;
-	line-height: 0;
+/* Theme Toggle */
+#theme-toggle {
+	-webkit-tap-highlight-color: transparent;
+	appearance: none;
+	background: none;
+	border: none;
+	margin: 0;
 }
+
+/* Light Mode */
+.icon-sun { display: block; }
+.icon-moon { display: none; }
+
+/* Dark Mode */
+.dark .icon-sun { display: none; }
+.dark .icon-moon { display: block; }
 
 /* Footer */
 footer {
