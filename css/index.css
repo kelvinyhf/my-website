@@ -1,10 +1,20 @@
 /* Customize Light/Dark Mode Colors */
 :root {
-	--grid-color: var(--white-a4);
+	--grid-color: rgba(255, 255, 255, 0.2);
+	--card-bg: rgba(255, 255, 255, 0.1);
+	--card-border: rgba(255, 255, 255, 0.75);
+	--card-shadow: rgba(0, 0, 0, 0.1);
+	--card-hover-bg: rgba(255, 255, 255, 0.4);
+	--card-hover-shadow: rgba(0, 0, 0, 0.15);
 }
 
 .dark {
-	--grid-color: var(--black-a2);
+	--grid-color: rgba(0, 0, 0, 0.05);
+	--card-bg: rgba(0, 0, 0, 0.25);
+	--card-border: rgba(0, 0, 0, 0.75);
+	--card-shadow: rgba(255, 255, 255, 0.1);
+	--card-hover-bg: rgba(0, 0, 0, 0.5);
+	--card-hover-shadow: rgba(255, 255, 255, 0.15);
 }
 
 /* Titles */
@@ -19,17 +29,17 @@ h3 {
 
 .first-h2 {
 	color: var(--purple-11);
-	border-bottom: 3px solid var(--purple-4);
+	border-bottom: 3px solid var(--purple-6);
 }
 
 .second-h2 {
 	color: var(--iris-11);
-	border-bottom: 3px solid var(--iris-4);
+	border-bottom: 3px solid var(--iris-6);
 }
 
 .third-h2 {
 	color: var(--blue-11);
-	border-bottom: 3px solid var(--blue-4);
+	border-bottom: 3px solid var(--blue-6);
 }
 
 /* Highlights */
@@ -41,13 +51,13 @@ h3 {
 
 .blue-hl {
 	display: inline;
-	background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
+	background: linear-gradient(var(--blue-5), var(--blue-5)) no-repeat 0% 100% / 100% 50%;
 	padding: 0 0.25rem;
 }
 
 .purple-hl {
 	display: inline;
-	background: linear-gradient(var(--purple-4), var(--purple-4)) no-repeat 0% 100% / 100% 50%;
+	background: linear-gradient(var(--purple-5), var(--purple-5)) no-repeat 0% 100% / 100% 50%;
 	padding: 0 0.25rem;
 }
 
@@ -66,12 +76,13 @@ section:first-of-type {
 	linear-gradient(var(--purple-3), var(--blue-3)) center / cover no-repeat;
 	border-bottom: 5px solid var(--gray-1);
 	padding: 0;
-	font-family: "Roboto Mono", monospace;
 }
 
+/* TO BE REPLACED WITH LOGO */
 section:first-of-type h1 {
 	display: inline;
-	color: var(--gray-11);
+	font-family: "Roboto Mono", monospace;
+	color: var(--gray-12);
 	background: linear-gradient(90deg, var(--purple-5), var(--blue-5)) no-repeat 0% 85% / 100% 30%;
 	padding: 0 0.25rem;
 }
@@ -99,36 +110,37 @@ section:first-of-type h1 {
 	z-index: 2;
 }
 
-/* Cards */
-.cards {
-	background-color: var(--white-a2);
-	border: 3px solid var(--white-a12);
+/* Card */
+.card {
+	background-color: var(--card-bg);
+	letter-spacing: 0.025em;
+	border: 3px solid var(--card-border);
 	border-radius: 1rem;
-	box-shadow: 0 5px 15px var(--black-a2);
+	box-shadow: 0 0 15px var(--card-shadow);
 	margin: 2rem 2rem 4rem 2rem;
-	padding: 0.75rem 0.25rem;
+	padding: 1rem 0.5rem;
 	transition:
 	background-color 0.3s ease-out,
 	box-shadow 0.3s ease-out,
 	transform 0.3s ease-out;
 }
 
-.cards p {
-	color: var(--gray-11);
-	font-weight: 600;
+.card p {
+	color: var(--gray-12);
+	font-weight: 500;
 }
 
 /* Hover Effects */
 @media (hover: hover) {
-	.cards:hover {
-		background-color: var(--white-a5);
-		box-shadow: 0 calc(5px + 0.2rem) 20px var(--black-a1);
-		transform: translateY(-0.4rem);
+	.card:hover {
+		background-color: var(--card-hover-bg);
+		box-shadow: 0 0 20px var(--card-hover-shadow);
+		transform: scale(0.98);
 	}
 }
 
 /* Cursor */
-section:first-of-type, nav {
+header {
 	-webkit-user-select: none;
 	user-select: none;
 }

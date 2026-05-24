@@ -15,11 +15,13 @@ html {
 
 /* Customize Light/Dark Mode Colors */
 :root {
-	--grid-color: var(--white-a3);
+	--grid-color: rgba(255, 255, 255, 0.1);
+	--theme-toggle-hover: rgba(0, 0, 0, 0.05);
 }
 
 .dark {
-	--grid-color: var(--black-a1);
+	--grid-color: rgba(0, 0, 0, 0.025);
+	--theme-toggle-hover: rgba(255, 255, 255, 0.1);
 }
 
 /* Default Margins */
@@ -83,22 +85,22 @@ svg { display: block; }
 
 /* Links */
 a {
-  color: var(--blue-9);
+  color: var(--blue-11);
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--iris-9);
+  color: var(--iris-11);
   text-decoration: none;
 }
 
 a:hover, a:active {
-  color: var(--blue-11);
+  color: var(--blue-12);
   text-decoration: underline;
 }
 
 a:visited:hover, a:visited:active {
-  color: var(--iris-11);
+  color: var(--iris-12);
   text-decoration: underline;
 }
 
@@ -107,16 +109,30 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.5rem;
+	padding: 1rem 2rem 1rem 1.5rem;
 }
 
 /* Theme Toggle */
 #theme-toggle {
 	-webkit-tap-highlight-color: transparent;
 	appearance: none;
+	cursor: pointer;
 	background: none;
 	border: none;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
 	margin: 0;
+	transition: background-color 0.1s ease-out;
+}
+
+@media (hover: hover) {
+	#theme-toggle:hover {
+		background-color: var(--theme-toggle-hover);
+	}
+}
+
+#theme-toggle:focus {
+	background-color: var(--theme-toggle-hover);
 }
 
 /* Light Mode */
@@ -133,12 +149,12 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background-color: var(--gray-1);
-	border-top: 2px solid var(--gray-6);
+	background-color: var(--iris-1);
+	border-top: 3px solid var(--iris-4);
 	padding: 1rem;
 }
 
 footer p {
 	font-size: 0.7rem;
-	color: var(--gray-10);
+	color: var(--gray-11);
 }
