@@ -13,6 +13,15 @@ html {
   font-size: 16px;
 }
 
+/* Customize Light/Dark Mode Colors */
+:root {
+	--grid-color: var(--white-a3);
+}
+
+.dark {
+	--grid-color: var(--black-a1);
+}
+
 /* Default Margins */
 p, blockquote, ul, ol, li, label, input, button, select {
 	margin: 0.5rem 1.5rem;
@@ -24,8 +33,8 @@ p, blockquote, ul, ol, li, label, input, button, select {
 /* Body */
 body {
 	background:
-	linear-gradient(90deg, color-mix(in srgb, var(--gray-1) 30%, transparent) 3px, transparent 3px) center / 50px 50px repeat,
-	linear-gradient(color-mix(in srgb, var(--gray-1) 30%, transparent) 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(90deg, var(--grid-color) 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(var(--grid-color) 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(var(--iris-2), var(--iris-2)) center / cover no-repeat;
 	font-family: "Inter", sans-serif;
 	line-height: 1.6;

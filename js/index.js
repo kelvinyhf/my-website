@@ -1,7 +1,9 @@
 // tsParticles
 if (window.tsParticles) {
+  
+  // Light Mode
   tsParticles.load({
-    id: "tsParticles",
+    id: "tsParticlesLight",
     options: {
       fullScreen: { enable: false },
       particles: {
@@ -19,4 +21,26 @@ if (window.tsParticles) {
       }
     }
   });
+  
+  // Dark Mode
+  tsParticles.load({
+    id: "tsParticlesDark",
+    options: {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 15 },
+        shape: { type: "square" },
+        color: { value: "#111111" },
+        opacity: { value: 0.75 },
+        size: { value: { min: 3, max: 6 } },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "bottom",
+          outModes: { default: "out" }
+        }
+      }
+    }
+  });
+  
 }
