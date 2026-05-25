@@ -10,10 +10,10 @@
 
 .dark {
 	--first-section-grid-color: rgba(0, 0, 0, 0.05);
-	--card-bg: rgba(0, 0, 0, 0.25);
+	--card-bg: rgba(0, 0, 0, 0.4);
 	--card-border: rgba(0, 0, 0, 0.75);
 	--card-shadow: rgba(255, 255, 255, 0.1);
-	--card-hover-bg: rgba(0, 0, 0, 0.5);
+	--card-hover-bg: rgba(0, 0, 0, 0.6);
 	--card-hover-shadow: rgba(255, 255, 255, 0.15);
 }
 
@@ -123,6 +123,12 @@ section:first-of-type h1 {
 	background-color 0.3s ease-out,
 	box-shadow 0.3s ease-out,
 	transform 0.3s ease-out;
+}
+
+.card h2 {
+  padding: 0 1.5rem 0.5rem 1.5rem;
+  margin: 0 0 1rem 0;
+  border-bottom: 3px solid var(--card-border);
 }
 
 .card p {
