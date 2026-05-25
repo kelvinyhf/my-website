@@ -15,13 +15,13 @@ html {
 
 /* Customize Light/Dark Mode Colors */
 :root {
-	--grid-color: rgba(255, 255, 255, 0.1);
-	--theme-toggle-hover: rgba(0, 0, 0, 0.05);
+	--body-grid-color: rgba(255, 255, 255, 0.1);
+	--clickable-hover-bg: rgba(0, 0, 0, 0.05);
 }
 
 .dark {
-	--grid-color: rgba(0, 0, 0, 0.025);
-	--theme-toggle-hover: rgba(255, 255, 255, 0.1);
+	--body-grid-color: rgba(0, 0, 0, 0.025);
+	--clickable-hover-bg: rgba(255, 255, 255, 0.1);
 }
 
 /* Default Margins */
@@ -35,8 +35,8 @@ p, blockquote, ul, ol, li, label, input, button, select {
 /* Body */
 body {
 	background:
-	linear-gradient(90deg, var(--grid-color) 3px, transparent 3px) center / 50px 50px repeat,
-	linear-gradient(var(--grid-color) 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(90deg, var(--body-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(var(--body-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(var(--iris-2), var(--iris-2)) center / cover no-repeat;
 	font-family: "Inter", sans-serif;
 	line-height: 1.6;
@@ -127,12 +127,18 @@ header {
 
 @media (hover: hover) {
 	#theme-toggle:hover {
-		background-color: var(--theme-toggle-hover);
+		background-color: var(--clickable-hover-bg);
+	}
+}
+
+@media (hover: none) {
+	#theme-toggle:active {
+		background-color: var(--clickable-hover-bg);
 	}
 }
 
 #theme-toggle:focus {
-	background-color: var(--theme-toggle-hover);
+	background-color: var(--clickable-hover-bg);
 }
 
 /* Light Mode */
