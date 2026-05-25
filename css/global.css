@@ -20,14 +20,20 @@ a, button {
 	appearance: none;
 }
 
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--iris-12);
+}
+
 /* Customize Light/Dark Mode Colors */
 :root {
-	--body-grid-color: rgba(255, 255, 255, 0.1);
 	--clickable-hover-bg: rgba(0, 0, 0, 0.05);
 }
 
 .dark {
-	--body-grid-color: rgba(0, 0, 0, 0.025);
 	--clickable-hover-bg: rgba(255, 255, 255, 0.1);
 }
 
@@ -41,10 +47,7 @@ p, blockquote, ul, ol, li, label, input, button, select {
 
 /* Body */
 body {
-	background:
-	linear-gradient(90deg, var(--body-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
-	linear-gradient(var(--body-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
-	linear-gradient(var(--iris-2), var(--iris-2)) center / cover no-repeat;
+	background-color: var(--iris-2);
 	font-family: "Inter", sans-serif;
 	line-height: 1.6;
 	color: var(--gray-12);

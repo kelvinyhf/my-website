@@ -145,20 +145,6 @@ section:first-of-type h1 {
 	}
 }
 
-/* Cursor */
-header {
-	-webkit-user-select: none;
-	user-select: none;
-}
-
-:focus {
-	outline: none;
-}
-
-:focus-visible {
-	outline: 2px solid var(--iris-12);
-}
-
 /* Links */
 .social-links {
 	display: flex;
