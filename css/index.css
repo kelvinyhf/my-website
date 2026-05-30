@@ -136,6 +136,39 @@ section:first-of-type h1 {
 	font-weight: 500;
 }
 
+/* Skill Card */
+.skill-card {
+  background-color: var(--card-bg);
+	border: 3px solid var(--card-border);
+	border-radius: 1rem;
+	box-shadow: 0 3px 0 var(--card-shadow);
+	padding: 1rem 1.5rem;
+	margin: 1.5rem;
+}
+
+.skill-card .header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card .header img {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--clickable-hover-bg);
+}
+
+.skill-card .header h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gray-12);
+}
+
+.skill-card p {
+  margin: 0.5rem 0;
+}
+
 /* Hover Effects */
 @media (hover: hover) {
 	.card:hover {

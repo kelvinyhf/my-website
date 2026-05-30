@@ -150,12 +150,12 @@ header {
 }
 
 /* Light Mode */
-.icon-sun { display: block; }
-.icon-moon { display: none; }
+.icon-sun { display: none; }
+.icon-moon { display: block; }
 
 /* Dark Mode */
-.dark .icon-sun { display: none; }
-.dark .icon-moon { display: block; }
+.dark .icon-sun { display: block; }
+.dark .icon-moon { display: none; }
 
 /* Footer */
 footer {
