@@ -137,37 +137,50 @@ section:first-of-type h1 {
 }
 
 /* Skill Card */
+.skill-cards-container {
+  background-color: var(--gray-a2);
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 0.25rem;
+}
+
 .skill-card {
   background-color: var(--card-bg);
 	border: 3px solid var(--card-border);
 	border-radius: 1rem;
 	box-shadow: 0 3px 0 var(--card-shadow);
 	padding: 1rem 1.5rem;
-	margin: 1.5rem;
+	margin: 1.5rem 1rem;
 }
 
-.skill-card .header {
+.skill-card div {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.skill-card .header img {
+.skill-card div img {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: var(--clickable-hover-bg);
 }
 
-.skill-card .header h3 {
+.skill-card div h3 {
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--gray-12);
 }
 
 .skill-card p {
   margin: 0.5rem 0;
 }
+
+/* Skill Cards */
+.skill-card.html h3 { color: var(--red-12); }
+.skill-card.css h3 { color: var(--blue-12); }
+.skill-card.js h3 { color: var(--yellow-12); }
+.skill-card.vscode h3 { color: var(--blue-12); }
+.skill-card.figma h3 { color: var(--green-12); }
 
 /* Hover Effects */
 @media (hover: hover) {
