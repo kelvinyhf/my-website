@@ -148,9 +148,12 @@ section:first-of-type h1 {
   background-color: var(--card-bg);
 	border: 3px solid var(--card-border);
 	border-radius: 1rem;
-	box-shadow: 0 3px 0 var(--card-shadow);
+	box-shadow: 0 4px 0 var(--card-shadow);
 	padding: 1rem 1.5rem;
 	margin: 1.5rem 1rem;
+	transition:
+	box-shadow 0.3s ease-out,
+	transform 0.3s ease-out;
 }
 
 .skill-card div {
@@ -184,11 +187,18 @@ section:first-of-type h1 {
 
 /* Hover Effects */
 @media (hover: hover) {
+  
 	.card:hover {
 		background-color: var(--card-hover-bg);
 		box-shadow: 0 0 20px var(--card-hover-shadow);
 		transform: scale(0.99);
 	}
+	
+	.skill-card:hover {
+	  box-shadow: 0 1px 0 var(--card-shadow);
+	  transform: translateY(3px);
+	}
+	
 }
 
 /* Links */
