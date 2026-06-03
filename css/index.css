@@ -156,21 +156,22 @@ section:first-of-type h1 {
 	transform 0.3s ease-out;
 }
 
-.skill-card div {
+.skill-card-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 1.25rem;
+  margin-bottom: 0.25rem;
+  padding: 0 0.5rem;
 }
 
-.skill-card div img {
+.skill-card-header img {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: var(--clickable-hover-bg);
 }
 
-.skill-card div h3 {
-  font-size: 1.25rem;
+.skill-card-header h3 {
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -184,6 +185,66 @@ section:first-of-type h1 {
 .skill-card.js h3 { color: var(--yellow-12); }
 .skill-card.vscode h3 { color: var(--blue-12); }
 .skill-card.figma h3 { color: var(--green-12); }
+
+/* Progress Bar */
+.progress-container {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.progress-bg {
+	display: flex;
+	flex-grow: 1;
+	background-color: var(--gray-5);
+	border-radius: 0.175rem;
+	height: 0.35rem;
+}
+
+.progress-bar {
+	border-radius: 0.175rem;
+	height: 100%;
+}
+
+.progress-container p {
+	white-space: nowrap;
+	flex-shrink: 0;
+	font-size: 0.75rem;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+}
+
+/* Progress Bars */
+.skill-card.html .progress-bar {
+	background-image: linear-gradient(90deg, var(--orange-9), var(--orange-8));
+	box-shadow: 0 0 5px var(--orange-a6);
+	width: 85%;
+}
+
+.skill-card.css .progress-bar {
+	background-image: linear-gradient(90deg, var(--blue-9), var(--blue-8));
+	box-shadow: 0 0 5px var(--blue-a6);
+	width: 50%;
+}
+
+.skill-card.js .progress-bar {
+	background-image: linear-gradient(90deg, var(--yellow-9), var(--yellow-8));
+	box-shadow: 0 0 5px var(--yellow-a6);
+	width: 10%;
+}
+
+.skill-card.vscode .progress-bar {
+	background-image: linear-gradient(90deg, var(--blue-9), var(--blue-8));
+	box-shadow: 0 0 5px var(--blue-a6);
+	width: 25%;
+}
+
+.skill-card.figma .progress-bar {
+	background-image: linear-gradient(90deg, var(--green-9), var(--green-8));
+	box-shadow: 0 0 5px var(--green-a6);
+	width: 30%;
+}
 
 /* Hover Effects */
 @media (hover: hover) {
