@@ -125,6 +125,14 @@ section:first-of-type h1 {
 	transform 0.3s ease-out;
 }
 
+@media (hover: hover) {
+  .card:hover {
+    background-color: var(--card-hover-bg);
+    box-shadow: 0 0 20px var(--card-hover-shadow);
+    transform: scale(0.99);
+  }
+}
+
 .card h2 {
   padding: 0 1.5rem 0.5rem 1.5rem;
   margin: 0 0 1rem 0;
@@ -154,6 +162,13 @@ section:first-of-type h1 {
 	transition:
 	box-shadow 0.15s ease-out,
 	transform 0.15s ease-out;
+}
+
+@media (hover: hover) {
+  .skill-card:hover {
+    box-shadow: 0 1px 0 var(--card-shadow);
+    transform: translateY(3px);
+  }
 }
 
 .skill-card-header {
@@ -245,20 +260,25 @@ section:first-of-type h1 {
 
 /* Chat */
 .chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
 	background-color: var(--card-bg);
 	border: 3px solid var(--card-border);
 	border-radius: 1rem;
 	box-shadow: 0 0 10px var(--card-shadow);
 	margin: 2rem;
+	overflow: hidden;
 }
 
 /* Chat Header */
 .chat-header {
 	display: flex;
 	align-items: center;
+	flex-shrink: 0;
 	padding: 0.75rem 2rem;
 	background-color: var(--card-border);
-	border-bottom: 3px solid var(--iris-5);
+	border-bottom: 2px solid var(--orange-4);
 }
 
 .chat-avatar-container {
@@ -304,32 +324,105 @@ section:first-of-type h1 {
 
 /* Chat Messages */
 .chat-messages {
-	height: 500px;
+	flex-grow: 1;
+	min-height: 0;
+	overflow-y: auto;
 }
 
 /* Chat Input */
 .chat-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-shrink: 0;
 	background-color: var(--card-border);
-	height: 4rem;
-	border-top: 3px solid var(--card-shadow);
+	padding: 1rem;
+	border-top: 2px solid var(--gray-3);
 }
 
-/* Hover Effects */
+.input-field {
+  flex-grow: 1;
+  min-width: 3rem;
+  background-color: var(--gray-1);
+  color: var(--gray-12);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray-6);
+  border-radius: 9999px;
+  transition:
+  border 0.15s ease-out,
+  box-shadow 0.15s ease-out;
+  margin: 0;
+}
+
+.input-field:focus-visible {
+  outline: none;
+  border-color: var(--purple-6);
+  box-shadow: 0 0 10px var(--card-hover-shadow);
+}
+
+.send-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--blue-5);
+  border: 2px solid var(--blue-3);
+  border-radius: 9999px;
+  margin: 0;
+  padding: 0.5rem;
+  transition:
+  background-color 0.15s ease-out;
+}
+
+.send-btn svg {
+  transition:
+  transform 0.15s ease-out,
+  fill 0.15s ease-out,
+  stroke 0.15s ease-out;
+}
+
 @media (hover: hover) {
   
-	.card:hover {
-		background-color: var(--card-hover-bg);
-		box-shadow: 0 0 20px var(--card-hover-shadow);
-		transform: scale(0.99);
+	.send-btn:hover {
+	  background-color: var(--blue-4);
+	  border-color: var(--blue-2);
 	}
 	
-	.skill-card:hover {
-	  box-shadow: 0 1px 0 var(--card-shadow);
-	  transform: translateY(3px);
+	.send-btn:hover svg {
+	  transform: scale(0.9);
+	  fill: var(--blue-10);
+	  stroke: var(--blue-10);
 	}
 	
 }
 
+@media (hover: none) {
+  
+  .send-btn:active {
+    background-color: var(--blue-4);
+    border-color: var(--blue-2);
+  }
+  
+  .send-btn:active svg {
+    transform: scale(0.9);
+    fill: var(--blue-10);
+    stroke: var(--blue-10);
+  }
+  
+}
+
+.send-btn:focus-visible {
+  background-color: var(--blue-4);
+  border-color: var(--blue-2);
+}
+
+.send-btn:focus-visible svg {
+  transform: scale(0.9);
+  fill: var(--blue-10);
+  stroke: var(--blue-10);
+}
+  
 /* Links */
 .social-links {
 	display: flex;
@@ -356,6 +449,6 @@ section:first-of-type h1 {
 	}
 }
 
-.social-links a:focus {
+.social-links a:focus-visible {
 	background-color: var(--clickable-hover-bg);
 }

@@ -145,7 +145,7 @@ header {
 	}
 }
 
-#theme-toggle:focus {
+#theme-toggle:focus-visible {
 	background-color: var(--clickable-hover-bg);
 }
 
