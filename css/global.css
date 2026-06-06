@@ -47,7 +47,8 @@ p, blockquote, ul, ol, li, label, input, button, select {
 
 /* Body */
 body {
-	background-color: var(--iris-2);
+	background-color: var(--iris-1);
+	background-image: linear-gradient(var(--iris-2) 100%, var(--iris-1) 100%);
 	font-family: "Inter", sans-serif;
 	line-height: 1.6;
 	color: var(--gray-12);
@@ -165,7 +166,9 @@ footer {
 	text-align: center;
 	background-color: var(--iris-1);
 	border-top: 3px solid var(--iris-4);
+	margin-top: 1.5rem;
 	padding: 1rem;
+	padding-bottom: 2rem;
 }
 
 footer p {

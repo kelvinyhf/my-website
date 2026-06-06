@@ -183,7 +183,6 @@ section:first-of-type h1 {
 .skill-card.html h3 { color: var(--red-12); }
 .skill-card.css h3 { color: var(--blue-12); }
 .skill-card.js h3 { color: var(--yellow-12); }
-.skill-card.vscode h3 { color: var(--blue-12); }
 .skill-card.figma h3 { color: var(--green-12); }
 
 /* Progress Bar */
@@ -216,30 +215,28 @@ section:first-of-type h1 {
 }
 
 /* Progress Bars */
+.skill-card.html { background-color: var(--orange-a1); }
 .skill-card.html .progress-bar {
 	background-image: linear-gradient(90deg, var(--orange-9), var(--orange-8));
 	box-shadow: 0 0 5px var(--orange-a6);
 	width: 85%;
 }
 
+.skill-card.css { background-color: var(--blue-a1); }
 .skill-card.css .progress-bar {
 	background-image: linear-gradient(90deg, var(--blue-9), var(--blue-8));
 	box-shadow: 0 0 5px var(--blue-a6);
 	width: 50%;
 }
 
+.skill-card.js { background-color: var(--yellow-a1); }
 .skill-card.js .progress-bar {
 	background-image: linear-gradient(90deg, var(--yellow-9), var(--yellow-8));
 	box-shadow: 0 0 5px var(--yellow-a6);
 	width: 10%;
 }
 
-.skill-card.vscode .progress-bar {
-	background-image: linear-gradient(90deg, var(--blue-9), var(--blue-8));
-	box-shadow: 0 0 5px var(--blue-a6);
-	width: 25%;
-}
-
+.skill-card.figma { background-color: var(--green-a1); }
 .skill-card.figma .progress-bar {
 	background-image: linear-gradient(90deg, var(--green-9), var(--green-8));
 	box-shadow: 0 0 5px var(--green-a6);

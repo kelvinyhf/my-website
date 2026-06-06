@@ -3,20 +3,20 @@ if (window.tsParticles) {
   
   // Light Mode
   tsParticles.load({
-    id: "tsParticlesLight",
+    id: 'tsParticlesLight',
     options: {
       fullScreen: { enable: false },
       particles: {
         number: { value: 15 },
-        shape: { type: "square" },
-        color: { value: "#ffffff" },
+        shape: { type: 'square' },
+        color: { value: '#ffffff' },
         opacity: { value: 0.75 },
         size: { value: { min: 3, max: 6 } },
         move: {
           enable: true,
           speed: 2,
-          direction: "bottom",
-          outModes: { default: "out" }
+          direction: 'bottom',
+          outModes: { default: 'out' }
         }
       }
     }
@@ -24,20 +24,20 @@ if (window.tsParticles) {
   
   // Dark Mode
   tsParticles.load({
-    id: "tsParticlesDark",
+    id: 'tsParticlesDark',
     options: {
       fullScreen: { enable: false },
       particles: {
         number: { value: 15 },
-        shape: { type: "square" },
-        color: { value: "#111111" },
+        shape: { type: 'square' },
+        color: { value: '#111111' },
         opacity: { value: 0.75 },
         size: { value: { min: 3, max: 6 } },
         move: {
           enable: true,
           speed: 2,
-          direction: "bottom",
-          outModes: { default: "out" }
+          direction: 'bottom',
+          outModes: { default: 'out' }
         }
       }
     }
