@@ -152,8 +152,8 @@ section:first-of-type h1 {
 	padding: 1rem 1.5rem;
 	margin: 1.5rem 1rem;
 	transition:
-	box-shadow 0.3s ease-out,
-	transform 0.3s ease-out;
+	box-shadow 0.15s ease-out,
+	transform 0.15s ease-out;
 }
 
 .skill-card-header {
@@ -241,6 +241,77 @@ section:first-of-type h1 {
 	background-image: linear-gradient(90deg, var(--green-9), var(--green-8));
 	box-shadow: 0 0 5px var(--green-a6);
 	width: 30%;
+}
+
+/* Chat */
+.chat-window {
+	background-color: var(--card-bg);
+	border: 3px solid var(--card-border);
+	border-radius: 1rem;
+	box-shadow: 0 0 10px var(--card-shadow);
+	margin: 2rem;
+}
+
+/* Chat Header */
+.chat-header {
+	display: flex;
+	align-items: center;
+	padding: 0.75rem 2rem;
+	background-color: var(--card-border);
+	border-bottom: 3px solid var(--iris-5);
+}
+
+.chat-avatar-container {
+	position: relative;
+	line-height: 0;
+}
+
+.chat-avatar-container img {
+	border-radius: 50%;
+}
+
+.chat-avatar-container::after {
+	content: "";
+	position: absolute;
+	bottom: -5%;
+	right: -5%;
+	width: 25%;
+	height: 25%;
+	background-color: var(--green-9);
+	border: 3px solid var(--gray-1);
+	border-radius: 50%;
+}
+
+.chat-name {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.chat-name p {
+	margin: 0 1.5rem;
+}
+
+.chat-name p:first-child {
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+.chat-name p:last-child {
+	font-size: 0.75rem;
+	color: var(--gray-11);
+}
+
+/* Chat Messages */
+.chat-messages {
+	height: 500px;
+}
+
+/* Chat Input */
+.chat-input {
+	background-color: var(--card-border);
+	height: 4rem;
+	border-top: 3px solid var(--card-shadow);
 }
 
 /* Hover Effects */
