@@ -6,6 +6,7 @@
 	--card-shadow: rgba(0, 0, 0, 0.1);
 	--card-hover-bg: rgba(255, 255, 255, 0.4);
 	--card-hover-shadow: rgba(0, 0, 0, 0.15);
+	--input-focus-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
@@ -15,6 +16,7 @@
 	--card-shadow: rgba(255, 255, 255, 0.1);
 	--card-hover-bg: rgba(0, 0, 0, 0.6);
 	--card-hover-shadow: rgba(255, 255, 255, 0.15);
+	--input-focus-shadow: rgba(255, 255, 255, 0.3);
 }
 
 /* Titles */
@@ -358,7 +360,7 @@ section:first-of-type h1 {
 .input-field:focus-visible {
   outline: none;
   border-color: var(--purple-5);
-  box-shadow: 0 0 10px var(--card-hover-shadow);
+  box-shadow: 0 0 10px var(--input-focus-shadow);
 }
 
 .send-btn {
