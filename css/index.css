@@ -326,9 +326,34 @@ section:first-of-type h1 {
 
 /* Chat Messages */
 .chat-messages {
+  display: flex;
+  flex-direction: column;
 	flex-grow: 1;
 	background-image: linear-gradient(var(--purple-2), var(--blue-2));
+	overflow-x: hidden;
 	overflow-y: auto;
+}
+
+.message {
+	padding: 0.75rem 1rem;
+	margin: 1.5rem 1rem 0 1rem;
+}
+
+.message p {
+	padding: 0;
+	margin: 0;
+}
+
+.message.decodr {
+	background-color: var(--purple-4);
+	align-self: flex-start;
+	border-radius: 1rem 1rem 1rem 0;
+}
+
+.message.user {
+	background-color: var(--blue-4);
+	align-self: flex-end;
+	border-radius: 1rem 1rem 0 1rem;
 }
 
 /* Chat Input */
