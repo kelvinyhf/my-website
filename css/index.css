@@ -6,7 +6,6 @@
 	--card-shadow: rgba(0, 0, 0, 0.1);
 	--card-hover-bg: rgba(255, 255, 255, 0.4);
 	--card-hover-shadow: rgba(0, 0, 0, 0.15);
-	--input-focus-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
@@ -16,7 +15,6 @@
 	--card-shadow: rgba(255, 255, 255, 0.1);
 	--card-hover-bg: rgba(0, 0, 0, 0.6);
 	--card-hover-shadow: rgba(255, 255, 255, 0.15);
-	--input-focus-shadow: rgba(255, 255, 255, 0.3);
 }
 
 /* Titles */
@@ -387,7 +385,7 @@ section:first-of-type h1 {
 .user-input:focus-visible {
   outline: 1px solid var(--blue-4);
   border-color: var(--blue-6);
-  box-shadow: 0 0 10px var(--input-focus-shadow);
+  box-shadow: 0 0 10px var(--blue-a4);
 }
 
 .send-btn {
@@ -395,63 +393,31 @@ section:first-of-type h1 {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  background-color: var(--blue-5);
-  border: 2px solid var(--blue-3);
+  background-color: var(--blue-7);
+  border: none;
   border-radius: 999px;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   margin: 0;
   padding: 0;
   transition:
-  background-color 0.15s ease-out;
-}
-
-.send-btn svg {
-  transition:
-  transform 0.15s ease-out,
-  fill 0.15s ease-out,
-  stroke 0.15s ease-out;
+  background-color 0.1s ease-out;
 }
 
 @media (hover: hover) {
-  
 	.send-btn:hover {
-	  background-color: var(--blue-4);
-	  border-color: var(--blue-2);
+	  background-color: var(--blue-3);
 	}
-	
-	.send-btn:hover svg {
-	  transform: scale(0.9);
-	  fill: var(--blue-10);
-	  stroke: var(--blue-10);
-	}
-	
 }
 
 @media (hover: none) {
-  
   .send-btn:active {
-    background-color: var(--blue-4);
-    border-color: var(--blue-2);
+    background-color: var(--blue-3);
   }
-  
-  .send-btn:active svg {
-    transform: scale(0.9);
-    fill: var(--blue-10);
-    stroke: var(--blue-10);
-  }
-  
 }
 
 .send-btn:focus-visible {
-  background-color: var(--blue-4);
-  border-color: var(--blue-2);
-}
-
-.send-btn:focus-visible svg {
-  transform: scale(0.9);
-  fill: var(--blue-10);
-  stroke: var(--blue-10);
+  background-color: var(--blue-3);
 }
 
 /* Links */
