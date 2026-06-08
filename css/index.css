@@ -264,7 +264,7 @@ section:first-of-type h1 {
 .chat-window {
   display: flex;
   flex-direction: column;
-  min-height: 75vh;
+  height: 80vh;
 	background-color: var(--card-bg);
 	border: 3px solid var(--card-border);
 	border-radius: 1rem;
@@ -336,7 +336,7 @@ section:first-of-type h1 {
 
 .message {
 	padding: 0.75rem 1rem;
-	margin: 1.5rem 1rem 0 1rem;
+	margin: 1rem;
 }
 
 .message p {
@@ -348,12 +348,14 @@ section:first-of-type h1 {
 	background-color: var(--purple-4);
 	align-self: flex-start;
 	border-radius: 1rem 1rem 1rem 0;
+	margin-right: 3rem;
 }
 
 .message.user {
 	background-color: var(--blue-4);
 	align-self: flex-end;
 	border-radius: 1rem 1rem 0 1rem;
+	margin-left: 3rem;
 }
 
 /* Chat Input */
@@ -368,7 +370,7 @@ section:first-of-type h1 {
 	border-top: 2px solid var(--gray-3);
 }
 
-.input-field {
+.user-input {
   flex-grow: 1;
   min-width: 3rem;
   background-color: var(--gray-1);
@@ -382,9 +384,9 @@ section:first-of-type h1 {
   box-shadow 0.15s ease-out;
 }
 
-.input-field:focus-visible {
-  outline: none;
-  border-color: var(--purple-5);
+.user-input:focus-visible {
+  outline: 1px solid var(--blue-4);
+  border-color: var(--blue-6);
   box-shadow: 0 0 10px var(--input-focus-shadow);
 }
 

@@ -51,7 +51,7 @@
 	<link rel="stylesheet" href="css/index.css">
 
 </head>
-<body>
+<body ontouchstart="">
 	
 	<main>
 		
@@ -197,7 +197,7 @@
 			</div>
 
 			<!-- Chat Messages -->
-			<div class="chat-messages">
+			<div id ="chatMessages" class="chat-messages">
 				<div class="message decodr">
 					<p>
 						Hi! I’m the digital version of Decodr.
@@ -208,8 +208,8 @@
 
 			<!-- Chat Input -->
 			<div class="chat-input">
-				<input type="text" class="input-field" placeholder="Your favorite food?">
-				<button class="send-btn">
+				<input id="userInput" type="text" class="user-input" placeholder="Your favorite food?">
+				<button id="sendBtn" class="send-btn">
 					<svg class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="var(--blue-11)" stroke="var(--blue-11)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg>
 				</button>
 			</div>

@@ -44,3 +44,49 @@ if (window.tsParticles) {
   });
   
 }
+
+// Chat With Me
+const chatMessages = document.getElementById('chatMessages');
+const userInput = document.getElementById('userInput');
+const sendBtn = document.getElementById('sendBtn');
+
+// Create message div and p
+function appendMessage(message, sender) {
+  const messageDiv = document.createElement('div');
+  const messageP = document.createElement('p');
+  
+  // Add proper classes and messages
+  messageDiv.classList.add('message', sender);
+  messageP.textContent = message;
+  
+  // Append children
+  messageDiv.appendChild(messageP);
+  chatMessages.appendChild(messageDiv);
+  
+  // Auto scroll
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  
+}
+
+// When sendbtn being clicked 
+sendBtn.addEventListener('click', function() {
+  const message = userInput.value.trim();
+  
+  // Return if nothing is typed
+  if (message === '') return;
+  
+  // Append message for user 
+  appendMessage(message, 'user');
+  userInput.value = '';
+  
+  // Fake AI response
+  setTimeout(function() { appendMessage('Got it!', 'decodr'); }, 1000);
+  
+});
+
+// When Enter being pressed 
+userInput.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    sendBtn.click();
+    }
+});
