@@ -49,6 +49,22 @@ if (window.tsParticles) {
 const chatMessages = document.getElementById('chatMessages');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
+const placeholders = [
+  "What's your favorite food?",
+  "What game do you play?",
+  "What's your hobby?",
+  "What songs you listens to?",
+  "Why you like coding?",
+];
+
+// Update placeholder
+function updatePlaceholder() {
+  const randomIndex = Math.floor(Math.random() * placeholders.length);
+  userInput.placeholder = placeholders[randomIndex];
+}
+
+// Initial placeholder
+updatePlaceholder();
 
 // Create message div and p
 function appendMessage(message, sender) {
@@ -70,13 +86,18 @@ function appendMessage(message, sender) {
 
 // When sendbtn being clicked 
 sendBtn.addEventListener('click', function() {
-  const message = userInput.value.trim();
   
-  // Return if nothing is typed
-  if (message === '') return;
+  // Check if nothing or only spaces is typed
+  if (userInput.value === '') {
+    userInput.value = userInput.placeholder;
+  }
+  else if (userInput.value.trim() === '') {
+    return;
+  }
   
-  // Append message for user 
-  appendMessage(message, 'user');
+  // Append message for user
+  appendMessage(userInput.value, 'user');
+  updatePlaceholder()
   userInput.value = '';
   
   // Fake AI response
@@ -85,8 +106,8 @@ sendBtn.addEventListener('click', function() {
 });
 
 // When Enter being pressed 
-userInput.addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') {
+userInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
     sendBtn.click();
-    }
+  }
 });

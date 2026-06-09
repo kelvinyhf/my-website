@@ -350,6 +350,7 @@ section:first-of-type h1 {
 }
 
 .message.user {
+  white-space: pre-wrap;
 	background-color: var(--blue-4);
 	align-self: flex-end;
 	border-radius: 1rem 1rem 0 1rem;
@@ -400,8 +401,6 @@ section:first-of-type h1 {
   height: 2.25rem;
   margin: 0;
   padding: 0;
-  transition:
-  background-color 0.1s ease-out;
 }
 
 @media (hover: hover) {
