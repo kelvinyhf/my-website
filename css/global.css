@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 
-a, button {
+a, input, button {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-appearance: none;
 	-moz-appearance: none;
