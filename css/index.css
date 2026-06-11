@@ -405,18 +405,18 @@ section:first-of-type h1 {
 
 @media (hover: hover) {
 	.send-btn:hover {
-	  background-color: var(--blue-3);
+	  background-color: var(--blue-4);
 	}
 }
 
 @media (hover: none) {
   .send-btn:active {
-    background-color: var(--blue-3);
+    background-color: var(--blue-4);
   }
 }
 
-.send-btn:focus-visible {
-  background-color: var(--blue-3);
+.send-btn:focus-visible, .send-btn:disabled {
+  background-color: var(--blue-4);
 }
 
 /* Links */

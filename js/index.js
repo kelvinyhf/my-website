@@ -84,14 +84,16 @@ function appendMessage(message, sender) {
   
 }
 
-// Sleep random function
-function sleepR(min, max) {
-  const randomTime = Math.floor(Math.random() * (max - min + 1)) + min;
-  return new Promise(resolve => setTimeout(resolve, randomTime));
-}
+// Sleep functions
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const sleepR = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1)) + min));
 
 // When sendbtn being clicked 
 sendBtn.addEventListener('click', async function() {
+  
+  // Check if button is disabled
+  if (sendBtn.disabled) { return; }
+  sendBtn.disabled = true;
   
   // Check if nothing or only spaces is typed
   if (userInput.value === '') {
@@ -154,9 +156,13 @@ sendBtn.addEventListener('click', async function() {
     
   }
   
+  // Enable the send button
+  await sleep(500);
+  sendBtn.disabled = false;
+  
 });
 
-// When Enter being pressed 
+// When Enter being pressed
 userInput.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
     sendBtn.click();
