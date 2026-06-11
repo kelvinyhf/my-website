@@ -84,8 +84,14 @@ function appendMessage(message, sender) {
   
 }
 
+// Sleep random function
+function sleepR(min, max) {
+  const randomTime = Math.floor(Math.random() * (max - min + 1)) + min;
+  return new Promise(resolve => setTimeout(resolve, randomTime));
+}
+
 // When sendbtn being clicked 
-sendBtn.addEventListener('click', function() {
+sendBtn.addEventListener('click', async function() {
   
   // Check if nothing or only spaces is typed
   if (userInput.value === '') {
@@ -95,13 +101,58 @@ sendBtn.addEventListener('click', function() {
     return;
   }
   
-  // Append message for user
-  appendMessage(userInput.value, 'user');
+  // Store userInput
+  const userText = userInput.value.trim();
+  
+  // Append message of user
+  appendMessage(userText, 'user');
   updatePlaceholder()
   userInput.value = '';
   
-  // Fake AI response
-  setTimeout(function() { appendMessage('Got it!', 'decodr'); }, 1000);
+  // Decodr is thinking...
+  await sleepR(250, 750);
+  appendMessage('Decodr is thinking...', 'decodr');
+  
+  try {
+    
+    // Send the prompt
+    const response = await fetch('https://my-web-ai.decodr.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: userText }),
+    });
+    
+    // Get the json
+    const result = await response.json();
+    
+    // Decodr is not thinking anymore
+    if (chatMessages.lastChild.textContent === 'Decodr is thinking...') {
+      chatMessages.removeChild(chatMessages.lastChild);
+    }
+    
+    // Check if there's an error
+    if (result.error) {
+      appendMessage('Error (try): ' + result.error, 'decodr');
+      console.warn(result.error);
+      return;
+    }
+    
+    // Append message of AI
+    const aiResponse = result.choices[0].message.content;
+    appendMessage(aiResponse, 'decodr');
+    
+  } catch (error) {
+    
+    // Decodr cannot think anymore
+    if (chatMessages.lastChild.textContent === 'Decodr is thinking...') {
+      chatMessages.removeChild(chatMessages.lastChild);
+    }
+    
+    // Append and log error
+    appendMessage('Error (catch): ' + error, 'decodr');
+    console.error(error);
+    
+  }
   
 });
 
