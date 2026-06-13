@@ -1,8 +1,8 @@
 # My Personal Website
 A **simple**, **responsive** website made by me to introduce myself and store my cool stuff!
 
-![GitHub Stars](https://img.shields.io/github/stars/decodr-hf/my-website)
-![GitHub Forks](https://img.shields.io/github/forks/decodr-hf/my-website)
+![GitHub Stars](https://img.shields.io/github/stars/kelvinyhf/my-website)
+![GitHub Forks](https://img.shields.io/github/forks/kelvinyhf/my-website)
 
 >“Your stars keep me motivated!”
 >

@@ -111,9 +111,9 @@ sendBtn.addEventListener('click', async function() {
   updatePlaceholder()
   userInput.value = '';
   
-  // Decodr is thinking...
+  // KelvinY is thinking...
   await sleepR(250, 750);
-  appendMessage('Decodr is thinking...', 'decodr');
+  appendMessage('KelvinY is thinking...', 'kelviny');
   
   try {
     
@@ -127,31 +127,31 @@ sendBtn.addEventListener('click', async function() {
     // Get the json
     const result = await response.json();
     
-    // Decodr is not thinking anymore
-    if (chatMessages.lastChild.textContent === 'Decodr is thinking...') {
+    // KelvinY is not thinking anymore
+    if (chatMessages.lastChild.textContent === 'KelvinY is thinking...') {
       chatMessages.removeChild(chatMessages.lastChild);
     }
     
     // Check if there's an error
     if (result.error) {
-      appendMessage('Error (try): ' + result.error, 'decodr');
+      appendMessage('Error (try): ' + result.error, 'kelviny');
       console.warn(result.error);
       return;
     }
     
     // Append message of AI
     const aiResponse = result.choices[0].message.content;
-    appendMessage(aiResponse, 'decodr');
+    appendMessage(aiResponse, 'kelviny');
     
   } catch (error) {
     
-    // Decodr cannot think anymore
-    if (chatMessages.lastChild.textContent === 'Decodr is thinking...') {
+    // KelvinY cannot think anymore
+    if (chatMessages.lastChild.textContent === 'KelvinY is thinking...') {
       chatMessages.removeChild(chatMessages.lastChild);
     }
     
     // Append and log error
-    appendMessage('Error (catch): ' + error, 'decodr');
+    appendMessage('Error (catch): ' + error, 'kelviny');
     console.error(error);
     
   }
