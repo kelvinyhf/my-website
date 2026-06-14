@@ -24,16 +24,18 @@ a, input, button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--iris-12);
+  outline: 2px solid var(--yellow-12);
 }
 
 /* Customize Light/Dark Mode Colors */
 :root {
 	--clickable-hover-bg: rgba(0, 0, 0, 0.05);
+	--white-black: #fff;
 }
 
 .dark {
 	--clickable-hover-bg: rgba(255, 255, 255, 0.1);
+	--white-black: #000;
 }
 
 /* Default Margins */
@@ -46,8 +48,8 @@ p, blockquote, ul, ol, li, label, input, button, select {
 
 /* Body */
 body {
-	background-color: var(--iris-1);
-	background-image: linear-gradient(var(--iris-2) 100%, var(--iris-1) 100%);
+	background-color: var(--white-black);
+	background-image: linear-gradient(var(--yellow-1) 0%, var(--yellow-1) 100%);
 	font-family: "Inter", sans-serif;
 	line-height: 1.6;
 	color: var(--gray-12);
@@ -119,7 +121,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 2rem 1rem 1.5rem;
+	padding: 1rem 2rem;
 }
 
 /* Theme Toggle */
@@ -163,8 +165,8 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background-color: var(--iris-1);
-	border-top: 3px solid var(--iris-4);
+	background-color: var(--white-black);
+	border-top: 2px solid var(--gray-6);
 	margin-top: 1.5rem;
 	padding: 1rem;
 	padding-bottom: 2rem;

@@ -28,36 +28,19 @@ h3 {
 }
 
 .first-h2 {
-	color: var(--purple-11);
-	border-bottom: 3px solid var(--purple-6);
+	color: var(--orange-11);
+	border-bottom: 3px solid var(--orange-7);
 }
 
 .second-h2 {
-	color: var(--iris-11);
-	border-bottom: 3px solid var(--iris-6);
-}
-
-.third-h2 {
-	color: var(--blue-11);
-	border-bottom: 3px solid var(--blue-6);
+	color: var(--green-11);
+	border-bottom: 3px solid var(--green-7);
 }
 
 /* Highlights */
 .gray-hl {
 	display: inline;
-	background: linear-gradient(var(--gray-5), var(--gray-5)) no-repeat 0% 100% / 100% 50%;
-	padding: 0 0.25rem;
-}
-
-.blue-hl {
-	display: inline;
-	background: linear-gradient(var(--blue-5), var(--blue-5)) no-repeat 0% 100% / 100% 50%;
-	padding: 0 0.25rem;
-}
-
-.purple-hl {
-	display: inline;
-	background: linear-gradient(var(--purple-5), var(--purple-5)) no-repeat 0% 100% / 100% 50%;
+	background: linear-gradient(var(--orange-4), var(--orange-4)) no-repeat 0% 100% / 100% 50%;
 	padding: 0 0.25rem;
 }
 
@@ -73,8 +56,8 @@ section:first-of-type {
 	background:
 	linear-gradient(90deg, var(--first-section-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(var(--first-section-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
-	linear-gradient(var(--purple-3), var(--blue-3)) center / cover no-repeat;
-	border-bottom: 5px solid var(--gray-1);
+	linear-gradient(var(--orange-3), var(--green-3)) center / cover no-repeat;
+	border-bottom: 5px solid var(--card-border);
 	padding: 0;
 }
 
@@ -83,7 +66,7 @@ section:first-of-type h1 {
 	display: inline;
 	font-family: "Roboto Mono", monospace;
 	color: var(--gray-12);
-	background: linear-gradient(90deg, var(--purple-5), var(--blue-5)) no-repeat 0% 85% / 100% 30%;
+	background: linear-gradient(90deg, var(--orange-5), var(--green-5)) no-repeat 0% 85% / 100% 30%;
 	padding: 0 0.25rem;
 }
 
@@ -327,9 +310,14 @@ section:first-of-type h1 {
   display: flex;
   flex-direction: column;
 	flex-grow: 1;
-	background-image: linear-gradient(var(--purple-2), var(--blue-2));
+	background-image: linear-gradient(var(--orange-2), var(--green-2));
 	overflow-x: hidden;
 	overflow-y: auto;
+	scrollbar-width: none;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
 }
 
 .message {
@@ -343,7 +331,7 @@ section:first-of-type h1 {
 }
 
 .message.kelviny {
-	background-color: var(--purple-4);
+	background-color: var(--orange-4);
 	align-self: flex-start;
 	border-radius: 1rem 1rem 1rem 0;
 	margin-right: 3rem;
@@ -351,7 +339,7 @@ section:first-of-type h1 {
 
 .message.user {
   white-space: pre-wrap;
-	background-color: var(--blue-4);
+	background-color: var(--green-4);
 	align-self: flex-end;
 	border-radius: 1rem 1rem 0 1rem;
 	margin-left: 3rem;
@@ -384,9 +372,9 @@ section:first-of-type h1 {
 }
 
 .user-input:focus-visible {
-  outline: 1px solid var(--blue-4);
-  border-color: var(--blue-6);
-  box-shadow: 0 0 10px var(--blue-a4);
+  outline: 1px solid var(--green-4);
+  border-color: var(--green-6);
+  box-shadow: 0 0 10px var(--green-a4);
 }
 
 .send-btn {
@@ -394,7 +382,7 @@ section:first-of-type h1 {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  background-color: var(--blue-7);
+  background-color: var(--green-9);
   border: none;
   border-radius: 999px;
   width: 2.25rem;
@@ -405,18 +393,18 @@ section:first-of-type h1 {
 
 @media (hover: hover) {
 	.send-btn:hover {
-	  background-color: var(--blue-4);
+	  background-color: var(--green-6);
 	}
 }
 
 @media (hover: none) {
   .send-btn:active {
-    background-color: var(--blue-4);
+    background-color: var(--green-6);
   }
 }
 
 .send-btn:focus-visible, .send-btn:disabled {
-  background-color: var(--blue-4);
+  background-color: var(--green-6);
 }
 
 /* Links */
