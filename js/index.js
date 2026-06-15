@@ -118,7 +118,7 @@ sendBtn.addEventListener('click', async function() {
   try {
     
     // Send the prompt
-    const response = await fetch('https://my-web-ai.kelviny.workers.dev', {
+    const response = await fetch('/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt: userText }),
