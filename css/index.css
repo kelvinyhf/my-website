@@ -50,7 +50,7 @@ article {
 }
 
 /* First Section */
-section:first-of-type {
+header {
 	position: relative;
 	overflow: hidden;
 	background:
@@ -62,12 +62,15 @@ section:first-of-type {
 }
 
 /* TO BE REPLACED WITH LOGO */
-section:first-of-type h1 {
+header .brand {
 	display: inline;
 	font-family: "Roboto Mono", monospace;
+	font-size: 1.4rem;
+	font-weight: 700;
 	color: var(--gray-12);
 	background: linear-gradient(90deg, var(--orange-5), var(--green-5)) no-repeat 0% 85% / 100% 30%;
 	padding: 0 0.25rem;
+	margin: 0;
 }
 
 /* tsParticles */
@@ -93,8 +96,8 @@ section:first-of-type h1 {
 	z-index: 2;
 }
 
-/* Card */
-.card {
+/* About Me */
+.about-me {
 	background-color: var(--card-bg);
 	letter-spacing: 0.025em;
 	border: 3px solid var(--card-border);
@@ -109,20 +112,21 @@ section:first-of-type h1 {
 }
 
 @media (hover: hover) {
-  .card:hover {
+  .about-me:hover {
     background-color: var(--card-hover-bg);
     box-shadow: 0 0 20px var(--card-hover-shadow);
     transform: scale(0.99);
   }
 }
 
-.card h2 {
+h1 {
+	font-size: 1.3rem;
   padding: 0 1.5rem 0.5rem 1.5rem;
   margin: 0 0 1rem 0;
   border-bottom: 3px solid var(--card-border);
 }
 
-.card p {
+.about-me p {
 	color: var(--gray-12);
 	font-weight: 500;
 }
