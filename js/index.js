@@ -56,6 +56,7 @@ const placeholders = [
   "What songs you listens to?",
   "Why you like coding?",
 ];
+let chatHistory = [];
 
 // Update placeholder
 function updatePlaceholder() {
@@ -105,6 +106,7 @@ sendBtn.addEventListener('click', async function() {
   
   // Store userInput
   const userText = userInput.value.trim();
+  chatHistory.push({ role: "user", content: userText });
   
   // Append message of user
   appendMessage(userText, 'user');
@@ -121,7 +123,7 @@ sendBtn.addEventListener('click', async function() {
     const response = await fetch('/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: userText }),
+      body: JSON.stringify({ history: chatHistory }),
     });
     
     // Get the json
@@ -134,6 +136,7 @@ sendBtn.addEventListener('click', async function() {
     
     // Check if there's an error
     if (result.error) {
+      chatHistory.pop();
       appendMessage('Error (try): ' + result.error, 'kelviny');
       console.warn(result.error);
       return;
@@ -142,8 +145,18 @@ sendBtn.addEventListener('click', async function() {
     // Append message of AI
     const aiResponse = result.choices[0].message.content;
     appendMessage(aiResponse, 'kelviny');
+    chatHistory.push({ role: "assistant", content: aiResponse });
+    
+    // Remove first conversation if there's more than 20 conversations
+    while (chatHistory.length > 20) {
+      chatHistory.shift();
+      chatHistory.shift();
+    }
     
   } catch (error) {
+    
+    // Delete the user message in the history
+    chatHistory.pop();
     
     // KelvinY cannot think anymore
     if (chatMessages.lastChild.textContent === 'KelvinY is thinking...') {
