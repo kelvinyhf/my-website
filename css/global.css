@@ -53,6 +53,7 @@ body {
 	font-family: "Inter", sans-serif;
 	line-height: 1.6;
 	color: var(--gray-12);
+	min-width: 320px;
 }
 
 /* Typography */
@@ -114,14 +115,6 @@ a:hover, a:active {
 a:visited:hover, a:visited:active {
   color: var(--iris-12);
   text-decoration: underline;
-}
-
-/* Navigation Bar */
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 2rem;
 }
 
 /* Theme Toggle */

@@ -1,6 +1,8 @@
 /* Customize Light/Dark Mode Colors */
 :root {
-	--first-section-grid-color: rgba(255, 255, 255, 0.2);
+	--nav-bg: rgba(255, 255, 255, 0.9);
+	--nav-shadow: rgba(0, 0, 0, 0.05);
+	--header-grid-color: rgba(255, 255, 255, 0.2);
 	--card-bg: rgba(255, 255, 255, 0.1);
 	--card-border: rgba(255, 255, 255, 0.75);
 	--card-shadow: rgba(0, 0, 0, 0.1);
@@ -9,7 +11,9 @@
 }
 
 .dark {
-	--first-section-grid-color: rgba(0, 0, 0, 0.05);
+	--nav-bg: rgba(0, 0, 0, 0.8);
+	--nav-shadow: rgba(255, 255, 255, 0.075);
+	--header-grid-color: rgba(0, 0, 0, 0.05);
 	--card-bg: rgba(0, 0, 0, 0.4);
 	--card-border: rgba(0, 0, 0, 0.75);
 	--card-shadow: rgba(255, 255, 255, 0.1);
@@ -49,13 +53,38 @@ article {
 	padding-bottom: 1.5rem;
 }
 
-/* First Section */
+/* Navigation Bar */
+nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--nav-bg);
+	backdrop-filter: blur(3px);
+	padding: 0.5rem 1.5rem 0.5rem 2rem;
+	height: 4rem;
+	box-shadow: 0 3px var(--nav-shadow);
+}
+
+/* TO BE REPLACED WITH LOGO */
+nav p {
+	font-family: "Roboto Mono", monospace;
+	font-size: 1.4rem;
+	font-weight: 600;
+	padding: 0;
+	margin: 0;
+}
+
+/* Header */
 header {
 	position: relative;
 	overflow: hidden;
 	background:
-	linear-gradient(90deg, var(--first-section-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
-	linear-gradient(var(--first-section-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(90deg, var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
+	linear-gradient(var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(var(--orange-3), var(--green-3)) center / cover no-repeat;
 	border-bottom: 5px solid var(--card-border);
 	padding: 0;
@@ -67,36 +96,29 @@ header {
 	body {
 		display: grid;
 		grid-template-columns: 325px 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+		"nav nav"
+		"header main"
+		"header footer";
 	}
 	
 	header {
-		position: fixed;
-		top: 0;
+		grid-area: header;
+		position: sticky;
+		top: 4rem;
 		left: 0;
 		width: 325px;
-		height: 100vh;
+		height: calc(100vh - 4rem);
 		border-bottom: none;
 		border-right: 5px solid var(--card-border);
 		overflow-y: auto;
-		grid-column: 1;
 	}
 	
-	main, footer {
-		 grid-column: 2;
-	}
+	nav { grid-area: nav; }
+	main { grid-area: main; }
+	footer { grid-area: footer; }
 	
-}
-
-/* TO BE REPLACED WITH LOGO */
-header .brand {
-	display: inline;
-	font-family: "Roboto Mono", monospace;
-	font-size: 1.4rem;
-	font-weight: 700;
-	color: var(--gray-12);
-	background: linear-gradient(90deg, var(--orange-5), var(--green-5)) no-repeat 0% 85% / 100% 30%;
-	padding: 0 0.25rem;
-	margin: 0;
 }
 
 /* tsParticles */
@@ -117,7 +139,7 @@ header .brand {
 .dark #tsParticlesLight { display: none; }
 .dark #tsParticlesDark { display: block; }
 
-.content {
+.about-me {
 	position: relative;
 	z-index: 2;
 }
@@ -125,11 +147,10 @@ header .brand {
 /* About Me */
 .about-me {
 	background-color: var(--card-bg);
-	letter-spacing: 0.025em;
 	border: 3px solid var(--card-border);
 	border-radius: 1rem;
 	box-shadow: 0 0 15px var(--card-shadow);
-	margin: 2rem 2rem 4rem 2rem;
+	margin: 3rem 2rem;
 	padding: 1rem 0.5rem;
 	transition:
 	background-color 0.3s ease-out,
