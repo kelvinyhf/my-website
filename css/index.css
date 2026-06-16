@@ -61,6 +61,32 @@ header {
 	padding: 0;
 }
 
+/* Responsive Web Design */
+@media (min-width: 768px) {
+	
+	body {
+		display: grid;
+		grid-template-columns: 325px 1fr;
+	}
+	
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 325px;
+		height: 100vh;
+		border-bottom: none;
+		border-right: 5px solid var(--card-border);
+		overflow-y: auto;
+		grid-column: 1;
+	}
+	
+	main, footer {
+		 grid-column: 2;
+	}
+	
+}
+
 /* TO BE REPLACED WITH LOGO */
 header .brand {
 	display: inline;
