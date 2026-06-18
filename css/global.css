@@ -1,8 +1,8 @@
 /* Reset Default Styles */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Initial Settings */
@@ -13,10 +13,10 @@ html {
 }
 
 a, input, button {
-	-webkit-tap-highlight-color: transparent;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 :focus {
@@ -29,22 +29,22 @@ a, input, button {
 
 /* Customize Light/Dark Mode Colors */
 :root {
-	--scroll-bar-thumb: #666;
-	--scroll-bar-thumb-hover: #444;
-	--clickable-hover-bg: rgba(0, 0, 0, 0.05);
-	--white-black: #fff;
+  --scroll-bar-thumb: #666;
+  --scroll-bar-thumb-hover: #444;
+  --clickable-hover-bg: rgba(0, 0, 0, 0.05);
+  --white-black: #fff;
 }
 
 .dark {
-	--scroll-bar-thumb: #ddd;
-	--scroll-bar-thumb-hover: #eee;
-	--clickable-hover-bg: rgba(255, 255, 255, 0.15);
-	--white-black: #000;
+  --scroll-bar-thumb: #ddd;
+  --scroll-bar-thumb-hover: #eee;
+  --clickable-hover-bg: rgba(255, 255, 255, 0.15);
+  --white-black: #000;
 }
 
 /* Default Margins */
 p, blockquote, ul, ol, li, label, input, button, select {
-	margin: 0.5rem 1.5rem;
+  margin: 0.5rem 1.5rem;
 }
 
 /* Scroll Bar */
@@ -68,17 +68,17 @@ p, blockquote, ul, ol, li, label, input, button, select {
 
 /* Body */
 body {
-	background-color: var(--white-black);
-	background-image: linear-gradient(var(--yellow-1) 0%, var(--yellow-1) 100%);
-	font-family: "Inter", sans-serif;
-	line-height: 1.6;
-	color: var(--gray-12);
-	min-width: 320px;
+  background-color: var(--white-black);
+  background-image: linear-gradient(var(--yellow-1) 0%, var(--yellow-1) 100%);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--gray-12);
+  min-width: 320px;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6, code {
-	font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 h1 { font-size: 1.4rem; }
@@ -91,14 +91,14 @@ p { font-size: 1rem; }
 ul { list-style: square; }
 
 blockquote {
-	border-left: 0.25rem solid var(--gray-6);
-	padding-left: 1rem;
-	color: var(--gray-11);
+  border-left: 0.25rem solid var(--gray-6);
+  padding-left: 1rem;
+  color: var(--gray-11);
 }
 
 /* Sections */
 section {
-	padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 /* Images */
@@ -139,29 +139,29 @@ a:visited:hover, a:visited:active {
 
 /* Theme Toggle */
 #theme-toggle {
-	cursor: pointer;
-	background: none;
-	border: none;
-	border-radius: 0.5rem;
-	padding: 0.5rem;
-	margin: 0;
-	transition: background-color 0.1s ease-out;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0;
+  transition: background-color 0.1s ease-out;
 }
 
 @media (hover: hover) {
-	#theme-toggle:hover {
-		background-color: var(--clickable-hover-bg);
-	}
+  #theme-toggle:hover {
+    background-color: var(--clickable-hover-bg);
+  }
 }
 
 @media (hover: none) {
-	#theme-toggle:active {
-		background-color: var(--clickable-hover-bg);
-	}
+  #theme-toggle:active {
+    background-color: var(--clickable-hover-bg);
+  }
 }
 
 #theme-toggle:focus-visible {
-	background-color: var(--clickable-hover-bg);
+  background-color: var(--clickable-hover-bg);
 }
 
 /* Light Mode */
@@ -174,18 +174,18 @@ a:visited:hover, a:visited:active {
 
 /* Footer */
 footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	background-color: var(--white-black);
-	border-top: 2px solid var(--gray-6);
-	margin-top: 1.5rem;
-	padding: 1rem;
-	padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white-black);
+  border-top: 2px solid var(--gray-6);
+  margin-top: 1.5rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
 }
 
 footer p {
-	font-size: 0.7rem;
-	color: var(--gray-11);
+  font-size: 0.7rem;
+  color: var(--gray-11);
 }
