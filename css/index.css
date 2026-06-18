@@ -42,7 +42,7 @@ h3 {
 }
 
 /* Highlights */
-.gray-hl {
+.orange-hl {
 	display: inline;
 	background: linear-gradient(var(--orange-4), var(--orange-4)) no-repeat 0% 100% / 100% 50%;
 	padding: 0 0.25rem;
@@ -87,6 +87,7 @@ header {
 	linear-gradient(var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
 	linear-gradient(var(--orange-3), var(--green-3)) center / cover no-repeat;
 	border-bottom: 5px solid var(--card-border);
+	scrollbar-width: none;
 	padding: 0;
 }
 

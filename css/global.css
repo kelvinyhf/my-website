@@ -24,17 +24,21 @@ a, input, button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--yellow-12);
+  outline: 2px solid var(--gray-12);	
 }
 
 /* Customize Light/Dark Mode Colors */
 :root {
+	--scroll-bar-thumb: #666;
+	--scroll-bar-thumb-hover: #444;
 	--clickable-hover-bg: rgba(0, 0, 0, 0.05);
 	--white-black: #fff;
 }
 
 .dark {
-	--clickable-hover-bg: rgba(255, 255, 255, 0.1);
+	--scroll-bar-thumb: #ddd;
+	--scroll-bar-thumb-hover: #eee;
+	--clickable-hover-bg: rgba(255, 255, 255, 0.15);
 	--white-black: #000;
 }
 
@@ -44,7 +48,23 @@ p, blockquote, ul, ol, li, label, input, button, select {
 }
 
 /* Scroll Bar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
 
+::-webkit-scrollbar-track {
+  background: var(--white-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bar-thumb-hover);
+}
 
 /* Body */
 body {
