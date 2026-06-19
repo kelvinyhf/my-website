@@ -1,3 +1,8 @@
+// Theme Toggle
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  localStorage.setItem('theme', document.documentElement.classList.toggle('dark') ? 'dark' : 'light');
+});
+
 // tsParticles
 if (window.tsParticles) {
   
