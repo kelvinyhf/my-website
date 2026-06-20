@@ -58,38 +58,38 @@
 <body ontouchstart="">
   
   <main>
-    <div class="chat-window">
-      
-      <!-- Chat Header -->
-      <header class="chat-header">
-        <div class="chat-avatar-container">
-          <img class="lg-1" src="assets/images/kelviny-avatar.png" width="40" height="40" alt="KelvinY's Avatar">
-        </div>
-        <div class="chat-name">
-          <h1>KelvinY</h1>
-          <span>Online</span>
-        </div>
-      </header>
-      
-      <!-- Chat Messages -->
-      <div id="chatMessages" class="chat-messages">
-        <div class="message kelviny">
-          <p>
-            Hi! I'm the digital version of KelvinY.
-            Feel free to ask me anything about him or just chat with me.
-          </p>
-        </div>
+    <!-- Chat Header -->
+    <header class="chat-header">
+      <div class="chat-avatar-container">
+        <img class="lg-1" src="assets/images/kelviny-avatar.png" width="40" height="40" alt="KelvinY's Avatar">
       </div>
-      
-      <!-- Chat Input -->
-      <div class="chat-input">
-        <input id="userInput" class="user-input" type="text" enterkeyhint="send">
-        <button id="sendBtn" class="send-btn">
-          <svg class="sm-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="var(--blue-1)" stroke="var(--blue-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z"/><path d="M6 12h16"/></svg>
-        </button>
+      <div class="chat-name">
+        <h1>KelvinY</h1>
+        <span>Online</span>
       </div>
-      
+      <a class="return-btn" aria-label="Return to home page." href="/index.html">
+        <svg class="md-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-11)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </a>
+    </header>
+    
+    <!-- Chat Messages -->
+    <div id="chatMessages" class="chat-messages">
+      <div class="message kelviny">
+        <p>
+          Hi! I'm the digital version of Kelvin.
+          Feel free to ask me anything about coding or just chat with me.
+        </p>
+      </div>
     </div>
+    
+    <!-- Chat Input -->
+    <div class="chat-input">
+      <textarea id="userInput" class="user-input" placeholder="Ask me anything..."></textarea>
+      <button id="sendBtn" class="send-btn">
+        <svg class="sm-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+      </button>
+    </div>
+    
   </main>
   
   <!-- JavaScript -->

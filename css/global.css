@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 
-a, input, button {
+a, input, textarea, button {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -73,7 +73,6 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: var(--gray-12);
-  min-width: 320px;
 }
 
 /* Typography */

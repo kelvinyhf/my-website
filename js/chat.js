@@ -54,6 +54,7 @@ sendBtn.addEventListener('click', async function() {
     userInput.value = userInput.placeholder;
   }
   else if (userInput.value.trim() === '') {
+    sendBtn.disabled = false;
     return;
   }
   
@@ -128,9 +129,25 @@ sendBtn.addEventListener('click', async function() {
   
 });
 
-// When Enter being pressed
+// When enter being pressed
 userInput.addEventListener('keydown', function(event) {
+  
+  // Check if composing
+  if (event.isComposing || event.keyCode === 229) return;
+  
   if (event.key === 'Enter') {
-    sendBtn.click();
+    // If is touch device
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      return;
+    } else {
+      // If PC "Shift + Enter"
+      if (event.shiftKey) {
+        return;
+      } else {
+        event.preventDefault();
+        sendBtn.click();
+      }
+    }
   }
+  
 });

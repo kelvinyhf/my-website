@@ -11,17 +11,18 @@
   --card-shadow: rgba(255, 255, 255, 0.1);
 }
 
-/* Chat */
-.chat-window {
+html, body {
+  height: 100svh;
+  overflow-y: hidden;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  height: 80vh;
-  background-color: var(--card-bg);
-  border: 3px solid var(--card-border);
-  border-radius: 1rem;
-  box-shadow: 0 0 10px var(--card-shadow);
-  margin: 2rem;
-  overflow: hidden;
+  height: 100%;
+  overflow-y: hidden;
 }
 
 /* Chat Header */
@@ -32,6 +33,12 @@
   padding: 0.75rem 2rem;
   background-color: var(--card-border);
   border-bottom: 2px solid var(--gray-4);
+}
+
+.return-btn {
+  padding: 0;
+  line-height: 0;
+  margin-left: auto;
 }
 
 .chat-avatar-container {
@@ -59,10 +66,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.chat-name h1, span {
-  margin: 0 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .chat-name h1 {
@@ -79,7 +83,10 @@
 .chat-messages {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 0;
   background-image: linear-gradient(var(--orange-2), var(--green-2));
   overflow-x: hidden;
   overflow-y: auto;
@@ -92,7 +99,9 @@
 
 .message {
   padding: 0.75rem 1rem;
-  margin: 1rem;
+  margin: 1rem 1.5rem;
+  overflow-wrap: break-word;
+  max-width: calc(100% - 4rem);
 }
 
 .message p {
@@ -104,7 +113,7 @@
   background-color: var(--orange-4);
   align-self: flex-start;
   border-radius: 1rem 1rem 1rem 0;
-  margin-right: 3rem;
+  margin-right: 4rem;
 }
 
 .message.user {
@@ -112,7 +121,7 @@
   background-color: var(--green-4);
   align-self: flex-end;
   border-radius: 1rem 1rem 0 1rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 
 /* Chat Input */
@@ -123,18 +132,21 @@
   gap: 1rem;
   flex-shrink: 0;
   background-color: var(--card-border);
-  padding: 1rem;
+  padding: 1.5rem;
   border-top: 2px solid var(--gray-3);
 }
 
 .user-input {
   flex-grow: 1;
   min-width: 3rem;
+  height: calc(2lh + 1rem);
   background-color: var(--gray-1);
-  color: var(--gray-12);
+  font-size: 0.85rem;
+  overflow-y: auto;
+  resize: none;
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--gray-6);
-  border-radius: 999px;
+  border-radius: 1rem;
   margin: 0;
   transition:
     border 0.15s ease-out,
@@ -154,9 +166,9 @@
   flex-shrink: 0;
   background-color: var(--green-9);
   border: none;
-  border-radius: 999px;
+  border-radius: 0.5rem;
   width: 2.25rem;
-  height: 2.25rem;
+  height: calc(2lh + 1rem);
   margin: 0;
   padding: 0;
 }

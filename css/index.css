@@ -70,7 +70,7 @@ nav {
 }
 
 /* TO BE REPLACED WITH LOGO */
-nav p {
+nav a {
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
   font-weight: 600;
