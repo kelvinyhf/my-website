@@ -115,6 +115,9 @@ nav a {
 
 /* Header */
 header {
+  display: flex;
+  justify-content: center;
+  align-items: start;
   position: relative;
   overflow: hidden;
   background:
@@ -122,8 +125,7 @@ header {
   linear-gradient(var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
   linear-gradient(var(--orange-3), var(--green-3)) center / cover no-repeat;
   border-bottom: 5px solid var(--card-border);
-  scrollbar-width: none;
-  padding: 0;
+  padding: 3rem 2rem;
 }
 
 /* Responsive Web Design */
@@ -144,11 +146,11 @@ header {
     position: sticky;
     top: 4rem;
     left: 0;
+    z-index: 998;
     width: 325px;
     height: calc(100vh - 4rem);
     border-bottom: none;
     border-right: 5px solid var(--card-border);
-    overflow-y: auto;
   }
   
   nav { grid-area: nav; }
@@ -182,11 +184,14 @@ header {
 
 /* About Me */
 .about-me {
+  flex: 1 1 0%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
   background-color: var(--card-bg);
   border: 3px solid var(--card-border);
   border-radius: 1rem;
   box-shadow: 0 0 15px var(--card-shadow);
-  margin: 3rem 2rem;
   padding: 1rem 0.5rem;
   transition:
   background-color 0.3s ease-out,
