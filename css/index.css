@@ -27,10 +27,6 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-h3 {
-  margin: 0.5rem 1.25rem;
-}
-
 .first-h2 {
   color: var(--orange-11);
   border-bottom: 3px solid var(--orange-7);
@@ -39,18 +35,6 @@ h3 {
 .second-h2 {
   color: var(--green-11);
   border-bottom: 3px solid var(--green-7);
-}
-
-/* Highlights */
-.orange-hl {
-  display: inline;
-  background: linear-gradient(var(--orange-4), var(--orange-4)) no-repeat 0% 100% / 100% 50%;
-  padding: 0 0.25rem;
-}
-
-/* Article */
-article {
-  padding-bottom: 1.5rem;
 }
 
 /* Navigation Bar */
@@ -217,6 +201,93 @@ h1 {
 .about-me p {
   color: var(--gray-12);
   font-weight: 500;
+}
+
+/* Timeline */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 2rem;
+  grid-template-areas:
+    "tl1 p1"
+    "tl2 p2"
+    "tl3 p3";
+}
+
+.tl1, .tl2, .tl3 {
+  justify-self: center;
+  width: 5px;
+  height: 100%;
+}
+
+.tl1 {
+  grid-area: tl1;
+  background-image: linear-gradient(var(--yellow-1) 0%, var(--orange-7) 10%, var(--orange-7) 90%, var(--yellow-1) 100%);
+}
+
+.tl2 {
+  grid-area: tl2;
+  background-image: linear-gradient(var(--yellow-1) 0%, var(--orange-7) 10%, var(--orange-7) 90%, var(--yellow-1) 100%);
+}
+
+.tl3 {
+  grid-area: tl3;
+  background-image: linear-gradient(var(--yellow-1) 0%, var(--orange-7) 10%, var(--orange-7) 90%, var(--yellow-1) 100%);
+}
+
+.p1, .p2, .p3 {
+  justify-self: center
+  align-self: center;
+  border: 3px solid var(--white-black);
+  border-radius: 1rem;
+  margin-right: 3rem;
+  margin-left: 0;
+  padding: 1rem;
+}
+
+.p1 p, .p2 p, .p3 p {
+  padding: 0;
+  margin: 0;
+}
+
+.p1 h3 {
+  display: inline-block;
+  background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
+  padding: 0 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.p1 {
+  grid-area: p1;
+  background-color: var(--blue-1);
+  box-shadow: 0 0 7px 2px var(--blue-a3);
+}
+
+.p2 h3 {
+  display: inline-block;
+  background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
+  padding: 0 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.p2 {
+  grid-area: p2;
+  background-color: var(--blue-1);
+  box-shadow: 0 0 7px 2px var(--blue-a3);
+}
+
+.p3 h3 {
+  display: inline-block;
+  background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
+  padding: 0 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.p3 {
+  grid-area: p3;
+  background-color: var(--blue-1);
+  box-shadow: 0 0 7px 2px var(--blue-a3);
 }
 
 /* Skill Card */
