@@ -67,9 +67,9 @@ sendBtn.addEventListener('click', async function() {
   updatePlaceholder()
   userInput.value = '';
   
-  // KelvinY is thinking...
+  // Kelvin is thinking...
   await sleepR(250, 750);
-  appendMessage('KelvinY is thinking...', 'kelviny');
+  appendMessage('Kelvin is thinking...', 'kelvin');
   
   try {
     
@@ -83,22 +83,22 @@ sendBtn.addEventListener('click', async function() {
     // Get the json
     const result = await response.json();
     
-    // KelvinY is not thinking anymore
-    if (chatMessages.lastChild.textContent === 'KelvinY is thinking...') {
+    // Kelvin is not thinking anymore
+    if (chatMessages.lastChild.textContent === 'Kelvin is thinking...') {
       chatMessages.removeChild(chatMessages.lastChild);
     }
     
     // Check if there's an error
     if (result.error) {
       chatHistory.pop();
-      appendMessage('Error (try): ' + result.error, 'kelviny');
+      appendMessage('Error (try): ' + result.error, 'kelvin');
       console.warn(result.error);
       return;
     }
     
     // Append message of AI
     const aiResponse = result.choices[0].message.content;
-    appendMessage(aiResponse, 'kelviny');
+    appendMessage(aiResponse, 'kelvin');
     chatHistory.push({ role: "assistant", content: aiResponse });
     
     // Remove first conversation if there's more than 20 conversations
@@ -112,13 +112,13 @@ sendBtn.addEventListener('click', async function() {
     // Delete the user message in the history
     chatHistory.pop();
     
-    // KelvinY cannot think anymore
-    if (chatMessages.lastChild.textContent === 'KelvinY is thinking...') {
+    // Kelvin cannot think anymore
+    if (chatMessages.lastChild.textContent === 'Kelvin is thinking...') {
       chatMessages.removeChild(chatMessages.lastChild);
     }
     
     // Append and log error
-    appendMessage('Error (catch): ' + error, 'kelviny');
+    appendMessage('Error (catch): ' + error, 'kelvin');
     console.error(error);
     
   }

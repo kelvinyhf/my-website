@@ -35,12 +35,6 @@ main {
   border-bottom: 2px solid var(--gray-4);
 }
 
-.return-btn {
-  padding: 0;
-  line-height: 0;
-  margin-left: auto;
-}
-
 .chat-avatar-container {
   position: relative;
   line-height: 0;
@@ -79,6 +73,30 @@ main {
   color: var(--gray-11);
 }
 
+.return-btn {
+  padding: 0.25rem;
+  line-height: 0;
+  margin-left: auto;
+  border-radius: 0.5rem;
+  transition: background-color 0.1s ease-out;
+}
+
+@media (hover: hover) {
+  .return-btn:hover {
+    background-color: var(--clickable-hover-bg);
+  }
+}
+
+@media (hover: none) {
+  .return-btn:active {
+    background-color: var(--clickable-hover-bg);
+  }
+}
+
+.return-btn:focus-visible {
+  background-color: var(--clickable-hover-bg);
+}
+
 /* Chat Messages */
 .chat-messages {
   display: flex;
@@ -109,7 +127,7 @@ main {
   margin: 0;
 }
 
-.message.kelviny {
+.message.kelvin {
   background-color: var(--orange-4);
   align-self: flex-start;
   border-radius: 1rem 1rem 1rem 0;
@@ -141,12 +159,13 @@ main {
   min-width: 3rem;
   height: calc(2lh + 1rem);
   background-color: var(--gray-1);
+  color: var(--gray-12);
   font-size: 0.85rem;
   overflow-y: auto;
   resize: none;
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--gray-6);
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   margin: 0;
   transition:
     border 0.15s ease-out,
@@ -166,7 +185,7 @@ main {
   flex-shrink: 0;
   background-color: var(--green-9);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   width: 2.25rem;
   height: calc(2lh + 1rem);
   margin: 0;
