@@ -6,8 +6,6 @@
   --card-bg: rgba(255, 255, 255, 0.1);
   --card-border: rgba(255, 255, 255, 0.75);
   --card-shadow: rgba(0, 0, 0, 0.1);
-  --card-hover-bg: rgba(255, 255, 255, 0.4);
-  --card-hover-shadow: rgba(0, 0, 0, 0.15);
 }
 
 .dark {
@@ -17,24 +15,15 @@
   --card-bg: rgba(0, 0, 0, 0.4);
   --card-border: rgba(0, 0, 0, 0.75);
   --card-shadow: rgba(255, 255, 255, 0.1);
-  --card-hover-bg: rgba(0, 0, 0, 0.6);
-  --card-hover-shadow: rgba(255, 255, 255, 0.15);
 }
 
 /* Titles */
 h2 {
-  padding: 0.5rem 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.first-h2 {
-  color: var(--orange-11);
-  border-bottom: 3px solid var(--orange-7);
-}
-
-.second-h2 {
-  color: var(--green-11);
-  border-bottom: 3px solid var(--green-7);
+  text-align: center;
+  color: var(--gray-12);
+  border-bottom: 3px solid var(--gray-10);
+  padding: 0.5rem 0;
+  margin: 0.5rem 5rem 2rem 5rem;
 }
 
 /* Navigation Bar */
@@ -183,14 +172,6 @@ header {
   transform 0.3s ease-out;
 }
 
-@media (hover: hover) {
-  .about-me:hover {
-    background-color: var(--card-hover-bg);
-    box-shadow: 0 0 20px var(--card-hover-shadow);
-    transform: scale(0.99);
-  }
-}
-
 h1 {
   font-size: 1.3rem;
   padding: 0 1.5rem 0.5rem 1.5rem;
@@ -207,8 +188,7 @@ h1 {
 .timeline-grid {
   display: grid;
   grid-template-columns: 4rem 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 2rem;
+  grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
     "tl1 p1"
     "tl2 p2"
@@ -223,26 +203,27 @@ h1 {
 
 .tl1 {
   grid-area: tl1;
-  background-image: linear-gradient(var(--yellow-1) 0%, var(--orange-7) 10%, var(--orange-7) 90%, var(--yellow-1) 100%);
+  background-image: linear-gradient(var(--blue-1) 0%, var(--blue-7) 25%);
+  box-shadow: 0 0 5px 3px var(--blue-a3);
 }
 
 .tl2 {
   grid-area: tl2;
-  background-image: linear-gradient(var(--yellow-1) 0%, var(--orange-7) 10%, var(--orange-7) 90%, var(--yellow-1) 100%);
+  background-color: var(--yellow-7);
+  box-shadow: 0 0 5px 3px var(--yellow-a3);
 }
 
 .tl3 {
   grid-area: tl3;
-  background-image: linear-gradient(var(--yellow-1) 0%, var(--orange-7) 10%, var(--orange-7) 90%, var(--yellow-1) 100%);
+  background-image: linear-gradient(var(--orange-7) 75%, var(--orange-1) 100%);
+  box-shadow: 0 0 5px 3px var(--orange-a3);
 }
 
 .p1, .p2, .p3 {
-  justify-self: center
-  align-self: center;
+  justify-self: center;
   border: 3px solid var(--white-black);
   border-radius: 1rem;
-  margin-right: 3rem;
-  margin-left: 0;
+  margin: 1.5rem 3rem 1.5rem 0;
   padding: 1rem;
 }
 
@@ -261,40 +242,40 @@ h1 {
 .p1 {
   grid-area: p1;
   background-color: var(--blue-1);
-  box-shadow: 0 0 7px 2px var(--blue-a3);
+  box-shadow: 0 0 0 3px var(--blue-a3);
 }
 
 .p2 h3 {
   display: inline-block;
-  background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
+  background: linear-gradient(var(--yellow-4), var(--yellow-4)) no-repeat 0% 100% / 100% 50%;
   padding: 0 0.25rem;
   margin-bottom: 1rem;
 }
 
 .p2 {
   grid-area: p2;
-  background-color: var(--blue-1);
-  box-shadow: 0 0 7px 2px var(--blue-a3);
+  background-color: var(--yellow-1);
+  box-shadow: 0 0 0 3px var(--yellow-a3);
 }
 
 .p3 h3 {
   display: inline-block;
-  background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
+  background: linear-gradient(var(--orange-4), var(--orange-4)) no-repeat 0% 100% / 100% 50%;
   padding: 0 0.25rem;
   margin-bottom: 1rem;
 }
 
 .p3 {
   grid-area: p3;
-  background-color: var(--blue-1);
-  box-shadow: 0 0 7px 2px var(--blue-a3);
+  background-color: var(--orange-1);
+  box-shadow: 0 0 0 3px var(--orange-a3);
 }
 
 /* Skill Card */
 .skill-cards-container {
   background-color: var(--gray-a2);
   border-radius: 1rem;
-  margin: 1rem;
+  margin: 1.5rem;
   padding: 0.25rem;
 }
 
