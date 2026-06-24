@@ -49,8 +49,8 @@ p, blockquote, ul, ol, li, label, input, button, select {
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -59,7 +59,7 @@ p, blockquote, ul, ol, li, label, input, button, select {
 
 ::-webkit-scrollbar-thumb {
   background: var(--scroll-bar-thumb);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
