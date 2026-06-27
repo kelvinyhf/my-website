@@ -95,11 +95,6 @@ blockquote {
   color: var(--gray-11);
 }
 
-/* Sections */
-section {
-  padding: 1rem 0;
-}
-
 /* Images */
 svg { display: block; }
 

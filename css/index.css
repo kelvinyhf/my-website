@@ -1,25 +1,42 @@
-/* Customize Light/Dark Mode Colors */
+/* Light and Dark Theme Variables */
 :root {
-  --nav-bg: rgba(255, 255, 255, 0.9);
-  --nav-shadow: rgba(0, 0, 0, 0.05);
-  --header-grid-color: rgba(255, 255, 255, 0.2);
-  --card-bg: rgba(255, 255, 255, 0.1);
-  --card-border: rgba(255, 255, 255, 0.75);
+  --nav-bg: rgba(255, 255, 255, 0.3);
+  --nav-shadow: rgba(0, 0, 0, 0.15);
+  
+  --header-grid-color: rgba(255, 255, 255, 0.1);
+  --kart-kid: url("/assets/images/kart-kid.png");
+  
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(255, 255, 255, 0.85);
   --card-shadow: rgba(0, 0, 0, 0.1);
+  
+  --skill-card-border: rgba(255, 255, 255, 0.75);
+  --skill-card-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
-  --nav-bg: rgba(0, 0, 0, 0.8);
-  --nav-shadow: rgba(255, 255, 255, 0.075);
-  --header-grid-color: rgba(0, 0, 0, 0.05);
-  --card-bg: rgba(0, 0, 0, 0.4);
-  --card-border: rgba(0, 0, 0, 0.75);
+  --nav-bg: rgba(0, 0, 0, 0.3);
+  --nav-shadow: rgba(255, 255, 255, 0.15);
+  
+  --header-grid-color: rgba(0, 0, 0, 0.025);
+  --kart-kid: url("/assets/images/kart-kid-dark.png");
+  
+  --card-bg: rgba(0, 0, 0, 0.65);
+  --card-border: rgba(0, 0, 0, 0.85);
   --card-shadow: rgba(255, 255, 255, 0.1);
+  
+  --skill-card-border: rgba(0, 0, 0, 0.75);
+  --skill-card-shadow: rgba(255, 255, 255, 0.1);
 }
 
 /* Body */
 body {
   min-width: 320px;
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
 }
 
 /* Titles */
@@ -28,23 +45,25 @@ h2 {
   color: var(--gray-12);
   border-bottom: 3px solid var(--gray-10);
   padding: 0.5rem 0;
-  margin: 0.5rem 5rem 2rem 5rem;
+  margin: 0.5rem 5rem 3rem 5rem;
 }
 
 /* Navigation Bar */
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 4rem;
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--nav-bg);
-  backdrop-filter: blur(3px);
+  border-radius: 0 0 1.5rem 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px var(--nav-shadow);
   padding: 0.5rem 1.5rem 0.5rem 2rem;
-  height: 4rem;
-  box-shadow: 0 3px var(--nav-shadow);
 }
 
 /* TO BE REPLACED WITH LOGO */
@@ -97,17 +116,30 @@ header {
   justify-content: center;
   align-items: start;
   position: relative;
+  min-height: 100svh;
   overflow: hidden;
   background:
+  linear-gradient(transparent 25%, var(--yellow-1) 100%) center / cover no-repeat,
   linear-gradient(90deg, var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
   linear-gradient(var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
-  linear-gradient(var(--orange-3), var(--green-3)) center / cover no-repeat;
-  border-bottom: 5px solid var(--card-border);
-  padding: 3rem 2rem;
+  linear-gradient(90deg, var(--orange-3), var(--green-3)) center / cover no-repeat;
+  border-bottom: 5px solid var(--white-black);
+  padding: 7rem 2rem 10rem 2rem;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: -2.5rem;
+  width: 15rem;
+  height: 15rem;
+  opacity: 0.5;
+  background: var(--kart-kid) no-repeat center / contain;
 }
 
 /* Responsive Web Design */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   
   body {
     display: grid;
@@ -127,7 +159,6 @@ header {
     z-index: 998;
     width: 325px;
     height: calc(100vh - 4rem);
-    border-bottom: none;
     border-right: 5px solid var(--card-border);
   }
   
@@ -135,7 +166,7 @@ header {
   main { grid-area: main; }
   footer { grid-area: footer; }
   
-}
+} */
 
 /* tsParticles */
 #tsParticlesLight, #tsParticlesDark {
@@ -162,10 +193,7 @@ header {
 
 /* About Me */
 .about-me {
-  flex: 1 1 0%;
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
   background-color: var(--card-bg);
   border: 3px solid var(--card-border);
   border-radius: 1rem;
@@ -211,7 +239,6 @@ h1 {
   z-index: 2;
   width: 5px;
   height: 100%;
-  clip-path: inset(0 -99px 0 -99px);
 }
 
 /* Start of Timeline */ 
@@ -402,10 +429,9 @@ h1 {
 }
 
 .skill-card {
-  background-color: var(--card-bg);
-  border: 3px solid var(--card-border);
+  border: 3px solid var(--skill-card-border);
   border-radius: 1rem;
-  box-shadow: 0 4px 0 var(--card-shadow);
+  box-shadow: 0 4px 0 var(--skill-card-shadow);
   padding: 1rem 1.5rem;
   margin: 1.5rem 1rem;
   transition:
@@ -415,7 +441,7 @@ h1 {
 
 @media (hover: hover) {
   .skill-card:hover {
-    box-shadow: 0 1px 0 var(--card-shadow);
+    box-shadow: 0 1px 0 var(--skill-card-shadow);
     transform: translateY(3px);
   }
 }
@@ -545,7 +571,6 @@ footer {
   text-align: center;
   background-color: var(--white-black);
   border-top: 2px solid var(--gray-6);
-  margin-top: 1.5rem;
   padding: 1rem;
   padding-bottom: 2rem;
 }

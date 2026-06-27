@@ -2,23 +2,7 @@
 const chatMessages = document.getElementById('chatMessages');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
-const placeholders = [
-  "How did you learn to code?",
-  "What are your skills?",
-  "What games do you play?",
-  "How do you relax?",
-  "What are your favorite foods?"
-];
 let chatHistory = [];
-
-// Update placeholder
-function updatePlaceholder() {
-  const randomIndex = Math.floor(Math.random() * placeholders.length);
-  userInput.placeholder = placeholders[randomIndex];
-}
-
-// Initial placeholder
-updatePlaceholder()
 
 // Create message div and p
 function appendMessage(message, sender) {
@@ -64,7 +48,6 @@ sendBtn.addEventListener('click', async function() {
   
   // Append message of user
   appendMessage(userText, 'user');
-  updatePlaceholder()
   userInput.value = '';
   
   // Kelvin is thinking...
