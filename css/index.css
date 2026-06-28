@@ -6,7 +6,7 @@
   --header-grid-color: rgba(255, 255, 255, 0.1);
   --kart-kid: url("/assets/images/kart-kid.png");
   
-  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-bg: rgba(255, 255, 255, 0.4);
   --card-border: rgba(255, 255, 255, 0.85);
   --card-shadow: rgba(0, 0, 0, 0.1);
   
@@ -21,7 +21,7 @@
   --header-grid-color: rgba(0, 0, 0, 0.025);
   --kart-kid: url("/assets/images/kart-kid-dark.png");
   
-  --card-bg: rgba(0, 0, 0, 0.65);
+  --card-bg: rgba(0, 0, 0, 0.4);
   --card-border: rgba(0, 0, 0, 0.85);
   --card-shadow: rgba(255, 255, 255, 0.1);
   
@@ -66,8 +66,7 @@ nav {
   padding: 0.5rem 1.5rem 0.5rem 2rem;
 }
 
-/* TO BE REPLACED WITH LOGO */
-nav a {
+nav p {
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
   font-weight: 600;
@@ -124,7 +123,15 @@ header {
   linear-gradient(var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
   linear-gradient(90deg, var(--orange-3), var(--green-3)) center / cover no-repeat;
   border-bottom: 5px solid var(--white-black);
-  padding: 7rem 2rem 10rem 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  
+  /* Base 3rem + Navbar 4rem */
+  padding-top: 7rem;
+  
+  /* Base 3rem + Kart Kid 7rem */
+  padding-bottom: 10rem;
+  
 }
 
 header::before {
@@ -198,11 +205,8 @@ header::before {
   border: 3px solid var(--card-border);
   border-radius: 1rem;
   box-shadow: 0 0 15px var(--card-shadow);
+  backdrop-filter: blur(5px);
   padding: 1rem 0.5rem;
-  transition:
-  background-color 0.3s ease-out,
-  box-shadow 0.3s ease-out,
-  transform 0.3s ease-out;
 }
 
 h1 {
@@ -215,6 +219,35 @@ h1 {
 .about-me p {
   color: var(--gray-12);
   font-weight: 500;
+}
+
+/* Chat */
+.chat {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.5rem;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--card-bg);
+  border: 3px solid var(--card-border);
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 0 0 15px var(--card-shadow);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  line-height: 0;
+  max-height: 4rem;
+}
+
+.chat:is(:link, :visited, :hover, :active, :visited:hover, :visited:active) {
+  color: var(--gray-12);
+  text-decoration: none;
+}
+
+.chat p {
+  margin: 0;
 }
 
 /* Timeline */
