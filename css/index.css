@@ -10,6 +10,8 @@
   --card-border: rgba(255, 255, 255, 0.85);
   --card-shadow: rgba(0, 0, 0, 0.1);
   
+  --chat-shadow: rgba(0, 0, 0, 0.05);
+  
   --skill-card-border: rgba(255, 255, 255, 0.75);
   --skill-card-shadow: rgba(0, 0, 0, 0.1);
 }
@@ -24,6 +26,8 @@
   --card-bg: rgba(0, 0, 0, 0.4);
   --card-border: rgba(0, 0, 0, 0.85);
   --card-shadow: rgba(255, 255, 255, 0.1);
+  
+  --chat-shadow: rgba(255, 255, 255, 0.05);
   
   --skill-card-border: rgba(0, 0, 0, 0.75);
   --skill-card-shadow: rgba(255, 255, 255, 0.1);
@@ -230,15 +234,15 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   background-color: var(--card-bg);
   border: 3px solid var(--card-border);
   border-radius: 1rem 0 0 1rem;
-  box-shadow: 0 0 15px var(--card-shadow);
+  box-shadow: 0 0 15px var(--chat-shadow);
   backdrop-filter: blur(5px);
   padding: 0.5rem 1rem;
   line-height: 0;
   max-height: 4rem;
+  opacity: 0.8;
 }
 
 .chat:is(:link, :visited, :hover, :active, :visited:hover, :visited:active) {
@@ -246,8 +250,8 @@ h1 {
   text-decoration: none;
 }
 
-.chat p {
-  margin: 0;
+.chat:is(:hover, :active, :focus) {
+  opacity: 1;
 }
 
 /* Timeline */

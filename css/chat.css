@@ -1,14 +1,11 @@
-/* Customize Light/Dark Mode Colors */
+/* Light and Dark Theme Variables */
 :root {
-  --card-bg: rgba(255, 255, 255, 0.1);
-  --card-border: rgba(255, 255, 255, 0.75);
-  --card-shadow: rgba(0, 0, 0, 0.1);
+  --bg-color: rgba(255, 255, 255, 0.75);
+  --dot-color: var(--green-9);
 }
 
 .dark {
-  --card-bg: rgba(0, 0, 0, 0.4);
-  --card-border: rgba(0, 0, 0, 0.75);
-  --card-shadow: rgba(255, 255, 255, 0.1);
+  --bg-color: rgba(0, 0, 0, 0.75);
 }
 
 html, body {
@@ -31,7 +28,7 @@ main {
   align-items: center;
   flex-shrink: 0;
   padding: 0.75rem 2rem;
-  background-color: var(--card-border);
+  background-color: var(--bg-color);
   border-bottom: 2px solid var(--gray-4);
 }
 
@@ -51,7 +48,7 @@ main {
   right: -5%;
   width: 25%;
   height: 25%;
-  background-color: var(--green-9);
+  background-color: var(--dot-color);
   border: 3px solid var(--gray-1);
   border-radius: 50%;
 }
@@ -144,14 +141,38 @@ main {
 
 /* Chat Input */
 .chat-input {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Energy Bar */
+.energy-bar-container {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--gray-4);
+}
+
+.energy-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--green-5);
+  transition: width 0.5s ease-out;
+}
+
+/* Input */
+.input-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  flex-shrink: 0;
-  background-color: var(--card-border);
+  background-color: var(--bg-color);
   padding: 1.5rem;
-  border-top: 2px solid var(--gray-3);
 }
 
 .user-input {

@@ -2,9 +2,14 @@
 const chatMessages = document.getElementById('chatMessages');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
+let isThinking = false;
 let chatHistory = [];
 
-// Create message div and p
+// Sleep functions
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const sleepR = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1)) + min));
+
+// Append message function
 function appendMessage(message, sender) {
   const messageDiv = document.createElement('div');
   const messageP = document.createElement('p');
@@ -22,25 +27,74 @@ function appendMessage(message, sender) {
   
 }
 
-// Sleep functions
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-const sleepR = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1)) + min));
+// Update status
+const status = document.getElementById('status');
+const energyBar = document.getElementById('energyBar');
+const maxEnergy = 5;
+let energy = sessionStorage.getItem('energy') !== null ? parseInt(sessionStorage.getItem('energy')) : maxEnergy;
+let counter = sessionStorage.getItem('counter') !== null ? parseInt(sessionStorage.getItem('counter')) : '0';
+
+// Regenerate energy
+for (let i = 0; i < counter; i++) {
+  if (energy < 5) energy++; else break;
+}
+sessionStorage.setItem('counter', '0');
+
+// Update status function
+function updateStatus() {
+  
+  // Update energy in stroage
+  sessionStorage.setItem('energy', energy);
+  
+  // Update energy bar width
+  const width = (energy / maxEnergy) * 100;
+  energyBar.style.width = `${width}%`;
+  
+  if (energy <= 0) {
+    
+    // Disable things
+    status.textContent = 'Offline';
+    document.documentElement.style.setProperty('--dot-color', 'var(--gray-9)');
+    userInput.placeholder = 'Kelvin is gone for a while...';
+    sendBtn.disabled = true;
+    
+  } else {
+    
+    // Enable things
+    status.textContent = 'Online';
+    document.documentElement.style.setProperty('--dot-color', 'var(--green-9)');
+    userInput.placeholder = 'Ask me anything...';
+    
+    if (isThinking) {
+      sendBtn.disabled = true;
+    } else {
+      sendBtn.disabled = false;
+    }
+    
+  }
+  
+}
+
+// Initial status
+updateStatus()
 
 // When sendbtn being clicked 
 sendBtn.addEventListener('click', async function() {
   
-  // Check if button is disabled
-  if (sendBtn.disabled) { return; }
-  sendBtn.disabled = true;
+  if (sendBtn.disabled || isThinking || energy <= 0) { return; }
   
   // Check if nothing or only spaces is typed
   if (userInput.value === '') {
     userInput.value = userInput.placeholder;
   }
   else if (userInput.value.trim() === '') {
-    sendBtn.disabled = false;
     return;
   }
+  
+  // Energy -1
+  isThinking = true;
+  energy--; 
+  updateStatus();
   
   // Store userInput
   const userText = userInput.value.trim();
@@ -73,10 +127,17 @@ sendBtn.addEventListener('click', async function() {
     
     // Check if there's an error
     if (result.error) {
+      
+      // Pop the message, append and log the error
       chatHistory.pop();
-      appendMessage('Error (try): ' + result.error, 'kelvin');
+      appendMessage('Something went wrong, please try again.', 'kelvin');
       console.warn(result.error);
+      
+      // Disable thinking and update status
+      isThinking = false;
+      updateStatus();
       return;
+      
     }
     
     // Append message of AI
@@ -101,14 +162,15 @@ sendBtn.addEventListener('click', async function() {
     }
     
     // Append and log error
-    appendMessage('Error (catch): ' + error, 'kelvin');
+    appendMessage('Something went wrong, please try again.', 'kelvin');
     console.error(error);
     
   }
   
-  // Enable the send button
+  // Disable thinking and update status
   await sleep(500);
-  sendBtn.disabled = false;
+  isThinking = false;
+  updateStatus();
   
 });
 
@@ -134,3 +196,11 @@ userInput.addEventListener('keydown', function(event) {
   }
   
 });
+
+// Energy +1
+setInterval(() => {
+  if (energy < maxEnergy) {
+    energy++;
+    updateStatus();
+  }
+}, 20000);
