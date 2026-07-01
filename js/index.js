@@ -12,11 +12,11 @@ if (window.tsParticles) {
     options: {
       fullScreen: { enable: false },
       particles: {
-        number: { value: 15 },
+        number: { value: 20 },
         shape: { type: 'square' },
         color: { value: '#ffffff' },
-        opacity: { value: 0.75 },
-        size: { value: { min: 3, max: 6 } },
+        opacity: { value: 0.7 },
+        size: { value: { min: 4, max: 8 } },
         move: {
           enable: true,
           speed: 2,
@@ -33,11 +33,11 @@ if (window.tsParticles) {
     options: {
       fullScreen: { enable: false },
       particles: {
-        number: { value: 15 },
+        number: { value: 20 },
         shape: { type: 'square' },
-        color: { value: '#111111' },
-        opacity: { value: 0.75 },
-        size: { value: { min: 3, max: 6 } },
+        color: { value: '#000000' },
+        opacity: { value: 0.7 },
+        size: { value: { min: 4, max: 8 } },
         move: {
           enable: true,
           speed: 2,
