@@ -3,6 +3,29 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   localStorage.setItem('theme', document.documentElement.classList.toggle('dark') ? 'dark' : 'light');
 });
 
+// Fade In Effect
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.35
+  };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  const hiddenElements = document.querySelectorAll(".fade-in");
+  hiddenElements.forEach(el => observer.observe(el));
+  
+});
+
 // tsParticles
 if (window.tsParticles) {
   
