@@ -78,7 +78,14 @@ nav {
   padding: 0.5rem 1.5rem 0.5rem 2rem;
 }
 
-nav p {
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand p {
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
   font-weight: 600;
@@ -86,6 +93,7 @@ nav p {
   margin: 0;
 }
 
+/* Nav links */
 .nav-links {
   display: none;
   list-style: none;
