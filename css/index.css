@@ -1,7 +1,9 @@
 /* Light and Dark Theme Variables */
 :root {
+  
   --nav-bg: rgba(255, 255, 255, 0.3);
   --nav-shadow: rgba(0, 0, 0, 0.15);
+  --nav-logo-color: #424242;
   
   --header-grid-color: rgba(255, 255, 255, 0.1);
   --kart-kid: url("/assets/images/kart-kid.png");
@@ -14,11 +16,16 @@
   
   --skill-card-border: rgba(255, 255, 255, 0.75);
   --skill-card-shadow: rgba(0, 0, 0, 0.1);
+  
+  --footer-shadow: rgba(0, 0, 0, 0.1);
+  
 }
 
 .dark {
+  
   --nav-bg: rgba(0, 0, 0, 0.3);
   --nav-shadow: rgba(255, 255, 255, 0.15);
+  --nav-logo-color: #d1d1d1;
   
   --header-grid-color: rgba(0, 0, 0, 0.025);
   --kart-kid: url("/assets/images/kart-kid-dark.png");
@@ -31,6 +38,9 @@
   
   --skill-card-border: rgba(0, 0, 0, 0.75);
   --skill-card-shadow: rgba(255, 255, 255, 0.1);
+  
+  --footer-shadow: rgba(255, 255, 255, 0.1);
+  
 }
 
 /* Body */
@@ -563,15 +573,18 @@ header::before {
   font-weight: 500;
 }
 
-.skill-card p {
-  margin: 0.5rem 0;
+.skill-card > p {
+  color: var(--gray-12);
+  margin: 1rem 0.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--gray-a4);
 }
 
 /* Skill Card Titles */
-.html-title { color: var(--red-12); }
-.css-title { color: var(--blue-12); }
-.js-title { color: var(--yellow-12); }
-.figma-title { color: var(--green-12); }
+#html-title { color: var(--red-12); }
+#css-title { color: var(--blue-12); }
+#js-title { color: var(--yellow-12); }
+#figma-title { color: var(--green-12); }
 
 /* Progress Bar */
 .progress-container {
@@ -614,7 +627,7 @@ header::before {
 .skill-card.css .progress-bar {
   background-image: linear-gradient(90deg, var(--blue-9), var(--blue-8));
   box-shadow: 0 0 5px var(--blue-a6);
-  width: 50%;
+  width: 60%;
 }
 
 .skill-card.js { background-color: var(--yellow-a1); }
@@ -668,9 +681,9 @@ footer {
   align-items: center;
   text-align: center;
   background-color: var(--white-black);
-  border-top: 2px solid var(--gray-6);
-  padding: 1rem;
-  padding-bottom: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 0 10px var(--footer-shadow);
 }
 
 footer p {

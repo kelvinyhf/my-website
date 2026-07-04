@@ -20,22 +20,26 @@
 
   <!-- SEO Meta Tags -->
   <title>KelvinY's Website</title>
-  <meta name="description" content="FILL">
+  <meta name="description" content="My personal website built with vanilla HTML, CSS, and JavaScript.">
   <meta name="author" content="KelvinY">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://kelviny.pages.dev/">
   
   <!-- Open Graph -->
   <meta property="og:title" content="KelvinY's Website">
-  <meta property="og:description" content="FILL">
+  <meta property="og:description" content="My personal website built with vanilla HTML, CSS, and JavaScript.">
   <meta property="og:image" content="IMAGE">
   <meta property="og:url" content="https://kelviny.pages.dev/">
   <meta property="og:type" content="website">
-
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KelvinY's Website">
+  <meta name="twitter:description" content="My personal website built with vanilla HTML, CSS, and JavaScript.">
+  <meta name="twitter:image" content="IMAGE">
+  
   <!-- iOS Optimization -->
-  <meta name="theme-color" content="COLOR">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="format-detection" content="telephone=no">
 
   <!-- External Files -->
@@ -48,11 +52,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap">
   
   <!-- Libraries -->
-  <link rel="stylesheet" href="assets/libraries/radix-colors.css">
+  <link rel="stylesheet" href="/assets/libraries/radix-colors.css">
   
   <!-- CSS -->
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/index.css">
   
 </head>
 <body ontouchstart="">
@@ -60,7 +64,7 @@
   <!-- Navigation Bar -->
   <nav>
     <div class="brand">
-      <svg aria-hidden="true" class="md-2" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none"><path d="M32.0813 96.5972C32.1559 96.1221 32.1671 95.66 32.1075 95.1828C26.5555 50.7619 6.48271 -10.1747 74.1271 55.1664C75.246 56.2473 76.8731 56.8181 78.413 56.5967C98.9031 53.6516 100.965 53.6509 120.4 57.2432C122.224 57.5803 124.093 56.8953 125.283 55.4722C136.793 41.701 195.675 -24.576 167.399 96.518C167.243 97.1889 167.208 97.9118 167.309 98.5933C168.365 105.711 173.328 148.734 141.942 165.151C141.729 165.263 141.526 165.386 141.328 165.522C129.491 173.697 97.6543 181.261 60.4624 167.014C30.9354 153.64 29.1961 114.961 32.0813 96.5972Z" stroke="var(--gray-12)" stroke-width="20"/></svg>
+      <svg aria-hidden="true" class="md-2" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="var(--nav-logo-color)" stroke-width="20"><path d="M32.0813 96.5972C32.1559 96.1221 32.1671 95.66 32.1075 95.1828C26.5555 50.7619 6.48271 -10.1747 74.1271 55.1664C75.246 56.2473 76.8731 56.8181 78.413 56.5967C98.9031 53.6516 100.965 53.6509 120.4 57.2432C122.224 57.5803 124.093 56.8953 125.283 55.4722C136.793 41.701 195.675 -24.576 167.399 96.518C167.243 97.1889 167.208 97.9118 167.309 98.5933C168.365 105.711 173.328 148.734 141.942 165.151C141.729 165.263 141.526 165.386 141.328 165.522C129.491 173.697 97.6543 181.261 60.4624 167.014C30.9354 153.64 29.1961 114.961 32.0813 96.5972Z"/></svg>
       <p>KelvinY</p>
     </div>
     <ul class="nav-links">
@@ -80,7 +84,7 @@
     <div id="tsParticlesDark"></div>
     
     <!-- About Me -->
-    <section class="about-me container">
+    <section class="about-me container fade-in">
       
       <h1>About Me</h1>
       <p class="intro">
@@ -116,7 +120,7 @@
     </section>
     
     <!-- Chat -->
-    <a class="chat" href="/chat.html">
+    <a class="chat" href="/chat.html" aria-label="Chat with the digital version of Kelvin (AI).">
       <svg aria-hidden="true" class="sm-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-12)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
     </a>
     
@@ -138,7 +142,7 @@
             I wrote my first line of code <code>print("Hello world!")</code> in Roblox Studio back in 2024, marking the start of my coding journey.
             In that year, I tried hard to learn Luau and create my first game in Roblox, but the dream didn't come true.
             All my ideas were either too boring or too hard to make.
-            I spent almost a whole year making "air".
+            I spent almost a whole year making nothing.
             After a few weeks of consideration, I finally decided to quit game development.
           </p>
         </article>
@@ -148,10 +152,10 @@
         <article class="p2 fade-in">
           <h3 data-time="2026-02-05" data-year="2026">The True Start</h3>
           <p>
-            During that month, I tried many different languages and engines, such as Python and LÖVE, hoping to find one which I actually liked.
+            After I quit game development, I tried many different languages and engines, such as Python and LÖVE, hoping to find one which I actually liked.
             Eventually, I got into web development and started to learn about front-end.
-            I thought all my time spent on Roblox Studio was wasted, since there was clearly no relationship between websites and Roblox Games.
-            However, it was not the case, it made me become more familiar with code, so I could learn front-end better and faster.
+            I thought all my time spent on Roblox Studio was wasted, since there was no relationship between websites and Roblox Games.
+            However, it was not the case, it helped me become more familiar with coding, so I could learn front-end better and faster.
           </p>
         </article>
         
@@ -179,53 +183,53 @@
         <!-- HTML -->
         <div class="skill-card html fade-in" role="group" aria-labelledby="html-title">
           <div class="skill-card-header">
-            <img class="lg-2" src="assets/devicon/html5.png" width="44" height="44" alt="">
-            <h3 class="html-title">HTML</h3>
+            <img class="lg-2" src="/assets/devicon/html5.png" width="44" height="44" alt="">
+            <h3 id="html-title">HTML</h3>
           </div>
           <div class="progress-container">
             <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p>85%</p>
+            <p aria-hidden="true">85%</p>
           </div>
-          <p>This is a paragraph.</p>
+          <p>Proficient in writing clean, semantic, and SEO-friendly markup to ensure solid web structures.</p>
         </div>
         
         <!-- CSS -->
         <div class="skill-card css fade-in" role="group" aria-labelledby="css-title">
           <div class="skill-card-header">
-            <img class="lg-2" src="assets/devicon/css3.png" width="44" height="44" alt="">
-            <h3 class="css-title">CSS</h3>
+            <img class="lg-2" src="/assets/devicon/css3.png" width="44" height="44" alt="">
+            <h3 id="css-title">CSS</h3>
           </div>
           <div class="progress-container">
-            <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p>50%</p>
+            <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div></div>
+            <p aria-hidden="true">60%</p>
           </div>
-          <p>This is a paragraph.</p>
+          <p>Capable of crafting responsive layouts, smooth animations, and dynamic dark mode styling.</p>
         </div>
         
         <!-- JavaScript -->
         <div class="skill-card js fade-in" role="group" aria-labelledby="js-title">
           <div class="skill-card-header">
-            <img class="lg-2" src="assets/devicon/javascript.png" width="44" height="44" alt="">
-            <h3 class="js-title">JavaScript</h3>
+            <img class="lg-2" src="/assets/devicon/javascript.png" width="44" height="44" alt="">
+            <h3 id="js-title">JavaScript</h3>
           </div>
           <div class="progress-container">
             <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p>10%</p>
+            <p aria-hidden="true">10%</p>
           </div>
-          <p>This is a paragraph.</p>
+         <p>Currently expanding my skills in DOM manipulation, asynchronous logic, and modern ES6+ features.</p>
         </div>
         
         <!-- Figma -->
         <div class="skill-card figma fade-in" role="group" aria-labelledby="figma-title">
           <div class="skill-card-header">
-            <img class="lg-2" src="assets/devicon/figma.png" width="44" height="44" alt="">
-            <h3 class="figma-title">Figma</h3>
+            <img class="lg-2" src="/assets/devicon/figma.png" width="44" height="44" alt="">
+            <h3 id="figma-title">Figma</h3>
           </div>
           <div class="progress-container">
             <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p>30%</p>
+            <p aria-hidden="true">30%</p>
           </div>
-          <p>This is a paragraph.</p>
+          <p>Experienced in wireframing and prototyping UI designs before transforming them into functional code.</p>
         </div>
         
       </div>
@@ -241,16 +245,16 @@
       Copyright &copy; 2026 KelvinY
     </p>
     <div class="social-links">
-      <a aria-label="GitHub Profile" href="https://github.com/kelvinyhf" target="_blank"><svg class="sm-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg></a>
-      <a aria-label="CodePen Proflie" href="https://codepen.io/kelvinyhf" target="_blank"><svg class="sm-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 15l9 6l9 -6l-9 -6l-9 6" /><path d="M3 9l9 6l9 -6l-9 -6l-9 6" /><path d="M3 9l0 6" /><path d="M21 9l0 6" /><path d="M12 3l0 6" /><path d="M12 15l0 6" /></svg></a>
-      <a aria-label="Discord Proflie" href="https://discord.com/users/1083677178669039706" target="_blank"><svg class="sm-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" /><path d="M7 16.5c3.5 1 6.5 1 10 0" /></svg></a>
+      <a aria-label="GitHub Profile" href="https://github.com/kelvinyhf" target="_blank" rel="noopener noreferrer"><svg class="sm-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg></a>
+      <a aria-label="CodePen Proflie" href="https://codepen.io/kelvinyhf" target="_blank" rel="noopener noreferrer"><svg class="sm-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 15l9 6l9 -6l-9 -6l-9 6" /><path d="M3 9l9 6l9 -6l-9 -6l-9 6" /><path d="M3 9l0 6" /><path d="M21 9l0 6" /><path d="M12 3l0 6" /><path d="M12 15l0 6" /></svg></a>
+      <a aria-label="Discord Proflie" href="https://discord.com/users/1083677178669039706" target="_blank" rel="noopener noreferrer"><svg class="sm-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" /><path d="M7 16.5c3.5 1 6.5 1 10 0" /></svg></a>
     </div>
   </footer>
   
   <!-- JavaScript -->
-  <script src="assets/libraries/tsparticles.bundle.min.js"></script>
-  <script src="js/global.js"></script>
-  <script src="js/index.js"></script>
+  <script src="/assets/libraries/tsparticles.bundle.min.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/index.js"></script>
 
 </body>
 </html>
