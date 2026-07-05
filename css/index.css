@@ -180,8 +180,10 @@ nav {
 /* Header */
 header {
   display: flex;
-  justify-content: center;
-  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
   position: relative;
   min-height: 100svh;
   overflow: hidden;
@@ -191,15 +193,7 @@ header {
   linear-gradient(var(--header-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
   linear-gradient(90deg, var(--orange-3), var(--green-3)) center / cover no-repeat;
   border-bottom: 5px solid var(--white-black);
-  padding-right: 2rem;
-  padding-left: 2rem;
-  
-  /* Base 3rem + Navbar 4rem */
-  padding-top: 7rem;
-  
-  /* Base 3rem + Kart Kid 7rem */
-  padding-bottom: 10rem;
-  
+  padding: 7rem 0 2rem 0;
 }
 
 header::before {
@@ -231,7 +225,7 @@ header::before {
 .dark #tsParticlesLight { display: none; }
 .dark #tsParticlesDark { display: block; }
 
-.about-me {
+.about-me, .tabs{
   position: relative;
   z-index: 2;
 }
@@ -244,6 +238,7 @@ header::before {
   border-radius: 1rem;
   box-shadow: 0 0 15px var(--card-shadow);
   backdrop-filter: blur(5px);
+  width: calc(100% - 4rem);
   padding: 1rem 0.5rem;
 }
 
@@ -299,30 +294,72 @@ header::before {
 .tag.blue p { color: var(--blue-11); }
 .tag.blue svg { stroke: var(--blue-9); }
 
-/* Chat */
-.chat {
-  position: absolute;
-  z-index: 2;
-  bottom: 1.5rem;
-  right: 0;
+/* Tabs */
+.tabs {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Source Code and Chat With Me */
+.source-code, .chat-with-me {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.75rem;
   background-color: var(--card-bg);
   border: 3px solid var(--card-border);
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 10px 0 0 10px;
   box-shadow: 0 0 15px var(--chat-shadow);
   backdrop-filter: blur(5px);
-  padding: 0.75rem 1rem;
-  line-height: 0;
-  max-height: 4rem;
-  opacity: 0.75;
+  padding: 0.5rem 0.75rem;
+  line-height: normal;
+  opacity: 0.85;
+  transition: color 0.2s ease-out, opacity 0.2s ease-out;
 }
 
-/* Disable default link style */
-.chat:is(:link, :visited, :hover, :focus, :active) {
+.source-code svg, .chat-with-me svg {
+  transition: stroke 0.2s ease-out;
+}
+
+.source-code p, .chat-with-me p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Clear default style */
+.source-code:is(:link, :visited, :focus), .chat-with-me:is(:link, :visited, :focus) {
   color: var(--gray-12);
   text-decoration: none;
+}
+
+@media (hover: hover) {
+  
+  .source-code:is(:hover, :visited:hover), .chat-with-me:is(:hover, :visited:hover) {
+    color: var(--blue-9);
+    opacity: 1;
+  }
+  
+  .source-code:is(:hover, :visited:hover) svg, .chat-with-me:is(:hover, :visited:hover) svg {
+    stroke: var(--blue-11);
+  }
+  
+}
+
+@media (hover: none) {
+  
+  .source-code:is(:active, :visited:active), .chat-with-me:is(:active, :visited:active) {
+    color: var(--blue-9);
+    opacity: 1;
+  }
+  
+  .source-code:is(:active, :visited:active) svg, .chat-with-me:is(:active, :visited:active) svg {
+    stroke: var(--blue-11);
+  }
+  
 }
 
 /* Timeline */

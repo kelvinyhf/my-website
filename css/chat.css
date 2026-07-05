@@ -34,7 +34,7 @@ main {
 
 .chat-avatar-container {
   position: relative;
-  line-height: 0;
+  line-height: normal;
 }
 
 .chat-avatar-container img {
@@ -72,7 +72,7 @@ main {
 
 .return-btn {
   padding: 0.25rem;
-  line-height: 0;
+  line-height: normal;
   margin-left: auto;
   border-radius: 0.5rem;
   transition: background-color 0.1s ease-out;
