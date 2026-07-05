@@ -130,3 +130,20 @@ a:visited:hover, a:visited:active {
   color: var(--iris-12);
   text-decoration: underline;
 }
+
+/* Fade In Effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease-out, transform 0.75s ease-out;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { transform: none; }
+  .fade-in.is-visible { transform: none; }
+}
