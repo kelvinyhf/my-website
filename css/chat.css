@@ -183,7 +183,7 @@ main {
   font-family: "Inter", sans-serif;
   background-color: var(--gray-1);
   color: var(--gray-12);
-  font-size: 0.85rem;
+  font-size: 1rem;
   overflow-y: auto;
   resize: none;
   padding: 0.5rem 0.75rem;

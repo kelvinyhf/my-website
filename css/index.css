@@ -547,13 +547,6 @@ header::before {
   transform 0.15s ease-out;
 }
 
-@media (hover: hover) {
-  .skill-card:hover {
-    box-shadow: 0 1px 0 var(--skill-card-shadow);
-    transform: translateY(3px);
-  }
-}
-
 .skill-card-header {
   display: flex;
   align-items: center;

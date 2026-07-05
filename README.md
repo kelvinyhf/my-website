@@ -1,37 +1,28 @@
-# My Personal Website
-A **simple**, **responsive** website made by me to introduce myself and store my cool stuff!
+# Kelvin's Website
+A clean, modern, and responsive website built from scratch to showcase my coding journey and skills!
 
-![GitHub Stars](https://img.shields.io/github/stars/kelvinyhf/my-website)
-![GitHub Forks](https://img.shields.io/github/forks/kelvinyhf/my-website)
+![Stars](https://img.shields.io/github/stars/kelvinyhf/my-website)
+![Forks](https://img.shields.io/github/forks/kelvinyhf/my-website)
 
->“Your stars keep me motivated!”
+>“Your stars keep me motivated!"
 >
 
-## 🚨 READ ME!!
-The entire website is **NOT DONE YET**, everything below is just my concepts.
+## What’s Inside?
+- About Me: A clean section featuring a brief description about myself and my future aspirations.
+- Timeline: A visual tracking of my coding journey, from writing my first line of code to diving deep into web development.
+- My Skills: A showcase of my frontend tech stack with visual proficiency bars.
 
-## 🤨 What’s Inside?
-- About Me - My experience, my favourite song…
-- Tools - Image converter, calculator…
-- Games - Pinball, claw machine…
+## Features
+- Fully Responsive: Optimized for a seamless experience across mobile, tablet, and desktop screens.
+- Theme Detection: Complete support of both light and dark modes.
+- AI Chatbot: An interactive chatbot powered by GitHub Models API, delivering real-time, intelligent responses.
 
-## 🧩 Built with…
-- HTML5
-- CSS3
-- JavaScript
+## Credits & Acknowledgments
+This project is made possible thanks to the following libraries, tools, and assets:
+- [Radix Colors](https://www.radix-ui.com/colors) - For the gorgeous, accessible color system.
+- [tsParticles](https://particles.js.org/) - For the incredible background effects.
+- [Lucide Icons](https://lucide.dev/) - For the clean, consistent vector icons.
+- **Kart Kid**: The visual character concept of Kart Kid is an intellectual property of **Tower Heroes** by **PixelBit Studio**. This project uses it purely for non-commercial, learning purposes as a tribute. All rights belong to their respective owners.
 
-## ✨ Features
-- Fully Responsive
-- Supports light & dark modes
-
-## ❗️ Note That…
-1. This website was created for **learning purposes**, and it’s not intended to be a professional portfolio.
-2. You can **contribute** to this website by following the guide below.
-
-## 💡 Contribution
-1. Fork this repository (and clone your fork locally).
-2. Make your changes.
-3. Open a pull request!
-
-## 📄 License
+## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
