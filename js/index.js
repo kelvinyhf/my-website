@@ -1,6 +1,43 @@
+// tsParticles
+function refreshColor() {
+  const isDark = document.documentElement.classList.contains('dark');
+  return isDark ? '#000000' : '#ffffff';
+}
+
+// fallingPixel
+if (window.tsParticles) {
+  tsParticles.load({
+    id: 'fallingPixel',
+    options: {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 20 },
+        shape: { type: 'square' },
+        color: { value: refreshColor() },
+        opacity: { value: 0.7 },
+        size: { value: { min: 4, max: 8 } },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: 'bottom',
+          outModes: { default: 'out' }
+        }
+      }
+    }
+  });
+}
+
 // Theme Toggle
 document.getElementById('theme-toggle').addEventListener('click', () => {
+  
+  // Update theme in storage
   localStorage.setItem('theme', document.documentElement.classList.toggle('dark') ? 'dark' : 'light');
+  
+  // Update fallingPixel's color
+  const container = tsParticles.domItem(0);
+  container.options.load({ particles: { color: { value: refreshColor() } } });
+  container.refresh();
+  
 });
 
 // Fade In Effect
@@ -25,53 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
   hiddenElements.forEach(el => observer.observe(el));
   
 });
-
-// tsParticles
-if (window.tsParticles) {
-  
-  // Light Mode
-  tsParticles.load({
-    id: 'tsParticlesLight',
-    options: {
-      fullScreen: { enable: false },
-      particles: {
-        number: { value: 20 },
-        shape: { type: 'square' },
-        color: { value: '#ffffff' },
-        opacity: { value: 0.7 },
-        size: { value: { min: 4, max: 8 } },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: 'bottom',
-          outModes: { default: 'out' }
-        }
-      }
-    }
-  });
-  
-  // Dark Mode
-  tsParticles.load({
-    id: 'tsParticlesDark',
-    options: {
-      fullScreen: { enable: false },
-      particles: {
-        number: { value: 20 },
-        shape: { type: 'square' },
-        color: { value: '#000000' },
-        opacity: { value: 0.7 },
-        size: { value: { min: 4, max: 8 } },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: 'bottom',
-          outModes: { default: 'out' }
-        }
-      }
-    }
-  });
-  
-}
 
 // Energy +1
 const maxEnergy = 5;

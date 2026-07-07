@@ -207,8 +207,9 @@ header::before {
   background: var(--kart-kid) no-repeat center / contain;
 }
 
-/* tsParticles */
-#tsParticlesLight, #tsParticlesDark {
+/* fallingPixel */
+#fallingPixel {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -217,16 +218,8 @@ header::before {
   z-index: 1;
 }
 
-/* Light Mode */
-#tsParticlesLight { display: block; }
-#tsParticlesDark { display: none; }
-
-/* Dark Mode */
-.dark #tsParticlesLight { display: none; }
-.dark #tsParticlesDark { display: block; }
-
 @media (prefers-reduced-motion: reduce) {
-  #tsParticlesLight, #tsParticlesDark, .dark #tsParticlesLight, .dark #tsParticlesDark { display: none; }
+  #fallingPixel { display: none; }
 }
 
 .about-me, .tabs {
@@ -377,7 +370,7 @@ header::before {
     "tl3 p3";
 }
 
-/* All timelines */
+/* Timelines */
 .tl1, .tl2, .tl3 {
   display: flex;
   justify-content: center;
@@ -390,17 +383,7 @@ header::before {
   height: 100%;
 }
 
-/* Start of Timeline */ 
-.tl1-start {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 15px);
-  width: 30px;
-  height: 3px;
-  background-color: var(--white-black);
-  box-shadow: 0 0 10px 1px var(--blue-a3);
-}
-
+/* Timeline 1 */
 .tl1 {
   grid-area: tl1;
   background-image: linear-gradient(var(--white-black) 0%, var(--blue-7) 50%);
@@ -417,6 +400,7 @@ header::before {
   box-shadow: 0 0 5px 2px var(--blue-a4);
 }
 
+/* Timeline 2 */
 .tl2 {
   grid-area: tl2;
   background-image: linear-gradient(var(--purple-7) 0%, var(--purple-7) 100%);
@@ -433,6 +417,7 @@ header::before {
   box-shadow: 0 0 5px 2px var(--purple-a4);
 }
 
+/* Timeline 3 */
 .tl3 {
   grid-area: tl3;
   background-image: linear-gradient(var(--orange-7) 50%, var(--white-black) 100%);
@@ -447,17 +432,6 @@ header::before {
   border: 2px solid var(--orange-6);
   border-radius: 0.5rem;
   box-shadow: 0 0 5px 2px var(--orange-a4);
-}
-
-/* End of Timeline */
-.tl3-end {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 15px);
-  width: 30px;
-  height: 3px;
-  background-color: var(--white-black);
-  box-shadow: 0 0 10px 1px var(--orange-a3);
 }
 
 /* Paragraphs */
@@ -494,6 +468,11 @@ header::before {
   margin-right: calc(1rem + 7.5ch);
 }
 
+.p1 p, .p2 p, .p3 p {
+  padding: 0;
+  margin: 0;
+}
+
 /* Date */
 .p1 h3::after, .p2 h3::after, .p3 h3::after {
   content: attr(data-time);
@@ -507,23 +486,13 @@ header::before {
   color: var(--gray-11);
 }
 
+/* Date Shorthand */
 @media ( max-width: 360px ) {
-  
-  .p1 h3, .p2 h3, .p3 h3 {
-    margin-right: calc(1rem + 3ch);
-  }
-  
-  .p1 h3::after, .p2 h3::after, .p3 h3::after {
-    content: attr(data-year);
-  }
-  
+  .p1 h3, .p2 h3, .p3 h3 { margin-right: calc(1rem + 3ch); }
+  .p1 h3::after, .p2 h3::after, .p3 h3::after { content: attr(data-year); }
 }
 
-.p1 p, .p2 p, .p3 p {
-  padding: 0;
-  margin: 0;
-}
-
+/* Paragraph 1 */
 .p1 {
   grid-area: p1;
   background-color: var(--blue-1);
@@ -539,6 +508,7 @@ header::before {
   background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
 }
 
+/* Paragraph 2 */
 .p2 {
   grid-area: p2;
   background-color: var(--purple-1);
@@ -554,6 +524,7 @@ header::before {
   background: linear-gradient(var(--purple-4), var(--purple-4)) no-repeat 0% 100% / 100% 50%;
 }
 
+/* Paragraph 3 */
 .p3 {
   grid-area: p3;
   background-color: var(--orange-1);
