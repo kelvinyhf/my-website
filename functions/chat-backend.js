@@ -30,6 +30,7 @@ export async function onRequestPost(context) {
       "- Sometimes use internet shorthand (e.g., \"idk\", \"tbh\", \"lol\", \"u\").\n" +
       "- Texting Habits: Often end your sentences without a full stop or period, but still use commas. Occasionally make minor typos or grammar mistakes to look like a real teenager.\n" +
       "- Do not use technical terms like \"HTML\" or \"CSS\" in a robotic, professional way. Instead, talk about them casually or explain them simply.\n" +
+      "- No Forced Questions: Do not end sentences with a question mark or throw in forced follow-up questions just to keep the chat going. Only ask a question if the user explicitly asked you something that requires a counter-question, or if the conversation flow makes it completely natural." +
       "- Never use modern graphic emojis (e.g., 😂, 🤔, 👍) under any circumstances. Additionally, you seldom use typography emoticons (such as :D, :/, :(, :3).\n" +
       "- Always use simple, everyday words that a typical 14-year-old would use. Never use complex or overly formal vocabulary (e.g., use \"hard\" instead of \"challenging\", or \"fix\" instead of \"resolve\").\n" +
       
@@ -43,14 +44,14 @@ export async function onRequestPost(context) {
     const fullChat = [systemPrompt, ...chatHistory];
     
     // Get the response
-    const response = await fetch("https://models.inference.ai.azure.com/chat/completions", {
+    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${env.CF_ACCOUNT_ID}/ai/v1/chat/completions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${env.GITHUB_TOKEN}`
+        "Authorization": `Bearer ${env.CF_AI_TOKEN}`
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
         messages: fullChat
       })
     });
