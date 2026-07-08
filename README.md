@@ -15,7 +15,7 @@ A clean, modern, and responsive website built from scratch to showcase my coding
 ## Features
 - Fully Responsive: Optimized for a seamless experience across mobile, tablet, and desktop screens.
 - Theme Detection: Complete support of both light and dark modes.
-- AI Chatbot: An interactive chatbot powered by GitHub Models API, delivering real-time, intelligent responses.
+- AI Chatbot: An interactive chatbot powered by Cloudflare Workers AI, delivering real-time, intelligent responses.
 
 ## Credits & Acknowledgments
 This project is made possible thanks to the following libraries, tools, and assets:

@@ -1,45 +1,99 @@
 /* Light and Dark Theme Variables */
 :root {
   
+  /* White and Black */
   --nav-bg: rgba(255, 255, 255, 0.3);
   --nav-shadow: rgba(0, 0, 0, 0.15);
   --nav-logo-color: #424242;
-  
-  --header-grid-color: rgba(255, 255, 255, 0.1);
+  --header-grid-color: rgba(255, 255, 255, 0.125);
   --kart-kid: url("/assets/images/kart-kid.png");
-  
   --card-bg: rgba(255, 255, 255, 0.4);
   --card-border: rgba(255, 255, 255, 0.85);
   --card-shadow: rgba(0, 0, 0, 0.1);
-  
   --chat-shadow: rgba(0, 0, 0, 0.05);
-  
+  --tl-paragraphs-border-color: rgba(255, 255, 255, 1);
   --skill-card-border: rgba(255, 255, 255, 0.75);
   --skill-card-shadow: rgba(0, 0, 0, 0.1);
-  
   --footer-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Colors */
+  --tabs-text-hover-color: var(--blue-9);
+  --tabs-svg-hover-color: var(--blue-11);
+  
+  --tl1-color: var(--blue-7);
+  --tl1-box-shadow-color: var(--blue-a3);
+  --ts1-background-color: var(--blue-6);
+  --ts1-border-color: var(--blue-7);
+  --p1-box-shadow-color: var(--blue-a3);
+  --p1-after-color: var(--blue-a4);
+  
+  --tl2-color: var(--purple-7);
+  --tl2-box-shadow-color: var(--purple-a3);
+  --ts2-background-color: var(--purple-6);
+  --ts2-border-color: var(--purple-7);
+  --p2-box-shadow-color: var(--purple-a3);
+  --p2-after-color: var(--purple-a4);
+  
+  --tl3-color: var(--orange-7);
+  --tl3-box-shadow-color: var(--orange-a3);
+  --ts3-background-color: var(--orange-6);
+  --ts3-border-color: var(--orange-7);
+  --p3-box-shadow-color: var(--orange-a3);
+  --p3-after-color: var(--orange-a4);
+  
+  --html-card-background-color: var(--orange-a1);
+  --css-card-background-color: var(--blue-a1);
+  --js-card-background-color: var(--yellow-a1);
+  --figma-card-background-color: var(--green-a1);
   
 }
 
 .dark {
   
+  /* White and Black */
   --nav-bg: rgba(0, 0, 0, 0.3);
   --nav-shadow: rgba(255, 255, 255, 0.15);
   --nav-logo-color: #d1d1d1;
-  
-  --header-grid-color: rgba(0, 0, 0, 0.025);
+  --header-grid-color: rgba(0, 0, 0, 0.035);
   --kart-kid: url("/assets/images/kart-kid-dark.png");
-  
   --card-bg: rgba(0, 0, 0, 0.4);
   --card-border: rgba(0, 0, 0, 0.85);
   --card-shadow: rgba(255, 255, 255, 0.1);
-  
   --chat-shadow: rgba(255, 255, 255, 0.05);
-  
-  --skill-card-border: rgba(0, 0, 0, 0.75);
+  --tl-paragraphs-border-color: rgba(0, 0, 0, 0.35);
+  --skill-card-border: rgba(0, 0, 0, 0.35);
   --skill-card-shadow: rgba(255, 255, 255, 0.1);
-  
   --footer-shadow: rgba(255, 255, 255, 0.1);
+  
+  /* Colors */
+  --tabs-text-hover-color: var(--blue-11);
+  --tabs-svg-hover-color: var(--blue-10);
+  
+  --tl1-color: var(--blue-8);
+  --tl1-box-shadow-color: var(--blue-a2);
+  --ts1-background-color: var(--blue-7);
+  --ts1-border-color: var(--blue-8);
+  --p1-box-shadow-color: color-mix(in srgb, var(--blue-a2), var(--blue-a3));
+  --p1-after-color: var(--blue-a5);
+  
+  --tl2-color: var(--purple-8);
+  --tl2-box-shadow-color: var(--purple-a2);
+  --ts2-background-color: var(--purple-7);
+  --ts2-border-color: var(--purple-8);
+  --p2-box-shadow-color: color-mix(in srgb, var(--purple-a2), var(--purple-a3));
+  --p2-after-color: var(--purple-a5);
+  
+  --tl3-color: var(--orange-8);
+  --tl3-box-shadow-color: var(--orange-a2);
+  --ts3-background-color: var(--orange-7);
+  --ts3-border-color: var(--orange-8);
+  --p3-box-shadow-color: color-mix(in srgb, var(--orange-a2), var(--orange-a3));
+  --p3-after-color: var(--orange-a5);
+  
+  --html-card-background-color: color-mix(in srgb, var(--gray-a1), var(--orange-a1));
+  --css-card-background-color: color-mix(in srgb, var(--gray-a1), var(--blue-a1));
+  --js-card-background-color: color-mix(in srgb, var(--gray-a1), var(--yellow-a1));
+  --figma-card-background-color: color-mix(in srgb, var(--gray-a1), var(--green-a1));
   
 }
 
@@ -68,6 +122,10 @@ h2 {
   border-bottom: 3px solid var(--gray-10);
   padding: 0.5rem 0;
   margin: 0.5rem 5rem 3rem 5rem;
+}
+
+h3 {
+  color: var(--gray-12);
 }
 
 /* Navigation Bar */
@@ -99,6 +157,7 @@ nav {
   font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
   font-weight: 600;
+  color: var(--gray-12);
   padding: 0;
   margin: 0;
 }
@@ -247,11 +306,11 @@ header::before {
 
 .about-me h1 {
   font-size: 1.3rem;
+  color: var(--gray-12);
   padding-bottom: 0.5rem;
 }
 
 .about-me .intro {
-  color: var(--gray-12);
   font-weight: 450;
   padding-bottom: 1rem;
 }
@@ -315,11 +374,6 @@ header::before {
   padding: 0.5rem 0.75rem;
   line-height: normal;
   opacity: 0.85;
-  transition: color 0.2s ease-out, opacity 0.2s ease-out;
-}
-
-.source-code svg, .chat-with-me svg {
-  transition: stroke 0.2s ease-out;
 }
 
 .source-code p, .chat-with-me p {
@@ -336,12 +390,12 @@ header::before {
 @media (hover: hover) {
   
   .source-code:is(:hover, :visited:hover), .chat-with-me:is(:hover, :visited:hover) {
-    color: var(--blue-9);
+    color: var(--tabs-text-hover-color);
     opacity: 1;
   }
   
   .source-code:is(:hover, :visited:hover) svg, .chat-with-me:is(:hover, :visited:hover) svg {
-    stroke: var(--blue-11);
+    stroke: var(--tabs-svg-hover-color);
   }
   
 }
@@ -349,12 +403,12 @@ header::before {
 @media (hover: none) {
   
   .source-code:is(:active, :visited:active), .chat-with-me:is(:active, :visited:active) {
-    color: var(--blue-9);
+    color: var(--tabs-text-hover-color);
     opacity: 1;
   }
   
   .source-code:is(:active, :visited:active) svg, .chat-with-me:is(:active, :visited:active) svg {
-    stroke: var(--blue-11);
+    stroke: var(--tabs-svg-hover-color);
   }
   
 }
@@ -386,16 +440,16 @@ header::before {
 /* Timeline 1 */
 .tl1 {
   grid-area: tl1;
-  background-image: linear-gradient(var(--white-black) 0%, var(--blue-7) 50%);
-  box-shadow: 0 0 10px 2px var(--blue-a3);
+  background-image: linear-gradient(var(--white-black) 0%, var(--tl1-color) 50%);
+  box-shadow: 0 0 10px 2px var(--tl1-box-shadow-color);
 }
 
 .ts1 {
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
-  background-color: var(--blue-5);
-  border: 2px solid var(--blue-6);
+  background-color: var(--ts1-background-color);
+  border: 2px solid var(--ts1-border-color);
   border-radius: 0.5rem;
   box-shadow: 0 0 5px 2px var(--blue-a4);
 }
@@ -403,16 +457,16 @@ header::before {
 /* Timeline 2 */
 .tl2 {
   grid-area: tl2;
-  background-image: linear-gradient(var(--purple-7) 0%, var(--purple-7) 100%);
-  box-shadow: 0 0 10px 2px var(--purple-a3);
+  background-image: linear-gradient(var(--tl2-color) 0%, var(--tl2-color) 100%);
+  box-shadow: 0 0 10px 2px var(--tl2-box-shadow-color);
 }
 
 .ts2 {
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
-  background-color: var(--purple-5);
-  border: 2px solid var(--purple-6);
+  background-color: var(--ts2-background-color);
+  border: 2px solid var(--ts2-border-color);
   border-radius: 0.5rem;
   box-shadow: 0 0 5px 2px var(--purple-a4);
 }
@@ -420,16 +474,16 @@ header::before {
 /* Timeline 3 */
 .tl3 {
   grid-area: tl3;
-  background-image: linear-gradient(var(--orange-7) 50%, var(--white-black) 100%);
-  box-shadow: 0 0 10px 2px var(--orange-a3);
+  background-image: linear-gradient(var(--tl3-color) 50%, var(--white-black) 100%);
+  box-shadow: 0 0 10px 2px var(--tl3-box-shadow-color);
 }
 
 .ts3 {
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
-  background-color: var(--orange-5);
-  border: 2px solid var(--orange-6);
+  background-color: var(--ts3-background-color);
+  border: 2px solid var(--ts3-border-color);
   border-radius: 0.5rem;
   box-shadow: 0 0 5px 2px var(--orange-a4);
 }
@@ -440,7 +494,7 @@ header::before {
   z-index: 1;
   overflow: hidden;
   justify-self: center;
-  border: 3px solid var(--white-black);
+  border: 3px solid var(--tl-paragraphs-border-color);
   border-left: none;
   border-radius: 0 1rem 1rem 0;
   margin: 2rem 2rem 2rem 0;
@@ -463,7 +517,6 @@ header::before {
 .p1 h3, .p2 h3, .p3 h3 {
   display: inline-block;
   position: relative;
-  padding: 0 0.25rem;
   margin-bottom: 1rem;
   margin-right: calc(1rem + 7.5ch);
 }
@@ -496,48 +549,40 @@ header::before {
 .p1 {
   grid-area: p1;
   background-color: var(--blue-1);
-  box-shadow: 0 0 5px 3px var(--blue-a3);
+  box-shadow: 0 0 10px var(--p1-box-shadow-color);
 }
 
 .p1::after {
   mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='black' d='m13.936 15.356l-12.11-3.244L0 18.93L18.928 24l2.68-9.99l-6.818-1.83zM5.072 0L2.394 9.992l6.816 1.83l.854-3.178l12.11 3.246L24 5.072z'/></svg>") no-repeat center / contain;
-  background-color: var(--blue-a4);
-}
-
-.p1 h3 {
-  background: linear-gradient(var(--blue-4), var(--blue-4)) no-repeat 0% 100% / 100% 50%;
+  background-color: var(--p1-after-color);
 }
 
 /* Paragraph 2 */
 .p2 {
   grid-area: p2;
   background-color: var(--purple-1);
-  box-shadow: 0 0 5px 3px var(--purple-a3);
+  box-shadow: 0 0 10px var(--p2-box-shadow-color);
 }
 
 .p2::after {
   mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'><path fill='black' d='M49.33 62h29.159C86.606 62 93 55.132 93 46.981V19.183c0-7.912-6.632-13.856-14.555-15.176c-5.014-.835-10.195-1.215-15.187-1.191c-4.99.023-9.612.448-13.805 1.191C37.098 6.188 35 10.758 35 19.183V30h29v4H23.776c-8.484 0-15.914 5.108-18.237 14.811c-2.681 11.12-2.8 17.919 0 29.53C7.614 86.983 12.569 93 21.054 93H31V79.952C31 70.315 39.428 62 49.33 62m-1.838-39.11c-3.026 0-5.478-2.479-5.478-5.545c0-3.079 2.451-5.581 5.478-5.581c3.015 0 5.479 2.502 5.479 5.581c-.001 3.066-2.465 5.545-5.479 5.545m74.789 25.921C120.183 40.363 116.178 34 107.682 34H97v12.981C97 57.031 88.206 65 78.489 65H49.33C41.342 65 35 72.326 35 80.326v27.8c0 7.91 6.745 12.564 14.462 14.834c9.242 2.717 17.994 3.208 29.051 0C85.862 120.831 93 116.549 93 108.126V97H64v-4h43.682c8.484 0 11.647-5.776 14.599-14.66c3.047-9.145 2.916-17.799 0-29.529m-41.955 55.606c3.027 0 5.479 2.479 5.479 5.547c0 3.076-2.451 5.579-5.479 5.579c-3.015 0-5.478-2.502-5.478-5.579c0-3.068 2.463-5.547 5.478-5.547'/></svg>") no-repeat center / contain;
-  background-color: var(--purple-a4);
-}
-
-.p2 h3 {
-  background: linear-gradient(var(--purple-4), var(--purple-4)) no-repeat 0% 100% / 100% 50%;
+  background-color: var(--p2-after-color);
 }
 
 /* Paragraph 3 */
 .p3 {
   grid-area: p3;
   background-color: var(--orange-1);
-  box-shadow: 0 0 5px 3px var(--orange-a3);
+  box-shadow: 0 0 10px var(--p3-box-shadow-color);
 }
 
 .p3::after {
   mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 128 128'><path fill='black' d='m87.195 53.445l3.188-9.777a.35.35 0 0 1 .18-.2a.32.32 0 0 1 .265-.003l36.75 15.36c.121.05.203.167.207.296l-.012 10.242a.33.33 0 0 1-.207.297l-36.75 15.352a.32.32 0 0 1-.265-.004a.33.33 0 0 1-.176-.203l-3.18-9.774a.333.333 0 0 1 .196-.414l26.148-10.074a.34.34 0 0 0 .215-.313a.33.33 0 0 0-.215-.308L87.391 53.859a.333.333 0 0 1-.196-.414M14.172 64.52l26.2 10.109a.31.31 0 0 1 .187.379l-3.211 9.808a.31.31 0 0 1-.168.184a.3.3 0 0 1-.246 0L.188 69.66A.3.3 0 0 1 0 69.371v-10.27a.3.3 0 0 1 .188-.288l36.757-15.348a.3.3 0 0 1 .246 0a.32.32 0 0 1 .168.183l3.207 9.817a.31.31 0 0 1-.183.383L14.172 63.94a.308.308 0 0 0 0 .578Zm28.75 40.476l28.89-82.437a.33.33 0 0 1 .32-.215h12.411a.33.33 0 0 1 .309.445l-28.75 82.434a.33.33 0 0 1-.309.218H43.23a.32.32 0 0 1-.27-.144a.32.32 0 0 1-.038-.3Zm0 0'/></svg>") no-repeat center / contain;
-  background-color: var(--orange-a4);
+  background-color: var(--p3-after-color);
 }
 
-.p3 h3 {
-  background: linear-gradient(var(--orange-4), var(--orange-4)) no-repeat 0% 100% / 100% 50%;
+.p3 blockquote {
+  margin: 0.75rem 0;
 }
 
 /* Skill Card */
@@ -576,7 +621,6 @@ header::before {
 }
 
 .skill-card > p {
-  color: var(--gray-12);
   margin: 1rem 0.5rem;
   padding-left: 1rem;
   border-left: 3px solid var(--gray-a4);
@@ -618,28 +662,28 @@ header::before {
 }
 
 /* Progress Bars */
-.skill-card.html { background-color: var(--orange-a1); }
+.skill-card.html { background-color: var(--html-card-background-color); }
 .skill-card.html .progress-bar {
   background-image: linear-gradient(90deg, var(--orange-9), var(--orange-8));
   box-shadow: 0 0 5px var(--orange-a6);
   width: 85%;
 }
 
-.skill-card.css { background-color: var(--blue-a1); }
+.skill-card.css { background-color: var(--css-card-background-color); }
 .skill-card.css .progress-bar {
   background-image: linear-gradient(90deg, var(--blue-9), var(--blue-8));
   box-shadow: 0 0 5px var(--blue-a6);
   width: 60%;
 }
 
-.skill-card.js { background-color: var(--yellow-a1); }
+.skill-card.js { background-color: var(--js-card-background-color); }
 .skill-card.js .progress-bar {
   background-image: linear-gradient(90deg, var(--yellow-9), var(--yellow-8));
   box-shadow: 0 0 5px var(--yellow-a6);
   width: 10%;
 }
 
-.skill-card.figma { background-color: var(--green-a1); }
+.skill-card.figma { background-color: var(--figma-card-background-color); }
 .skill-card.figma .progress-bar {
   background-image: linear-gradient(90deg, var(--green-9), var(--green-8));
   box-shadow: 0 0 5px var(--green-a6);

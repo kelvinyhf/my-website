@@ -1,11 +1,13 @@
 /* Light and Dark Theme Variables */
 :root {
-  --bg-color: rgba(255, 255, 255, 0.75);
   --dot-color: var(--green-9);
+  --message-kelvin-background-color: var(--orange-4);
+  --message-user-background-color: var(--green-4);
 }
 
 .dark {
-  --bg-color: rgba(0, 0, 0, 0.75);
+  --message-kelvin-background-color: var(--orange-5);
+  --message-user-background-color: var(--green-5);
 }
 
 html, body {
@@ -28,7 +30,7 @@ main {
   align-items: center;
   flex-shrink: 0;
   padding: 0.75rem 2rem;
-  background-color: var(--bg-color);
+  background-color: var(--white-black);
   border-bottom: 2px solid var(--gray-4);
 }
 
@@ -46,10 +48,10 @@ main {
   position: absolute;
   bottom: -5%;
   right: -5%;
-  width: 25%;
-  height: 25%;
+  width: 0.65rem;
+  height: 0.65rem;
   background-color: var(--dot-color);
-  border: 3px solid var(--gray-1);
+  border: 3px solid var(--white-black);
   border-radius: 50%;
 }
 
@@ -63,6 +65,7 @@ main {
 .chat-name h1 {
   font-weight: 500;
   font-size: 1.2rem;
+  color: var(--gray-12);
 }
 
 .chat-name span {
@@ -121,12 +124,13 @@ main {
 }
 
 .message p {
+  color: var(--gray-12);
   padding: 0;
   margin: 0;
 }
 
 .message.kelvin {
-  background-color: var(--orange-4);
+  background-color: var(--message-kelvin-background-color);
   align-self: flex-start;
   border-radius: 1rem 1rem 1rem 0;
   margin-right: 4rem;
@@ -134,7 +138,7 @@ main {
 
 .message.user {
   white-space: pre-wrap;
-  background-color: var(--green-4);
+  background-color: var(--message-user-background-color);
   align-self: flex-end;
   border-radius: 1rem 1rem 0 1rem;
   margin-left: 4rem;
@@ -162,7 +166,7 @@ main {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: var(--green-5);
+  background-color: var(--green-6);
   transition: width 0.5s ease-out;
 }
 
@@ -172,7 +176,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background-color: var(--bg-color);
+  background-color: var(--white-black);
   padding: 1.5rem;
 }
 
@@ -181,8 +185,8 @@ main {
   min-width: 3rem;
   height: calc(2lh + 1rem);
   font-family: "Inter", sans-serif;
-  background-color: var(--gray-1);
-  color: var(--gray-12);
+  background-color: var(--white-black);
+  color: var(--text-color);
   font-size: 1rem;
   overflow-y: auto;
   resize: none;
@@ -190,15 +194,11 @@ main {
   border: 1px solid var(--gray-6);
   border-radius: 0.75rem;
   margin: 0;
-  transition:
-    border 0.15s ease-out,
-    box-shadow 0.15s ease-out;
 }
 
 .user-input:focus-visible {
-  outline: 1px solid var(--green-4);
-  border-color: var(--green-6);
-  box-shadow: 0 0 10px var(--green-a4);
+  outline: 1px solid var(--green-3);
+  border-color: var(--green-3);
 }
 
 .send-btn {

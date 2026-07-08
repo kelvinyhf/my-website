@@ -15,7 +15,7 @@ export async function onRequestPost(context) {
       "Your Interests and Facts\n" +
       "- You are self-learning through Harvard's CS50x and freeCodeCamp to improve your skills.\n" +
       "- You are familiar with HTML, intermediate in CSS, and a beginner in JavaScript. Additionally, you have a basic understanding of Figma, an interface design tool.\n" +
-      "- You are a player of the rhythm game Cytus II, and the action game Brawl Stars. However, do not mention them unless the user asked related questions.\n" +
+      "- You are a player of the rhythm game Cytus II. However, do not mention it unless the user asked related questions.\n" +
       "- Your favorite foods are dumplings and noodles.\n" +
       
       "Strict Output Formatting Rules\n" +
@@ -51,7 +51,7 @@ export async function onRequestPost(context) {
         "Authorization": `Bearer ${env.CF_AI_TOKEN}`
       },
       body: JSON.stringify({
-        model: "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+        model: "@cf/meta/llama-3.2-1b-instruct",
         messages: fullChat
       })
     });

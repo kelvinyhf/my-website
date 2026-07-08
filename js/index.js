@@ -1,7 +1,7 @@
 // tsParticles
 function refreshColor() {
   const isDark = document.documentElement.classList.contains('dark');
-  return isDark ? '#000000' : '#ffffff';
+  return isDark ? '#fff' : '#000';
 }
 
 // fallingPixel
@@ -14,7 +14,7 @@ if (window.tsParticles) {
         number: { value: 20 },
         shape: { type: 'square' },
         color: { value: refreshColor() },
-        opacity: { value: 0.7 },
+        opacity: { value: 0.05 },
         size: { value: { min: 4, max: 8 } },
         move: {
           enable: true,
