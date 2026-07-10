@@ -63,6 +63,30 @@ document.addEventListener("DOMContentLoaded", () => {
   
 });
 
+// Custom Elements
+class SkillCard extends HTMLElement {
+  connectedCallback() {
+    const skill = this.getAttribute('skill');
+    const title = this.getAttribute('title');
+    const progress = this.getAttribute('progress');
+    const description = this.getAttribute('description');
+    this.innerHTML = `
+      <div class="skill-card ${skill} fade-in" role="group" aria-labelledby="${skill}-title">
+        <div class="skill-card-header">
+          <img class="lg-2" src="/assets/devicon/${skill}.png" width="44" height="44" alt="">
+          <h3 id="${skill}-title">${title}</h3>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100" style="width: ${progress}%;"></div></div>
+          <p aria-hidden="true">${progress}%</p>
+        </div>
+        <p>${description}</p>
+      </div>
+    `;
+  }
+}
+customElements.define('skill-card', SkillCard);
+
 // Energy +1
 const maxEnergy = 5;
 let energy = sessionStorage.getItem('energy') !== null ? parseInt(sessionStorage.getItem('energy')) : maxEnergy;

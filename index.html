@@ -62,10 +62,10 @@
   
   <!-- Navigation Bar -->
   <nav>
-    <div class="brand">
+    <a class="brand" href="/">
       <svg aria-hidden="true" class="md-2" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none" stroke="var(--nav-logo-color)" stroke-width="20"><path d="M32.0813 96.5972C32.1559 96.1221 32.1671 95.66 32.1075 95.1828C26.5555 50.7619 6.48271 -10.1747 74.1271 55.1664C75.246 56.2473 76.8731 56.8181 78.413 56.5967C98.9031 53.6516 100.965 53.6509 120.4 57.2432C122.224 57.5803 124.093 56.8953 125.283 55.4722C136.793 41.701 195.675 -24.576 167.399 96.518C167.243 97.1889 167.208 97.9118 167.309 98.5933C168.365 105.711 173.328 148.734 141.942 165.151C141.729 165.263 141.526 165.386 141.328 165.522C129.491 173.697 97.6543 181.261 60.4624 167.014C30.9354 153.64 29.1961 114.961 32.0813 96.5972Z"/></svg>
-      <p>KelvinY</p>
-    </div>
+      <span>KelvinY</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#about-me">About Me</a></li>
       <li><a href="#timeline">Timeline</a></li>
@@ -77,65 +77,60 @@
     </button>
   </nav>
   
-  <!-- Header -->
-  <header id="about-me">
-    <div id="fallingPixel"></div>
+  <main>
     
     <!-- About Me -->
-    <section class="about-me container">
+    <section id="about-me">
+      <div id="fallingPixel"></div>
       
-      <h1>About Me</h1>
-      <p class="intro">
-        I'm KelvinY, a passionate 14-year-old self-taught coder.
-        I mainly do frontend development, currently learning JavaScript and Python. 
-        I hope I can be a great developer in the future, working a job that I really like!
-      </p>
-      
-      <div class="tags">
+      <!-- About Card -->
+      <div class="about-card container">
+        <h1>About Me</h1>
+        <p class="intro">
+          I'm KelvinY, a passionate 14-year-old self-taught coder.
+          I mainly do frontend development, currently learning JavaScript and Python. 
+          I hope I can be a great developer in the future, working a job that I really like!
+        </p>
         
-        <div class="tag red">
-          <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-          <p>Hong Kong</p>
-        </div>
-        
-        <div class="tag amber">
-          <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
-          <p>Dreamer</p>
-        </div>
-        
-        <div class="tag green">
-          <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-          <p>Learning</p>
-        </div>
-        
-        <div class="tag blue">
-          <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-          <p>Front-end</p>
+        <!-- Tags -->
+        <div class="tags">
+          <div class="tag red">
+            <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Hong Kong</p>
+          </div>
+          <div class="tag amber">
+            <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
+            <p>Dreamer</p>
+          </div>
+          <div class="tag green">
+            <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            <p>Learning</p>
+          </div>
+          <div class="tag blue">
+            <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-10)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            <p>Front-end</p>
+          </div>
         </div>
         
       </div>
       
+      <div class="tabs">
+        
+        <!-- Source Code -->
+        <a class="source-code" href="https://github.com/kelvinyhf/my-website" aria-label="View the repo in GitHub.">
+          <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-12)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+          <p>Source Code</p>
+        </a>
+        
+        <!-- Chat With Me -->
+        <a class="chat-with-me" href="/chat.html" aria-label="Chat with the digital version of Kelvin (AI Chat).">
+          <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-12)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+          <p>Chat With Me</p>
+        </a>
+        
+      </div>
+      
     </section>
-    
-    <div class="tabs">
-      
-      <!-- Source Code -->
-      <a class="source-code" href="https://github.com/kelvinyhf/my-website" aria-label="View the repo in GitHub.">
-        <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-12)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
-        <p>Source Code</p>
-      </a>
-      
-      <!-- Chat With Me -->
-      <a class="chat-with-me" href="/chat.html" aria-label="Chat with the digital version of Kelvin (AI Chat).">
-        <svg aria-hidden="true" class="sm-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-12)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
-        <p>Chat With Me</p>
-      </a>
-      
-    </div>
-    
-  </header>
-  
-  <main>
     
     <!-- Timeline -->
     <section id="timeline" class="container">
@@ -188,59 +183,10 @@
     <section id="my-skills" class="container">
       <h2 class="fade-in">My Skills</h2>
       <div class="skill-cards-container">
-        
-        <!-- HTML -->
-        <div class="skill-card html fade-in" role="group" aria-labelledby="html-title">
-          <div class="skill-card-header">
-            <img class="lg-2" src="/assets/devicon/html5.png" width="44" height="44" alt="">
-            <h3 id="html-title">HTML</h3>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p aria-hidden="true">85%</p>
-          </div>
-          <p>Proficient in writing clean, semantic, and SEO-friendly markup to ensure solid web structures.</p>
-        </div>
-        
-        <!-- CSS -->
-        <div class="skill-card css fade-in" role="group" aria-labelledby="css-title">
-          <div class="skill-card-header">
-            <img class="lg-2" src="/assets/devicon/css3.png" width="44" height="44" alt="">
-            <h3 id="css-title">CSS</h3>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p aria-hidden="true">60%</p>
-          </div>
-          <p>Capable of crafting responsive layouts, smooth animations, and dynamic dark mode styling.</p>
-        </div>
-        
-        <!-- JavaScript -->
-        <div class="skill-card js fade-in" role="group" aria-labelledby="js-title">
-          <div class="skill-card-header">
-            <img class="lg-2" src="/assets/devicon/javascript.png" width="44" height="44" alt="">
-            <h3 id="js-title">JavaScript</h3>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p aria-hidden="true">10%</p>
-          </div>
-         <p>Currently expanding my skills in DOM manipulation, asynchronous logic, and modern ES6+ features.</p>
-        </div>
-        
-        <!-- Figma -->
-        <div class="skill-card figma fade-in" role="group" aria-labelledby="figma-title">
-          <div class="skill-card-header">
-            <img class="lg-2" src="/assets/devicon/figma.png" width="44" height="44" alt="">
-            <h3 id="figma-title">Figma</h3>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div></div>
-            <p aria-hidden="true">30%</p>
-          </div>
-          <p>Experienced in wireframing and prototyping UI designs before transforming them into functional code.</p>
-        </div>
-        
+        <skill-card skill="html" title="HTML" progress="75" description="Proficient in writing clean, semantic, and SEO-friendly markup to ensure solid web structures."></skill-card>
+        <skill-card skill="css" title="CSS" progress="60" description="Capable of crafting responsive layouts, smooth animations, and dynamic dark mode styling."></skill-card>
+        <skill-card skill="js" title="JavaScript" progress="35" description="Currently expanding my skills in DOM manipulation, asynchronous logic, and modern ES6+ features."></skill-card>
+        <skill-card skill="figma" title="Figma" progress="30" description="Experienced in wireframing and prototyping UI designs before transforming them into functional code."></skill-card>
       </div>
     </section>
     
