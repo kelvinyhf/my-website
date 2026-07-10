@@ -29,7 +29,6 @@ function appendMessage(message, sender) {
 
 // Update status
 const status = document.getElementById('status');
-const energyBar = document.getElementById('energyBar');
 const maxEnergy = 5;
 let energy = sessionStorage.getItem('energy') !== null ? parseInt(sessionStorage.getItem('energy')) : maxEnergy;
 let counter = sessionStorage.getItem('counter') !== null ? parseInt(sessionStorage.getItem('counter')) : '0';
@@ -45,10 +44,6 @@ function updateStatus() {
   
   // Update energy in stroage
   sessionStorage.setItem('energy', energy);
-  
-  // Update energy bar width
-  const width = (energy / maxEnergy) * 100;
-  energyBar.style.width = `${width}%`;
   
   if (energy <= 0) {
     
@@ -83,13 +78,8 @@ sendBtn.addEventListener('click', async function() {
   
   if (sendBtn.disabled || isThinking || energy <= 0) { return; }
   
-  // Check if nothing or only spaces is typed
-  if (userInput.value === '') {
-    userInput.value = userInput.placeholder;
-  }
-  else if (userInput.value.trim() === '') {
-    return;
-  }
+  // Check if nothing is typed
+  if (userInput.value === '' || userInput.value.trim() === '') { return; }
   
   // Energy -1
   isThinking = true;

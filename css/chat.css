@@ -1,13 +1,20 @@
 /* Light and Dark Theme Variables */
 :root {
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
   --dot-color: var(--green-9);
   --message-kelvin-background-color: var(--orange-4);
+  --message-kelvin-shadow-color: var(--orange-a2);
   --message-user-background-color: var(--green-4);
+  --message-user-shadow-color: var(--green-a2);
 }
 
 .dark {
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+  --dot-color: var(--green-9);
   --message-kelvin-background-color: var(--orange-5);
+  --message-kelvin-shadow-color: var(--orange-a3);
   --message-user-background-color: var(--green-5);
+  --message-user-shadow-color: var(--green-a3);
 }
 
 html, body {
@@ -15,6 +22,10 @@ html, body {
   overflow-y: hidden;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: auto;
+}
+
+body {
+  background-image: linear-gradient(var(--orange-2), var(--green-2));
 }
 
 main {
@@ -30,8 +41,9 @@ main {
   align-items: center;
   flex-shrink: 0;
   padding: 0.75rem 2rem;
-  background-color: var(--white-black);
-  border-bottom: 2px solid var(--gray-4);
+  background-color: var(--orange-1);
+  border-radius: 0 0 1.5rem 1.5rem;
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .chat-avatar-container {
@@ -46,12 +58,12 @@ main {
 .chat-avatar-container::after {
   content: "";
   position: absolute;
-  bottom: -5%;
-  right: -5%;
+  bottom: 0;
+  right: 0;
   width: 0.65rem;
   height: 0.65rem;
   background-color: var(--dot-color);
-  border: 3px solid var(--white-black);
+  box-shadow: 0 0 0 3px var(--orange-1);
   border-radius: 50%;
 }
 
@@ -105,7 +117,6 @@ main {
   flex-grow: 1;
   flex-shrink: 1;
   min-height: 0;
-  background-image: linear-gradient(var(--orange-2), var(--green-2));
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
@@ -131,6 +142,7 @@ main {
 
 .message.kelvin {
   background-color: var(--message-kelvin-background-color);
+  box-shadow: 0 4px var(--message-kelvin-shadow-color);
   align-self: flex-start;
   border-radius: 1rem 1rem 1rem 0;
   margin-right: 4rem;
@@ -139,6 +151,7 @@ main {
 .message.user {
   white-space: pre-wrap;
   background-color: var(--message-user-background-color);
+  box-shadow: 0 4px var(--message-user-shadow-color);
   align-self: flex-end;
   border-radius: 1rem 1rem 0 1rem;
   margin-left: 4rem;
@@ -148,42 +161,20 @@ main {
 .chat-input {
   position: relative;
   flex-shrink: 0;
-}
-
-/* Energy Bar */
-.energy-bar-container {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--gray-4);
-}
-
-.energy-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: var(--green-6);
-  transition: width 0.5s ease-out;
-}
-
-/* Input */
-.input-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background-color: var(--white-black);
+  background-color: var(--green-1);
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 0 10px var(--box-shadow-color);
   padding: 1.5rem;
 }
 
 .user-input {
   flex-grow: 1;
   min-width: 3rem;
-  height: calc(2lh + 1rem);
+  height: 100%;
   font-family: "Inter", sans-serif;
   background-color: var(--white-black);
   color: var(--text-color);
@@ -197,8 +188,8 @@ main {
 }
 
 .user-input:focus-visible {
-  outline: 1px solid var(--green-3);
-  border-color: var(--green-3);
+  outline: 1px solid var(--green-5);
+  border-color: var(--green-5);
 }
 
 .send-btn {
@@ -206,28 +197,28 @@ main {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  background-color: var(--green-9);
+  background-color: var(--green-8);
   border: none;
   border-radius: 0.75rem;
   width: 2.25rem;
-  height: calc(2lh + 1rem);
+  height: 75%;
   margin: 0;
   padding: 0;
 }
 
 @media (hover: hover) {
   .send-btn:hover {
-    background-color: var(--green-6);
+    background-color: var(--green-5);
   }
 }
 
 @media (hover: none) {
   .send-btn:active {
-    background-color: var(--green-6);
+    background-color: var(--green-5);
   }
 }
 
 .send-btn:focus-visible,
 .send-btn:disabled {
-  background-color: var(--green-6);
+  background-color: var(--green-5);
 }
