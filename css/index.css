@@ -17,9 +17,11 @@
   --footer-shadow: rgba(0, 0, 0, 0.1);
   
   /* Colors */
-  --tabs-text-hover-color: var(--blue-9);
-  --tabs-svg-hover-color: var(--blue-11);
-  
+  --tabs-sc-text-hover-color: var(--blue-9);
+  --tabs-sc-svg-hover-color: var(--blue-11);
+  --tabs-cwm-text-hover-color: var(--green-9);
+  --tabs-cwm-svg-hover-color: var(--green-11);
+
   --tl1-color: var(--blue-7);
   --tl1-box-shadow-color: var(--blue-a3);
   --ts1-background-color: var(--blue-6);
@@ -66,9 +68,11 @@
   --footer-shadow: rgba(255, 255, 255, 0.1);
   
   /* Colors */
-  --tabs-text-hover-color: var(--blue-11);
-  --tabs-svg-hover-color: var(--blue-10);
-  
+  --tabs-sc-text-hover-color: var(--blue-11);
+  --tabs-sc-svg-hover-color: var(--blue-10);
+  --tabs-cwm-text-hover-color: var(--green-11);
+  --tabs-cwm-svg-hover-color: var(--green-10);
+
   --tl1-color: var(--blue-8);
   --tl1-box-shadow-color: var(--blue-a2);
   --ts1-background-color: var(--blue-7);
@@ -391,28 +395,46 @@ nav {
 
 @media (hover: hover) {
   
-  .source-code:is(:hover, :visited:hover), .chat-with-me:is(:hover, :visited:hover) {
-    color: var(--tabs-text-hover-color);
+  .source-code:is(:hover, :visited:hover) {
+    color: var(--tabs-sc-text-hover-color);
     opacity: 1;
   }
   
-  .source-code:is(:hover, :visited:hover) svg, .chat-with-me:is(:hover, :visited:hover) svg {
-    stroke: var(--tabs-svg-hover-color);
+  .chat-with-me:is(:hover, :visited:hover) {
+    color: var(--tabs-cwm-text-hover-color);
+    opacity: 1;
+  }
+
+  .source-code:is(:hover, :visited:hover) svg {
+    stroke: var(--tabs-sc-svg-hover-color);
   }
   
+  .chat-with-me:is(:hover, :visited:hover) svg {
+    stroke: var(--tabs-cwm-svg-hover-color);
+  }
+
 }
 
 @media (hover: none) {
   
-  .source-code:is(:active, :visited:active), .chat-with-me:is(:active, :visited:active) {
-    color: var(--tabs-text-hover-color);
+  .source-code:is(:active, :visited:active) {
+    color: var(--tabs-sc-text-hover-color);
     opacity: 1;
   }
   
-  .source-code:is(:active, :visited:active) svg, .chat-with-me:is(:active, :visited:active) svg {
-    stroke: var(--tabs-svg-hover-color);
+  .chat-with-me:is(:active, :visited:active) {
+    color: var(--tabs-cwm-text-hover-color);
+    opacity: 1;
+  }
+
+  .source-code:is(:active, :visited:active) svg {
+    stroke: var(--tabs-sc-svg-hover-color);
   }
   
+  .chat-with-me:is(:active, :visited:active) svg {
+    stroke: var(--tabs-cwm-svg-hover-color);
+  }
+
 }
 
 /* Timeline */
