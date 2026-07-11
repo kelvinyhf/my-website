@@ -101,8 +101,17 @@ body {
   background-color: var(--white-black);
   background-image: linear-gradient(var(--yellow-1) 0%, var(--yellow-1) 100%);
   font-family: "Inter", sans-serif;
+  min-width: 320px;
   line-height: 1.6;
   color: var(--text-color);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Typography */

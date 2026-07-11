@@ -22,6 +22,16 @@ function appendMessage(message, sender) {
   
 }
 
+// Resize textarea function
+function resizeTextarea() {
+  userInput.style.height = 'auto';
+  userInput.style.height = userInput.scrollHeight + 'px';
+}
+
+// Initial size and event listener
+resizeTextarea()
+userInput.addEventListener('input', resizeTextarea);
+
 // When sendbtn being clicked 
 sendBtn.addEventListener('click', async function() {
   
