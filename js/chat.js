@@ -2,12 +2,7 @@
 const chatMessages = document.getElementById('chatMessages');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
-let isThinking = false;
 let chatHistory = [];
-
-// Sleep functions
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-const sleepR = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1)) + min));
 
 // Append message function
 function appendMessage(message, sender) {
@@ -27,64 +22,12 @@ function appendMessage(message, sender) {
   
 }
 
-// Update status
-const status = document.getElementById('status');
-const maxEnergy = 5;
-let energy = sessionStorage.getItem('energy') !== null ? parseInt(sessionStorage.getItem('energy')) : maxEnergy;
-let counter = sessionStorage.getItem('counter') !== null ? parseInt(sessionStorage.getItem('counter')) : '0';
-
-// Regenerate energy
-for (let i = 0; i < counter; i++) {
-  if (energy < 5) energy++; else break;
-}
-sessionStorage.setItem('counter', '0');
-
-// Update status function
-function updateStatus() {
-  
-  // Update energy in stroage
-  sessionStorage.setItem('energy', energy);
-  
-  if (energy <= 0) {
-    
-    // Disable things
-    status.textContent = 'Offline';
-    document.documentElement.style.setProperty('--dot-color', 'var(--gray-9)');
-    userInput.placeholder = 'Kelvin is gone for a while...';
-    sendBtn.disabled = true;
-    
-  } else {
-    
-    // Enable things
-    status.textContent = 'Online';
-    document.documentElement.style.setProperty('--dot-color', 'var(--green-9)');
-    userInput.placeholder = 'Ask me anything...';
-    
-    if (isThinking) {
-      sendBtn.disabled = true;
-    } else {
-      sendBtn.disabled = false;
-    }
-    
-  }
-  
-}
-
-// Initial status
-updateStatus()
-
 // When sendbtn being clicked 
 sendBtn.addEventListener('click', async function() {
   
-  if (sendBtn.disabled || isThinking || energy <= 0) { return; }
-  
-  // Check if nothing is typed
-  if (userInput.value === '' || userInput.value.trim() === '') { return; }
-  
-  // Energy -1
-  isThinking = true;
-  energy--; 
-  updateStatus();
+  // If disabled or nothing is typed
+  if (sendBtn.disabled || userInput.value === '' || userInput.value.trim() === '') { return; }
+  sendBtn.disabled = true;
   
   // Store userInput
   const userText = userInput.value.trim();
@@ -123,9 +66,7 @@ sendBtn.addEventListener('click', async function() {
       appendMessage('Something went wrong, please try again.', 'kelvin');
       console.warn(result.error);
       
-      // Disable thinking and update status
-      isThinking = false;
-      updateStatus();
+      sendBtn.disabled = false;
       return;
       
     }
@@ -157,10 +98,9 @@ sendBtn.addEventListener('click', async function() {
     
   }
   
-  // Disable thinking and update status
+  // Cool it down
   await sleep(500);
-  isThinking = false;
-  updateStatus();
+  sendBtn.disabled = false;
   
 });
 
@@ -186,11 +126,3 @@ userInput.addEventListener('keydown', function(event) {
   }
   
 });
-
-// Energy +1
-setInterval(() => {
-  if (energy < maxEnergy) {
-    energy++;
-    updateStatus();
-  }
-}, 20000);

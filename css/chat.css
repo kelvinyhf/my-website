@@ -121,6 +121,7 @@ main {
   overflow-y: auto;
   scrollbar-width: none;
   padding: 0.5rem 0 1rem 0;
+  scroll-behavior: smooth;
 }
 
 .chat-messages::-webkit-scrollbar {
