@@ -86,15 +86,3 @@ class SkillCard extends HTMLElement {
   }
 }
 customElements.define('skill-card', SkillCard);
-
-// Energy +1
-const maxEnergy = 5;
-let energy = sessionStorage.getItem('energy') !== null ? parseInt(sessionStorage.getItem('energy')) : maxEnergy;
-let counter = 0;
-
-setInterval(() => {
-  if (energy + counter < maxEnergy) {
-    counter++;
-    sessionStorage.setItem('counter', counter);
-  }
-}, 20000);

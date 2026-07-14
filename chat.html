@@ -63,21 +63,23 @@
   <main>
     
     <!-- Chat Header -->
-    <header class="chat-header">
-      <div class="chat-avatar-container">
-        <img class="lg-1" src="/assets/images/kelviny-avatar.png" width="40" height="40" alt="KelvinY's Avatar">
+    <header>
+      <div class="chat-header container">
+        <div class="chat-avatar-container">
+          <img class="lg-1" src="/assets/images/kelviny-avatar.png" width="40" height="40" alt="KelvinY's Avatar">
+        </div>
+        <div class="chat-name">
+          <h1>KelvinY</h1>
+          <span id="status">Online</span>
+        </div>
+        <a class="return-btn" aria-label="Return to home page" href="/index.html">
+          <svg class="md-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-11)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </a>
       </div>
-      <div class="chat-name">
-        <h1>KelvinY</h1>
-        <span id="status">Online</span>
-      </div>
-      <a class="return-btn" aria-label="Return to home page" href="/index.html">
-        <svg class="md-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-11)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      </a>
     </header>
     
     <!-- Chat Messages -->
-    <div id="chatMessages" class="chat-messages">
+    <div id="chatMessages" class="chat-messages container">
       <div class="message kelvin">
         <p>
           Hi! I'm the digital version of Kelvin.
@@ -87,11 +89,13 @@
     </div>
     
     <!-- Chat Input -->
-    <div class="chat-input">
-      <textarea id="userInput" class="user-input" placeholder="Ask me anything..."></textarea>
-      <button id="sendBtn" class="send-btn">
-        <svg class="sm-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
-      </button>
+    <div class="chat-input-container">
+      <div class="chat-input container">
+        <textarea id="userInput" class="user-input" placeholder="Ask me anything..."></textarea>
+        <button id="sendBtn" class="send-btn">
+          <svg class="sm-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+        </button>
+      </div>
     </div>
     
   </main>
