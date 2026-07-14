@@ -46,6 +46,7 @@ sendBtn.addEventListener('click', async function() {
   // Append message of user
   appendMessage(userText, 'user');
   userInput.value = '';
+  resizeTextarea();
   
   // Kelvin is thinking...
   await sleepR(250, 750);

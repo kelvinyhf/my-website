@@ -1,6 +1,14 @@
 export async function onRequestPost(context) {
   const { request, env } = context;
   
+  // If someone hacking
+  const referrer = request.headers.get('referrer');
+  if (!referrer.includes('kelviny.pages.dev')) {
+    return new Response(JSON.stringify({ error: "Access Denied" }), {
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+  
   try {
     
     // Get the chat history
