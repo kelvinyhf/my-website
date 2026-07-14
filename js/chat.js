@@ -75,8 +75,6 @@ sendBtn.addEventListener('click', async function() {
       chatHistory.pop();
       appendMessage('Something went wrong, please try again.', 'kelvin');
       console.warn(result.error);
-      
-      sendBtn.disabled = false;
       return;
       
     }
@@ -106,11 +104,13 @@ sendBtn.addEventListener('click', async function() {
     appendMessage('Something went wrong, please try again.', 'kelvin');
     console.error(error);
     
+  } finally {
+    
+    // Cool it down
+    await sleep(500);
+    sendBtn.disabled = false;
+    
   }
-  
-  // Cool it down
-  await sleep(500);
-  sendBtn.disabled = false;
   
 });
 
@@ -118,7 +118,7 @@ sendBtn.addEventListener('click', async function() {
 userInput.addEventListener('keydown', function(event) {
   
   // Check if composing
-  if (event.isComposing || event.keyCode === 229) return;
+  if (event.isComposing) return;
   
   if (event.key === 'Enter') {
     // If is touch device

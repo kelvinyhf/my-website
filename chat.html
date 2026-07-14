@@ -62,6 +62,8 @@
   
   <main>
     
+    <h1 class="sr-only">Chat With Me</h1>
+    
     <!-- Chat Header -->
     <header>
       <div class="chat-header container">
@@ -69,7 +71,7 @@
           <img class="lg-1" src="/assets/images/kelviny-avatar.png" width="40" height="40" alt="KelvinY's Avatar">
         </div>
         <div class="chat-name">
-          <h1>KelvinY</h1>
+          <h2>KelvinY</h2>
           <span id="status">Online</span>
         </div>
         <a class="return-btn" aria-label="Return to home page" href="/index.html">
@@ -79,24 +81,24 @@
     </header>
     
     <!-- Chat Messages -->
-    <div id="chatMessages" class="chat-messages container">
+    <section id="chatMessages" class="container">
       <div class="message kelvin">
         <p>
           Hi! I'm the digital version of Kelvin.
           Feel free to ask me anything about coding or just chat with me.
         </p>
       </div>
-    </div>
+    </section>
     
     <!-- Chat Input -->
-    <div class="chat-input-container">
+    <form>
       <div class="chat-input container">
-        <textarea id="userInput" class="user-input" placeholder="Ask me anything..."></textarea>
-        <button id="sendBtn" class="send-btn">
+        <textarea id="userInput" placeholder="Ask me anything..." aria-label="Type your message here..."></textarea>
+        <button id="sendBtn">
           <svg class="sm-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
         </button>
       </div>
-    </div>
+    </form>
     
   </main>
   
