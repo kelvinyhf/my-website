@@ -291,7 +291,7 @@ nav {
   padding: 1rem 0.5rem;
 }
 
-.about-card h1, .about-card .intro {
+.about-card h1, .about-card .intro, .tags {
   padding: 0 1.5rem;
   margin: 0 0 1rem 0;
   border-bottom: 3px solid var(--card-border);
@@ -310,7 +310,7 @@ nav {
 
 /* Tags */
 .tags {
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .tag {
@@ -342,6 +342,17 @@ nav {
 .tag.blue { background-color: var(--blue-a2); }
 .tag.blue p { color: var(--blue-11); }
 .tag.blue svg { stroke: var(--blue-9); }
+
+/* Snk */
+.snk {
+  width: 100%;
+}
+
+.snk.light { visibility: visible; }
+.snk.dark { visibility: hidden; }
+
+.dark .snk.light { visibility: hidden; }
+.dark .snk.dark { visibility: visible; }
 
 /* Tabs */
 .tabs {
