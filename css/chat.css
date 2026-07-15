@@ -206,6 +206,10 @@ form {
   margin: 0;
 }
 
+#userInput::-webkit-scrollbar {
+  display: none;
+}
+
 #userInput:focus-visible {
   outline: 1px solid var(--green-5);
   border-color: var(--green-5);
@@ -227,17 +231,20 @@ form {
 
 @media (hover: hover) {
   #sendBtn:hover {
-    background-color: var(--green-5);
+    background-color: var(--green-6);
   }
 }
 
 @media (hover: none) {
   #sendBtn:active {
-    background-color: var(--green-5);
+    background-color: var(--green-6);
   }
 }
 
-#sendBtn:focus-visible,
+#sendBtn:focus-visible {
+  background-color: var(--green-7);
+}
+
 #sendBtn:disabled {
   background-color: var(--green-5);
 }
