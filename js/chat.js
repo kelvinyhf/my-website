@@ -55,7 +55,7 @@ sendBtn.addEventListener('click', async function() {
   try {
     
     // Send the prompt
-    const response = await fetch('/chat-backend', {
+    const response = await fetch('https://chatbot.kelviny.workers.dev', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ history: chatHistory }),
