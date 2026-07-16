@@ -1,14 +1,6 @@
 export async function onRequestPost(context) {
   const { request, env } = context;
   
-  // If someone hacking
-  const referrer = request.headers.get('referrer');
-  if (!referrer.includes('kelviny.pages.dev')) {
-    return new Response(JSON.stringify({ error: "Access Denied" }), {
-      headers: { "Content-Type": "application/json" }
-    });
-  }
-  
   try {
     
     // Get the chat history
@@ -43,32 +35,20 @@ export async function onRequestPost(context) {
     const fullChat = [systemPrompt, ...chatHistory];
     
     // Get the response
-    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${env.CF_ACCOUNT_ID}/ai/v1/chat/completions`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${env.CF_AI_TOKEN}`
-      },
-      body: JSON.stringify({
-        model: "@cf/meta/llama-3.2-3b-instruct",
-        messages: fullChat
-      })
+    const aiResponse = await env.AI.run("@cf/meta/llama-3.2-3b-instruct", {
+      messages: fullChat
     });
     
     // Return the response
-    const data = await response.json();
-    return new Response(JSON.stringify(data), {
+    return new Response(JSON.stringify(aiResponse), {
       headers: { "Content-Type": "application/json" }
     });
     
   } catch (error) {
-    
-    // Catch the error
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { "Content-Type": "application/json" }
     });
-    
   }
   
 }

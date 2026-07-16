@@ -74,7 +74,7 @@ sendBtn.addEventListener('click', async function() {
       
       // Pop the message, append and log the error
       chatHistory.pop();
-      appendMessage('Something went wrong, please try again.', 'kelvin');
+      appendMessage(`Error (try): [${result.error}]`, 'kelvin');
       console.warn(result.error);
       return;
       
@@ -102,7 +102,7 @@ sendBtn.addEventListener('click', async function() {
     }
     
     // Append and log error
-    appendMessage('Something went wrong, please try again.', 'kelvin');
+    appendMessage(`Error (catch): [${error.message}]`, 'kelvin');
     console.error(error);
     
   } finally {
