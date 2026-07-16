@@ -10,7 +10,7 @@
   --card-bg: rgba(255, 255, 255, 0.4);
   --card-border: rgba(255, 255, 255, 0.85);
   --card-shadow: rgba(0, 0, 0, 0.1);
-  --chat-shadow: rgba(0, 0, 0, 0.05);
+  --tabs-shadow: rgba(0, 0, 0, 0.05);
   --tl-paragraphs-border-color: rgba(255, 255, 255, 1);
   --skill-card-border: rgba(255, 255, 255, 0.75);
   --skill-card-shadow: rgba(0, 0, 0, 0.1);
@@ -61,7 +61,7 @@
   --card-bg: rgba(0, 0, 0, 0.4);
   --card-border: rgba(0, 0, 0, 0.85);
   --card-shadow: rgba(255, 255, 255, 0.1);
-  --chat-shadow: rgba(255, 255, 255, 0.05);
+  --tabs-shadow: rgba(255, 255, 255, 0.05);
   --tl-paragraphs-border-color: rgba(0, 0, 0, 0.35);
   --skill-card-border: rgba(0, 0, 0, 0.35);
   --skill-card-shadow: rgba(255, 255, 255, 0.1);
@@ -276,6 +276,11 @@ nav {
 
 .about-card, .tabs {
   position: relative;
+  z-index: 3;
+}
+
+.floating-cards {
+  position: relative;
   z-index: 2;
 }
 
@@ -286,12 +291,12 @@ nav {
   border: 3px solid var(--card-border);
   border-radius: 1rem;
   box-shadow: 0 0 15px var(--card-shadow);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
   width: calc(100% - 4rem);
   padding: 1rem 0.5rem;
 }
 
-.about-card h1, .about-card .intro, .tags {
+.about-card h1, .about-card .intro {
   padding: 0 1.5rem;
   margin: 0 0 1rem 0;
   border-bottom: 3px solid var(--card-border);
@@ -343,17 +348,6 @@ nav {
 .tag.blue p { color: var(--blue-11); }
 .tag.blue svg { stroke: var(--blue-9); }
 
-/* Snk */
-.snk {
-  width: 100%;
-}
-
-.snk.light { visibility: visible; }
-.snk.dark { visibility: hidden; }
-
-.dark .snk.light { visibility: hidden; }
-.dark .snk.dark { visibility: visible; }
-
 /* Tabs */
 .tabs {
   align-self: flex-end;
@@ -373,7 +367,7 @@ nav {
   background-color: var(--card-bg);
   border: 3px solid var(--card-border);
   border-radius: 10px 0 0 10px;
-  box-shadow: 0 0 15px var(--chat-shadow);
+  box-shadow: 0 0 15px var(--tabs-shadow);
   backdrop-filter: blur(5px);
   padding: 0.5rem 0.75rem;
   line-height: normal;
@@ -434,6 +428,96 @@ nav {
   }
 
 }
+
+/* Floating Cards */
+.floating-cards {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-60%);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 6rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.floating-cards > div {
+  display: flex;
+  width: max-content;
+}
+
+.floating-cards-groups {
+  display: flex;
+  align-items: center;
+  gap: 7.5rem;
+  padding-right: 7.5rem;
+}
+
+.floating-cards-groups.left {
+  animation: scroll-left 20s linear infinite;
+}
+
+.floating-cards-groups.right {
+  animation: scroll-right 20s linear infinite;
+}
+
+.floating-card {
+  background-color: var(--nav-bg);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 10px var(--tabs-shadow);
+  padding: 0.25rem 0.5rem;
+  opacity: 0.5;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .floating-cards {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-cards-groups {
+    animation: none !important;
+  }
+  .floating-cards-groups.left {
+    transform: translateX(-25%) !important;
+  }
+  .floating-cards-groups.right {
+    transform: translateX(-75%) !important;
+  }
+}
+
+/* Snk
+.snk-container {
+  display: grid;
+  grid-template-areas: "snk";
+  width: 100%;
+  overflow: hidden;
+}
+
+.snk {
+  grid-area: snk;
+  width: 100%;
+  margin-bottom: -5%;
+}
+
+.snk.light { visibility: visible; }
+.snk.dark { visibility: hidden; }
+
+.dark .snk.light { visibility: hidden; }
+.dark .snk.dark { visibility: visible; }
+*/
 
 /* Timeline */
 .timeline-grid {
