@@ -1,8 +1,11 @@
-// Sleep functions
+// Random
+const random = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min; };
+
+// Sleep
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const sleepR = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1)) + min));
 
-// Fade In Effect
+// Fade In
 document.addEventListener("DOMContentLoaded", () => {
   
   const observerOptions = {

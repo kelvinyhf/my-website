@@ -40,6 +40,31 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   
 });
 
+// Copy div for infinite scroll effect
+document.addEventListener("DOMContentLoaded", () => {
+  const floatingCardsGroups = document.querySelectorAll('.floating-cards-groups');
+  floatingCardsGroups.forEach(group => {
+    
+    // Random Y Offset
+    const floatingCards = group.querySelectorAll('.floating-card');
+    floatingCards.forEach(card => {
+      const randomY = random(-15, 15);
+      card.style.setProperty('--y-offset', `${randomY}%`);
+    });
+    
+    // Clone before
+    const cloneBefore = group.cloneNode(true);
+    cloneBefore.setAttribute('aria-hidden', 'true');
+    group.parentNode.insertBefore(cloneBefore, group);
+    
+    // Clone after
+    const cloneAfter = group.cloneNode(true);
+    cloneAfter.setAttribute('aria-hidden', 'true');
+    group.parentNode.insertBefore(cloneAfter, group);
+    
+  });
+});
+
 // Custom Elements
 class SkillCard extends HTMLElement {
   connectedCallback() {
