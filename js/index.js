@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const floatingCards = group.querySelectorAll('.floating-card');
     floatingCards.forEach(card => {
       
-      const floatY = random(0, 1) === 0 ? random(30, 50) : -random(30, 50);
+      const floatY = random(0, 1) === 0 ? random(20, 30) : -random(20, 30);
       card.style.setProperty('--float-y', `${floatY}px`);
       
       const floatDur = random(3, 6)
@@ -87,7 +87,7 @@ class SkillCard extends HTMLElement {
     this.innerHTML = `
       <div class="skill-card ${skill} fade-in" role="group" aria-labelledby="${skill}-title">
         <div class="skill-card-header">
-          <img class="lg-2" src="/assets/devicon/${skill}.png" width="44" height="44" alt="">
+          <img class="lg-2" src="/assets/devicon/${skill}.webp" width="44" height="44" alt="">
           <h3 id="${skill}-title">${title}</h3>
         </div>
         <div class="progress-container">
