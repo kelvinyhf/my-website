@@ -1,0 +1,12 @@
+# Kelvin's Website
+My personal website built with HTML, CSS, and Vanilla JavaScript, to showcase my coding journey and skills.
+
+## Navigation
+- [About Me](https://kelviny.pages.dev/#about-me) - A brief description about myself and my future aspirations.
+- [Timeline](https://kelviny.pages.dev/#timeline) - My coding journey, from writing my first line of code to diving deep into web development.
+- [Experience](https://kelviny.pages.dev/#experience) - A showcase of my frontend tech stack with visual proficiency bars.
+
+## Socials
+- [GitHub Profile](https://github.com/kelvinyhf)
+- [CodePen Profile](https://codepen.io/kelvinyhf)
+- [Discord Profile](https://discord.com/users/1083677178669039706)

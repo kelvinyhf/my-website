@@ -10,7 +10,7 @@ A clean, modern, and responsive website built from scratch to showcase my coding
 ## What’s Inside?
 - About Me: A clean section featuring a brief description about myself and my future aspirations.
 - Timeline: A visual tracking of my coding journey, from writing my first line of code to diving deep into web development.
-- My Skills: A showcase of my frontend tech stack with visual proficiency bars.
+- Experience: A showcase of my frontend tech stack with visual proficiency bars.
 
 ## Features
 - Fully Responsive: Optimized for a seamless experience across mobile, tablet, and desktop screens.
