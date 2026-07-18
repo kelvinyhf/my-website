@@ -4,28 +4,35 @@ function refreshColor() {
   return isDark ? '#fff' : '#000';
 }
 
-// fallingPixel
-if (window.tsParticles) {
-  tsParticles.load({
-    id: 'fallingPixel',
-    options: {
-      fullScreen: { enable: false },
-      particles: {
-        number: { value: 20 },
-        shape: { type: 'square' },
-        color: { value: refreshColor() },
-        opacity: { value: 0.05 },
-        size: { value: { min: 4, max: 8 } },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: 'bottom',
-          outModes: { default: 'out' }
+// tsParticles
+async function initParticles() {
+  if (window.tsParticles && window.loadSlim) {
+    await loadSlim(tsParticles);
+    
+    // fallingPixel
+    await tsParticles.load({
+      id: 'fallingPixel',
+      options: {
+        fullScreen: { enable: false },
+        particles: {
+          number: { value: 20 },
+          shape: { type: 'square' },
+          color: { value: refreshColor() },
+          opacity: { value: 0.05 },
+          size: { value: { min: 4, max: 8 } },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: 'bottom',
+            outModes: { default: 'out' }
+          }
         }
       }
-    }
-  });
+    });
+    
+  }
 }
+initParticles();
 
 // Theme Toggle
 document.getElementById('theme-toggle').addEventListener('click', () => {
@@ -49,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const floatingCards = group.querySelectorAll('.floating-card');
     floatingCards.forEach(card => {
       
-      const floatY = random(0, 1) === 0 ? random(40, 60) : -random(40, 60);
+      const floatY = random(0, 1) === 0 ? random(30, 50) : -random(30, 50);
       card.style.setProperty('--float-y', `${floatY}px`);
       
       const floatDur = random(3, 6)
@@ -84,7 +91,7 @@ class SkillCard extends HTMLElement {
           <h3 id="${skill}-title">${title}</h3>
         </div>
         <div class="progress-container">
-          <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100" style="width: ${progress}%;"></div></div>
+          <div class="progress-bg"><div class="progress-bar" role="progressbar" aria-label="Learning Progress" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100" style="width: ${progress}%;"></div></div>
           <p aria-hidden="true">${progress}%</p>
         </div>
         <p>${description}</p>

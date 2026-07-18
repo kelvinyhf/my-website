@@ -488,7 +488,7 @@ nav {
 
 @keyframes float-up-down {
   0% { transform: translateY(0); }
-  100% { transform: translateY(var(--float-y, 50px)); }
+  100% { transform: translateY(var(--float-y, 30px)); }
 }
 
 /* Card Colors */
