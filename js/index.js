@@ -48,8 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Random Y Offset
     const floatingCards = group.querySelectorAll('.floating-card');
     floatingCards.forEach(card => {
-      const randomY = random(-15, 15);
-      card.style.setProperty('--y-offset', `${randomY}%`);
+      
+      const floatY = random(0, 1) === 0 ? random(40, 60) : -random(40, 60);
+      card.style.setProperty('--float-y', `${floatY}px`);
+      
+      const floatDur = random(3, 6)
+      card.style.setProperty('--float-dur', `${floatDur}s`)
+      
     });
     
     // Clone before
@@ -60,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clone after
     const cloneAfter = group.cloneNode(true);
     cloneAfter.setAttribute('aria-hidden', 'true');
-    group.parentNode.insertBefore(cloneAfter, group);
+    group.parentNode.appendChild(cloneAfter, group);
     
   });
 });

@@ -469,12 +469,11 @@ nav {
   box-shadow: 0 0 15px var(--card-shadow);
   padding: 0.5rem;
   opacity: 0.25;
-  transform: translateY(var(--y-offset, 0%));
+  animation: float-up-down var(--float-dur, 4s) ease-in-out infinite alternate;
 }
 
-.floating-card ul li p {
+.floating-card ul li {
   font-size: 0.85rem;
-  margin: 0;
 }
 
 @keyframes scroll-left {
@@ -487,7 +486,13 @@ nav {
   100% { transform: translateX(0); }
 }
 
+@keyframes float-up-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(var(--float-y, 50px)); }
+}
+
 /* Card Colors */
+.floating-card.gray { border: 2px solid var(--gray-a4); }
 .floating-card.red { border: 2px solid var(--red-a4); }
 .floating-card.orange  { border: 2px solid var(--orange-a4); }
 .floating-card.green { border: 2px solid var(--green-a4); }
@@ -511,6 +516,20 @@ nav {
     transform: translateX(-75%) !important;
   }
 }
+
+/* print("Hello world!") */
+.print-hello-world {
+  display: block;
+  margin: 0.5rem;
+  white-space: pre-wrap;
+}
+
+.local-func { color: var(--red-10); }
+.func-name { color: var(--amber-10); }
+.indent-line { display: block; padding-left: 2em; }
+.print { color: var(--blue-10); }
+.hello-world { color: var(--green-10); }
+.end { color: var(--red-10); }
 
 /* Snk */
 .graph {
@@ -550,6 +569,16 @@ nav {
   padding: 0.5rem 1rem;
   border-left: 3px solid var(--red-9);
   color: var(--red-12);
+}
+
+/* Git CLI */
+.git-cli {
+  display: block;
+  background-color: var(--gray-2);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  border-left: 3px solid var(--gray-7);
 }
 
 /* Timeline */
