@@ -2,8 +2,8 @@
 :root {
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --dot-color: var(--green-9);
-  --message-kelvin-background-color: var(--orange-4);
-  --message-kelvin-shadow-color: var(--orange-a2);
+  --message-kelvin-background-color: var(--red-4);
+  --message-kelvin-shadow-color: var(--red-a2);
   --message-user-background-color: var(--green-4);
   --message-user-shadow-color: var(--green-a2);
 }
@@ -11,8 +11,8 @@
 .dark {
   --box-shadow-color: rgba(255, 255, 255, 0.1);
   --dot-color: var(--green-9);
-  --message-kelvin-background-color: var(--orange-5);
-  --message-kelvin-shadow-color: var(--orange-a3);
+  --message-kelvin-background-color: var(--red-5);
+  --message-kelvin-shadow-color: var(--red-a3);
   --message-user-background-color: var(--green-5);
   --message-user-shadow-color: var(--green-a3);
 }
@@ -25,7 +25,7 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(var(--orange-2), var(--green-2));
+  background-image: linear-gradient(var(--red-2), var(--orange-2));
 }
 
 main {
@@ -39,7 +39,7 @@ main {
 header {
   flex-shrink: 0;
   padding: 0.75rem 2rem;
-  background-color: var(--orange-1);
+  background-color: var(--red-1);
   border-radius: 0 0 1.5rem 1.5rem;
   box-shadow: 0 0 10px var(--box-shadow-color);
 }
@@ -66,7 +66,7 @@ header {
   width: 0.65rem;
   height: 0.65rem;
   background-color: var(--dot-color);
-  box-shadow: 0 0 0 3px var(--orange-1);
+  box-shadow: 0 0 0 3px var(--red-1);
   border-radius: 50%;
 }
 
@@ -165,7 +165,7 @@ header {
 form {
   position: relative;
   flex-shrink: 0;
-  background-color: var(--green-1);
+  background-color: var(--orange-1);
   border-radius: 1.5rem 1.5rem 0 0;
   box-shadow: 0 0 10px var(--box-shadow-color);
   padding: 1.5rem;

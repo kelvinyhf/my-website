@@ -12,37 +12,38 @@
   --card-shadow: rgba(0, 0, 0, 0.1);
   --tabs-shadow: rgba(0, 0, 0, 0.05);
   --floating-cards-bg: rgba(255, 255, 255, 0.75);
+  --cube-glow: var(--red-a4);
   --tl-paragraphs-border-color: rgba(255, 255, 255, 1);
   --skill-card-border: rgba(255, 255, 255, 0.75);
   --skill-card-shadow: rgba(0, 0, 0, 0.1);
   --footer-shadow: rgba(0, 0, 0, 0.1);
   
   /* Colors */
-  --tabs-sc-text-hover-color: var(--blue-9);
-  --tabs-sc-svg-hover-color: var(--blue-11);
-  --tabs-cwm-text-hover-color: var(--green-9);
-  --tabs-cwm-svg-hover-color: var(--green-11);
+  --tabs-sc-text-hover-color: var(--red-9);
+  --tabs-sc-svg-hover-color: var(--red-11);
+  --tabs-cwm-text-hover-color: var(--orange-9);
+  --tabs-cwm-svg-hover-color: var(--orange-11);
 
-  --tl1-color: var(--blue-7);
-  --tl1-box-shadow-color: var(--blue-a3);
-  --ts1-background-color: var(--blue-6);
-  --ts1-border-color: var(--blue-7);
-  --p1-box-shadow-color: var(--blue-a3);
-  --p1-after-color: var(--blue-a4);
+  --tl1-color: var(--red-7);
+  --tl1-box-shadow-color: var(--red-a3);
+  --ts1-background-color: var(--red-6);
+  --ts1-border-color: var(--red-7);
+  --p1-box-shadow-color: var(--red-a3);
+  --p1-after-color: var(--red-a4);
   
-  --tl2-color: var(--purple-7);
-  --tl2-box-shadow-color: var(--purple-a3);
-  --ts2-background-color: var(--purple-6);
-  --ts2-border-color: var(--purple-7);
-  --p2-box-shadow-color: var(--purple-a3);
-  --p2-after-color: var(--purple-a4);
+  --tl2-color: var(--orange-7);
+  --tl2-box-shadow-color: var(--orange-a3);
+  --ts2-background-color: var(--orange-6);
+  --ts2-border-color: var(--orange-7);
+  --p2-box-shadow-color: var(--orange-a3);
+  --p2-after-color: var(--orange-a4);
   
-  --tl3-color: var(--orange-7);
-  --tl3-box-shadow-color: var(--orange-a3);
-  --ts3-background-color: var(--orange-6);
-  --ts3-border-color: var(--orange-7);
-  --p3-box-shadow-color: var(--orange-a3);
-  --p3-after-color: var(--orange-a4);
+  --tl3-color: var(--purple-7);
+  --tl3-box-shadow-color: var(--purple-a3);
+  --ts3-background-color: var(--purple-6);
+  --ts3-border-color: var(--purple-7);
+  --p3-box-shadow-color: var(--purple-a3);
+  --p3-after-color: var(--purple-a4);
   
   --html-card-background-color: var(--orange-a1);
   --css-card-background-color: var(--blue-a1);
@@ -64,37 +65,38 @@
   --card-shadow: rgba(255, 255, 255, 0.1);
   --tabs-shadow: rgba(255, 255, 255, 0.05);
   --floating-cards-bg: rgba(0, 0, 0, 0.75);
+  --cube-glow: var(--red-a7);
   --tl-paragraphs-border-color: rgba(0, 0, 0, 0.35);
   --skill-card-border: rgba(0, 0, 0, 0.35);
   --skill-card-shadow: rgba(255, 255, 255, 0.1);
   --footer-shadow: rgba(255, 255, 255, 0.1);
   
   /* Colors */
-  --tabs-sc-text-hover-color: var(--blue-11);
-  --tabs-sc-svg-hover-color: var(--blue-10);
-  --tabs-cwm-text-hover-color: var(--green-11);
-  --tabs-cwm-svg-hover-color: var(--green-10);
+  --tabs-sc-text-hover-color: var(--red-11);
+  --tabs-sc-svg-hover-color: var(--red-10);
+  --tabs-cwm-text-hover-color: var(--orange-11);
+  --tabs-cwm-svg-hover-color: var(--orange-10);
 
-  --tl1-color: var(--blue-8);
-  --tl1-box-shadow-color: var(--blue-a2);
-  --ts1-background-color: var(--blue-7);
-  --ts1-border-color: var(--blue-8);
-  --p1-box-shadow-color: color-mix(in srgb, var(--blue-a2), var(--blue-a3));
-  --p1-after-color: var(--blue-a5);
+  --tl1-color: var(--red-8);
+  --tl1-box-shadow-color: var(--red-a2);
+  --ts1-background-color: var(--red-7);
+  --ts1-border-color: var(--red-8);
+  --p1-box-shadow-color: color-mix(in srgb, var(--red-a2), var(--red-a3));
+  --p1-after-color: var(--red-a5);
   
-  --tl2-color: var(--purple-8);
-  --tl2-box-shadow-color: var(--purple-a2);
-  --ts2-background-color: var(--purple-7);
-  --ts2-border-color: var(--purple-8);
-  --p2-box-shadow-color: color-mix(in srgb, var(--purple-a2), var(--purple-a3));
-  --p2-after-color: var(--purple-a5);
+  --tl2-color: var(--orange-8);
+  --tl2-box-shadow-color: var(--orange-a2);
+  --ts2-background-color: var(--orange-7);
+  --ts2-border-color: var(--orange-8);
+  --p2-box-shadow-color: color-mix(in srgb, var(--orange-a2), var(--orange-a3));
+  --p2-after-color: var(--orange-a5);
   
-  --tl3-color: var(--orange-8);
-  --tl3-box-shadow-color: var(--orange-a2);
-  --ts3-background-color: var(--orange-7);
-  --ts3-border-color: var(--orange-8);
-  --p3-box-shadow-color: color-mix(in srgb, var(--orange-a2), var(--orange-a3));
-  --p3-after-color: var(--orange-a5);
+  --tl3-color: var(--purple-8);
+  --tl3-box-shadow-color: var(--purple-a2);
+  --ts3-background-color: var(--purple-7);
+  --ts3-border-color: var(--purple-8);
+  --p3-box-shadow-color: color-mix(in srgb, var(--purple-a2), var(--purple-a3));
+  --p3-after-color: var(--purple-a5);
   
   --html-card-background-color: color-mix(in srgb, var(--gray-a1), var(--orange-a1));
   --css-card-background-color: color-mix(in srgb, var(--gray-a1), var(--blue-a1));
@@ -242,23 +244,12 @@ nav {
   min-height: 100svh;
   overflow: hidden;
   background:
-  linear-gradient(transparent 25%, var(--yellow-1) 100%) center / cover no-repeat,
+  linear-gradient(transparent 25%, var(--amber-1) 100%) center / cover no-repeat,
   linear-gradient(90deg, var(--about-me-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
   linear-gradient(var(--about-me-grid-color) 3px, transparent 3px) center / 50px 50px repeat,
-  linear-gradient(90deg, var(--orange-3), var(--green-3)) center / cover no-repeat;
+  linear-gradient(90deg, var(--red-3), var(--orange-3)) center / cover no-repeat;
   border-bottom: 5px solid var(--white-black);
   padding: 7rem 0 2rem 0;
-}
-
-#about-me::before {
-  content: "";
-  position: absolute;
-  bottom: -2.5rem;
-  left: -2.5rem;
-  width: 15rem;
-  height: 15rem;
-  opacity: 0.5;
-  background: var(--kart-kid) no-repeat center / contain;
 }
 
 /* fallingPixel */
@@ -434,11 +425,11 @@ nav {
 /* Floating Cards */
 .floating-cards {
   position: absolute;
-  top: 60%;
-  transform: translateY(-60%);
+  top: 55%;
+  transform: translateY(-55%);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-row-gap: 5rem;
+  grid-row-gap: 4rem;
   width: 100%;
 }
 
@@ -455,11 +446,11 @@ nav {
 }
 
 .floating-cards-groups.left {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 35s linear infinite;
 }
 
 .floating-cards-groups.right {
-  animation: scroll-right 30s linear infinite;
+  animation: scroll-right 50s linear infinite;
 }
 
 .floating-card {
@@ -498,7 +489,7 @@ nav {
 .floating-card.blue { border: 2px solid var(--blue-a4); }
 
 /* Responsive and Reduce Motion */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .floating-cards {
     visibility: hidden !important;
   }
@@ -514,16 +505,6 @@ nav {
   .floating-cards-groups.right {
     transform: translateX(-75%) !important;
   }
-}
-
-/* Git CLI */
-.git-cli {
-  display: block;
-  background-color: var(--gray-2);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 1rem;
-  border-left: 3px solid var(--gray-7);
 }
 
 /* Snk */
@@ -566,6 +547,16 @@ nav {
   color: var(--red-12);
 }
 
+/* Git CLI */
+.git-cli {
+  display: block;
+  background-color: var(--gray-2);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  border-left: 3px solid var(--gray-7);
+}
+
 /* print("Hello world!") */
 .print-hello-world {
   display: block;
@@ -579,6 +570,89 @@ nav {
 .print { color: var(--blue-10); }
 .hello-world { color: var(--green-10); }
 .end { color: var(--red-10); }
+
+/* Cube */
+.cube {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  width: 70px;
+  height: 70px;
+  animation: spin 7s infinite linear, float 3s infinite ease-in-out alternate;
+  transform-style: preserve-3d;
+}
+
+.cube span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--red-5);
+  z-index: 2;
+}
+
+.cube div {
+  position: absolute;
+  background-color: var(--red-a1);
+  border: 5px solid var(--red-a2);
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 10px var(--cube-glow);
+  opacity: 0.5;
+}
+
+.cube div:nth-of-type(1) {
+  transform: rotateY(180deg) translateZ(35px);
+}
+
+.cube div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.cube div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.cube div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.cube div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.cube div:nth-of-type(6) {
+  transform: translateZ(35px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(25deg) rotateY(20deg);
+  }
+  100% {
+    transform: rotateX(25deg) rotateY(-340deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 60px;
+  }
+}
 
 /* Timeline */
 .timeline-grid {
@@ -618,7 +692,7 @@ nav {
   background-color: var(--ts1-background-color);
   border: 2px solid var(--ts1-border-color);
   border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px var(--blue-a4);
+  box-shadow: 0 0 5px 2px var(--red-a4);
 }
 
 /* Timeline 2 */
@@ -635,7 +709,7 @@ nav {
   background-color: var(--ts2-background-color);
   border: 2px solid var(--ts2-border-color);
   border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px var(--purple-a4);
+  box-shadow: 0 0 5px 2px var(--orange-a4);
 }
 
 /* Timeline 3 */
@@ -652,7 +726,7 @@ nav {
   background-color: var(--ts3-background-color);
   border: 2px solid var(--ts3-border-color);
   border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px var(--orange-a4);
+  box-shadow: 0 0 5px 2px var(--purple-a4);
 }
 
 /* Paragraphs */
@@ -715,7 +789,7 @@ nav {
 /* Paragraph 1 */
 .p1 {
   grid-area: p1;
-  background-color: var(--blue-1);
+  background-color: var(--red-1);
   box-shadow: 0 0 10px var(--p1-box-shadow-color);
 }
 
@@ -727,7 +801,7 @@ nav {
 /* Paragraph 2 */
 .p2 {
   grid-area: p2;
-  background-color: var(--purple-1);
+  background-color: var(--orange-1);
   box-shadow: 0 0 10px var(--p2-box-shadow-color);
 }
 
@@ -739,7 +813,7 @@ nav {
 /* Paragraph 3 */
 .p3 {
   grid-area: p3;
-  background-color: var(--orange-1);
+  background-color: var(--purple-1);
   box-shadow: 0 0 10px var(--p3-box-shadow-color);
 }
 

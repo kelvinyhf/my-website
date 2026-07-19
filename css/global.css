@@ -7,42 +7,42 @@
 
 /* Fonts */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 400;
   font-display: swap;
   src: url('/fonts/Inter_18pt-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-display: swap;
   src: url('/fonts/Inter_18pt-Medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 600;
   font-display: swap;
   src: url('/fonts/Inter_18pt-SemiBold.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-weight: 400;
   font-display: swap;
   src: url('/fonts/RobotoMono_18pt-Medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-weight: 500;
   font-display: swap;
   src: url('/fonts/RobotoMono_18pt-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-weight: 600;
   font-display: swap;
   src: url('/fonts/RobotoMono_18pt-SemiBold.woff2') format('woff2');
@@ -156,7 +156,7 @@ p, blockquote, ul, ol, li, label, input, button, select {
 /* Body */
 body {
   background-color: var(--white-black);
-  background-image: linear-gradient(var(--yellow-1) 0%, var(--yellow-1) 100%);
+  background-image: linear-gradient(var(--amber-1) 0%, var(--amber-1) 100%);
   font-family: "Inter", sans-serif;
   min-width: 320px;
   line-height: 1.6;
