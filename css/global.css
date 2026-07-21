@@ -5,49 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Fonts */
-@font-face {
-  font-family: "Inter";
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Inter_18pt-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Inter_18pt-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Inter_18pt-SemiBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Roboto Mono";
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/RobotoMono_18pt-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Roboto Mono";
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/RobotoMono_18pt-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "Roboto Mono";
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/RobotoMono_18pt-SemiBold.woff2') format('woff2');
-}
-
 /* Initial Settings */
 html {
   -webkit-text-size-adjust: 100%;

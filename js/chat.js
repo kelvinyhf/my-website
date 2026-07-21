@@ -1,4 +1,4 @@
-// Chat With Me
+// AI Chat
 const chatMessages = document.getElementById('chatMessages');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');

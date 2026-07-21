@@ -21,10 +21,10 @@
   --footer-shadow: rgba(0, 0, 0, 0.03);
   
   /* Colors */
-  --tabs-sc-text-hover-color: var(--red-9);
-  --tabs-sc-svg-hover-color: var(--red-11);
-  --tabs-cwm-text-hover-color: var(--orange-9);
-  --tabs-cwm-svg-hover-color: var(--orange-11);
+  --tab1-text-hover-color: var(--red-9);
+  --tab1-svg-hover-color: var(--red-11);
+  --tab2-text-hover-color: var(--orange-9);
+  --tab2-svg-hover-color: var(--orange-11);
 
   --tl1-color: var(--red-7);
   --tl1-box-shadow-color: var(--red-a3);
@@ -76,10 +76,10 @@
   --footer-shadow: rgba(255, 255, 255, 0.03);
   
   /* Colors */
-  --tabs-sc-text-hover-color: var(--red-11);
-  --tabs-sc-svg-hover-color: var(--red-10);
-  --tabs-cwm-text-hover-color: var(--orange-11);
-  --tabs-cwm-svg-hover-color: var(--orange-10);
+  --tab1-text-hover-color: var(--red-11);
+  --tab1-svg-hover-color: var(--red-10);
+  --tab2-text-hover-color: var(--orange-11);
+  --tab2-svg-hover-color: var(--orange-10);
 
   --tl1-color: var(--red-8);
   --tl1-box-shadow-color: var(--red-a2);
@@ -353,8 +353,8 @@ nav {
   gap: 1rem;
 }
 
-/* Source Code and Chat With Me */
-.source-code, .chat-with-me {
+/* AI Chat and Source Code */
+.ai-chat, .source-code {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -369,59 +369,59 @@ nav {
   opacity: 0.85;
 }
 
-.source-code p, .chat-with-me p {
+.ai-chat p, .source-code p {
   font-size: 0.9rem;
   margin: 0;
 }
 
 /* Clear default style */
-.source-code:is(:link, :visited, :focus), .chat-with-me:is(:link, :visited, :focus) {
+.ai-chat:is(:link, :visited, :focus), .source-code:is(:link, :visited, :focus) {
   color: var(--gray-12);
   text-decoration: none;
 }
 
 @media (hover: hover) {
   
+  .ai-chat:is(:hover, :visited:hover) {
+    color: var(--tab1-text-hover-color);
+    opacity: 1;
+  }
+  
   .source-code:is(:hover, :visited:hover) {
-    color: var(--tabs-sc-text-hover-color);
+    color: var(--tab2-text-hover-color);
     opacity: 1;
   }
   
-  .chat-with-me:is(:hover, :visited:hover) {
-    color: var(--tabs-cwm-text-hover-color);
-    opacity: 1;
+  .ai-chat:is(:hover, :visited:hover) svg {
+    stroke: var(--tab1-svg-hover-color);
   }
-
+  
   .source-code:is(:hover, :visited:hover) svg {
-    stroke: var(--tabs-sc-svg-hover-color);
+    stroke: var(--tab2-svg-hover-color);
   }
   
-  .chat-with-me:is(:hover, :visited:hover) svg {
-    stroke: var(--tabs-cwm-svg-hover-color);
-  }
-
 }
 
 @media (hover: none) {
   
+  .ai-chat:is(:active, :visited:active) {
+    color: var(--tab1-text-hover-color);
+    opacity: 1;
+  }
+  
   .source-code:is(:active, :visited:active) {
-    color: var(--tabs-sc-text-hover-color);
+    color: var(--tab2-text-hover-color);
     opacity: 1;
   }
   
-  .chat-with-me:is(:active, :visited:active) {
-    color: var(--tabs-cwm-text-hover-color);
-    opacity: 1;
+  .ai-chat:is(:active, :visited:active) svg {
+    stroke: var(--tab1-svg-hover-color);
   }
-
+  
   .source-code:is(:active, :visited:active) svg {
-    stroke: var(--tabs-sc-svg-hover-color);
+    stroke: var(--tab2-svg-hover-color);
   }
   
-  .chat-with-me:is(:active, :visited:active) svg {
-    stroke: var(--tabs-cwm-svg-hover-color);
-  }
-
 }
 
 /* Floating Cards */
