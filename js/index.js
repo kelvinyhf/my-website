@@ -1,7 +1,7 @@
 // tsParticles
 function refreshColor() {
   const isDark = document.documentElement.classList.contains('dark');
-  return isDark ? '#fff' : '#000';
+  return isDark ? '#dc3e42' : '#ec5d5e';
 }
 
 // tsParticles
@@ -18,8 +18,8 @@ async function initParticles() {
           number: { value: 20 },
           shape: { type: 'square' },
           color: { value: refreshColor() },
-          opacity: { value: 0.05 },
-          size: { value: { min: 4, max: 8 } },
+          opacity: { value: { min: 0.05, max: 0.1 } },
+          size: { value: { min: 3, max: 6 } },
           move: {
             enable: true,
             speed: 2,

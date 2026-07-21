@@ -2,7 +2,8 @@
 :root {
   
   /* White and Black */
-  --nav-bg: rgba(255, 255, 255, 0.3);
+  --nav-bg: rgba(255, 255, 255, 0.5);
+  --nav-border: rgba(255, 255, 255, 0.75);
   --nav-shadow: rgba(0, 0, 0, 0.1);
   --nav-logo-color: #424242;
   --about-me-grid-color: rgba(255, 255, 255, 0.125);
@@ -15,8 +16,9 @@
   --cube-glow: var(--red-a4);
   --tl-paragraphs-border-color: rgba(255, 255, 255, 1);
   --skill-card-border: rgba(255, 255, 255, 0.75);
-  --skill-card-shadow: rgba(0, 0, 0, 0.1);
-  --footer-shadow: rgba(0, 0, 0, 0.1);
+  --skill-card-shadow: rgba(0, 0, 0, 0.05);
+  --footer-border: rgba(255, 255, 255, 0.75);
+  --footer-shadow: rgba(0, 0, 0, 0.03);
   
   /* Colors */
   --tabs-sc-text-hover-color: var(--red-9);
@@ -31,19 +33,19 @@
   --p1-box-shadow-color: var(--red-a3);
   --p1-after-color: var(--red-a4);
   
-  --tl2-color: var(--orange-7);
-  --tl2-box-shadow-color: var(--orange-a3);
-  --ts2-background-color: var(--orange-6);
-  --ts2-border-color: var(--orange-7);
-  --p2-box-shadow-color: var(--orange-a3);
-  --p2-after-color: var(--orange-a4);
+  --tl2-color: color-mix(in srgb, var(--red-7), var(--orange-7));
+  --tl2-box-shadow-color: color-mix(in srgb, var(--red-a3), var(--orange-a3));
+  --ts2-background-color: color-mix(in srgb, var(--red-6), var(--orange-6));
+  --ts2-border-color: color-mix(in srgb, var(--red-7), var(--orange-7));
+  --p2-box-shadow-color: color-mix(in srgb, var(--red-a3), var(--orange-a3));
+  --p2-after-color: color-mix(in srgb, var(--red-a4), var(--orange-a4));
   
-  --tl3-color: var(--purple-7);
-  --tl3-box-shadow-color: var(--purple-a3);
-  --ts3-background-color: var(--purple-6);
-  --ts3-border-color: var(--purple-7);
-  --p3-box-shadow-color: var(--purple-a3);
-  --p3-after-color: var(--purple-a4);
+  --tl3-color: var(--orange-7);
+  --tl3-box-shadow-color: var(--orange-a3);
+  --ts3-background-color: var(--orange-6);
+  --ts3-border-color: var(--orange-7);
+  --p3-box-shadow-color: var(--orange-a3);
+  --p3-after-color: var(--orange-a4);
   
   --html-card-background-color: var(--orange-a1);
   --css-card-background-color: var(--blue-a1);
@@ -55,7 +57,8 @@
 .dark {
   
   /* White and Black */
-  --nav-bg: rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(0, 0, 0, 0.5);
+  --nav-border: rgba(0, 0, 0, 0.75);
   --nav-shadow: rgba(255, 255, 255, 0.1);
   --nav-logo-color: #d1d1d1;
   --about-me-grid-color: rgba(0, 0, 0, 0.035);
@@ -68,8 +71,9 @@
   --cube-glow: var(--red-a7);
   --tl-paragraphs-border-color: rgba(0, 0, 0, 0.35);
   --skill-card-border: rgba(0, 0, 0, 0.35);
-  --skill-card-shadow: rgba(255, 255, 255, 0.1);
-  --footer-shadow: rgba(255, 255, 255, 0.1);
+  --skill-card-shadow: rgba(255, 255, 255, 0.05);
+  --footer-border: rgba(0, 0, 0, 0.75);
+  --footer-shadow: rgba(255, 255, 255, 0.03);
   
   /* Colors */
   --tabs-sc-text-hover-color: var(--red-11);
@@ -84,19 +88,19 @@
   --p1-box-shadow-color: color-mix(in srgb, var(--red-a2), var(--red-a3));
   --p1-after-color: var(--red-a5);
   
-  --tl2-color: var(--orange-8);
-  --tl2-box-shadow-color: var(--orange-a2);
-  --ts2-background-color: var(--orange-7);
-  --ts2-border-color: var(--orange-8);
-  --p2-box-shadow-color: color-mix(in srgb, var(--orange-a2), var(--orange-a3));
-  --p2-after-color: var(--orange-a5);
+  --tl2-color: color-mix(in srgb, var(--red-8), var(--orange-8));
+  --tl2-box-shadow-color: color-mix(in srgb, var(--red-a2), var(--orange-a2));
+  --ts2-background-color: color-mix(in srgb, var(--red-7), var(--orange-7));
+  --ts2-border-color: color-mix(in srgb, var(--red-8), var(--orange-8));
+  --p2-box-shadow-color: color-mix(in srgb, var(--red-a2), var(--orange-a3));
+  --p2-after-color: color-mix(in srgb, var(--red-a5), var(--orange-a5));
   
-  --tl3-color: var(--purple-8);
-  --tl3-box-shadow-color: var(--purple-a2);
-  --ts3-background-color: var(--purple-7);
-  --ts3-border-color: var(--purple-8);
-  --p3-box-shadow-color: color-mix(in srgb, var(--purple-a2), var(--purple-a3));
-  --p3-after-color: var(--purple-a5);
+  --tl3-color: var(--orange-8);
+  --tl3-box-shadow-color: var(--orange-a2);
+  --ts3-background-color: var(--orange-7);
+  --ts3-border-color: var(--orange-8);
+  --p3-box-shadow-color: color-mix(in srgb, var(--orange-a2), var(--orange-a3));
+  --p3-after-color: var(--orange-a5);
   
   --html-card-background-color: color-mix(in srgb, var(--gray-a1), var(--orange-a1));
   --css-card-background-color: color-mix(in srgb, var(--gray-a1), var(--blue-a1));
@@ -135,9 +139,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--nav-bg);
-  border-radius: 0 0 1.5rem 1.5rem;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 15px var(--nav-shadow);
+  border-bottom: 2px solid var(--nav-border);
   padding: 0.5rem 1.5rem 0.5rem 2rem;
 }
 
@@ -172,7 +176,7 @@ nav {
 
 /* Nav links hover active effect */
 .nav-links li a:is(:link, :visited, :hover, :focus, :active) {
-  border-radius: 0.5rem;
+  border-radius: 8px;
   transition: background-color 0.1s ease-out;
   padding: 0.5rem;
   color: var(--gray-11);
@@ -203,7 +207,7 @@ nav {
   cursor: pointer;
   background: none;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   padding: 0.5rem;
   margin: 0;
   transition: background-color 0.1s ease-out;
@@ -269,20 +273,19 @@ nav {
 
 .about-card, .tabs {
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .floating-cards {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* About Card */
 .about-card {
   overflow-y: auto;
   background-color: var(--card-bg);
-  border: 3px solid var(--card-border);
-  border-radius: 1rem;
+  border-block: 3px solid var(--card-border);
   box-shadow: 0 0 15px var(--card-shadow);
   backdrop-filter: blur(15px);
   width: calc(100% - 4rem);
@@ -296,26 +299,25 @@ nav {
 .about-card h1 {
   font-size: 1.3rem;
   color: var(--gray-12);
-  padding: 0 1.5rem;
+  padding: 0 1.75rem;
 }
 
 .about-card .intro {
-  padding: 1rem 1.5rem;
-  margin: 0.75rem 0;
-  border-top: 3px solid var(--card-border);
-  border-bottom: 3px solid var(--card-border);
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0.5rem;
+  border-block: 3px solid var(--card-border);
 }
 
 /* Tags */
 .tags {
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border-radius: 10px;
+  border-radius: 6px;
   margin: 0.5rem 0.25rem;
   padding: 0.25rem 0.5rem;
 }
@@ -359,7 +361,7 @@ nav {
   gap: 0.75rem;
   background-color: var(--card-bg);
   border: 3px solid var(--card-border);
-  border-radius: 10px 0 0 10px;
+  border-radius: 6px 0 0 6px;
   box-shadow: 0 0 15px var(--tabs-shadow);
   backdrop-filter: blur(5px);
   padding: 0.5rem 0.75rem;
@@ -455,7 +457,6 @@ nav {
 
 .floating-card {
   background-color: var(--floating-cards-bg);
-  border-radius: 1rem;
   box-shadow: 0 0 15px var(--card-shadow);
   padding: 0.5rem;
   opacity: 0.25;
@@ -482,11 +483,11 @@ nav {
 }
 
 /* Card Colors */
-.floating-card.gray { border: 2px solid var(--gray-a4); }
-.floating-card.red { border: 2px solid var(--red-a4); }
-.floating-card.orange  { border: 2px solid var(--orange-a4); }
-.floating-card.green { border: 2px solid var(--green-a4); }
-.floating-card.blue { border: 2px solid var(--blue-a4); }
+.floating-card.gray { border-block: 2px solid var(--gray-a4); }
+.floating-card.red { border-block: 2px solid var(--red-a4); }
+.floating-card.orange  { border-block: 2px solid var(--orange-a4); }
+.floating-card.green { border-block: 2px solid var(--green-a4); }
+.floating-card.blue { border-block: 2px solid var(--blue-a4); }
 
 /* Responsive and Reduce Motion */
 @media (max-width: 992px) {
@@ -551,7 +552,7 @@ nav {
 .git-cli {
   display: block;
   background-color: var(--gray-2);
-  border-radius: 1rem;
+  border-radius: 8px;
   padding: 0.5rem 1rem;
   margin: 0.5rem 1rem;
   border-left: 3px solid var(--gray-7);
@@ -574,12 +575,13 @@ nav {
 /* Cube */
 .cube {
   position: absolute;
-  bottom: 40px;
-  left: 50px;
-  width: 70px;
-  height: 70px;
+  bottom: 30px;
+  left: 45px;
+  width: 60px;
+  height: 60px;
   animation: spin 7s infinite linear, float 3s infinite ease-in-out alternate;
   transform-style: preserve-3d;
+  z-index: 2;
 }
 
 .cube span {
@@ -592,10 +594,9 @@ nav {
   justify-content: center;
   align-items: center;
   font-family: "Roboto Mono", monospace;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--red-5);
-  z-index: 2;
 }
 
 .cube div {
@@ -604,12 +605,12 @@ nav {
   border: 5px solid var(--red-a2);
   height: 100%;
   width: 100%;
-  box-shadow: 0 0 10px var(--cube-glow);
+  box-shadow: 0 0 5px var(--cube-glow);
   opacity: 0.5;
 }
 
 .cube div:nth-of-type(1) {
-  transform: rotateY(180deg) translateZ(35px);
+  transform: rotateY(180deg) translateZ(30px);
 }
 
 .cube div:nth-of-type(2) {
@@ -633,7 +634,7 @@ nav {
 }
 
 .cube div:nth-of-type(6) {
-  transform: translateZ(35px);
+  transform: translateZ(30px);
 }
 
 @keyframes spin {
@@ -650,7 +651,7 @@ nav {
     bottom: 40px;
   }
   100% {
-    bottom: 60px;
+    bottom: 55px;
   }
 }
 
@@ -678,55 +679,50 @@ nav {
   height: 100%;
 }
 
-/* Timeline 1 */
-.tl1 {
-  grid-area: tl1;
-  background-image: linear-gradient(var(--white-black) 0%, var(--tl1-color) 50%);
-  box-shadow: 0 0 10px 2px var(--tl1-box-shadow-color);
-}
-
-.ts1 {
+.ts1, .ts2, .ts3 {
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
+  border-radius: 6px;
+}
+
+/* Timeline 1 */
+.tl1 {
+  grid-area: tl1;
+  background-image: linear-gradient(var(--amber-1) 0%, var(--tl1-color) 50%);
+  box-shadow: 0 15px 15px 2px var(--tl1-box-shadow-color);
+}
+
+.ts1 {
   background-color: var(--ts1-background-color);
   border: 2px solid var(--ts1-border-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px var(--red-a4);
+  box-shadow: 0 0 10px 2px var(--red-a4);
 }
 
 /* Timeline 2 */
 .tl2 {
   grid-area: tl2;
   background-image: linear-gradient(var(--tl2-color) 0%, var(--tl2-color) 100%);
-  box-shadow: 0 0 10px 2px var(--tl2-box-shadow-color);
+  box-shadow: 0 0 15px 2px var(--tl2-box-shadow-color);
 }
 
 .ts2 {
-  flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
   background-color: var(--ts2-background-color);
   border: 2px solid var(--ts2-border-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px var(--orange-a4);
+  box-shadow: 0 0 10px 2px color-mix(in srgb, var(--red-a4), var(--orange-a4));
 }
 
 /* Timeline 3 */
 .tl3 {
   grid-area: tl3;
-  background-image: linear-gradient(var(--tl3-color) 50%, var(--white-black) 100%);
-  box-shadow: 0 0 10px 2px var(--tl3-box-shadow-color);
+  background-image: linear-gradient(var(--tl3-color) 50%, var(--amber-1) 100%);
+  box-shadow: 0 -15px 15px 2px var(--tl3-box-shadow-color);
 }
 
 .ts3 {
-  flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
   background-color: var(--ts3-background-color);
   border: 2px solid var(--ts3-border-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 0 5px 2px var(--purple-a4);
+  box-shadow: 0 0 10px 2px var(--orange-a4);
 }
 
 /* Paragraphs */
@@ -737,7 +733,7 @@ nav {
   justify-self: center;
   border: 3px solid var(--tl-paragraphs-border-color);
   border-left: none;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 8px 8px 0;
   margin: 2rem 2rem 2rem 0;
   padding: 1rem 1rem 3rem 2rem;
 }
@@ -790,7 +786,7 @@ nav {
 .p1 {
   grid-area: p1;
   background-color: var(--red-1);
-  box-shadow: 0 0 10px var(--p1-box-shadow-color);
+  box-shadow: 0 0 20px var(--p1-box-shadow-color);
 }
 
 .p1::after {
@@ -801,8 +797,8 @@ nav {
 /* Paragraph 2 */
 .p2 {
   grid-area: p2;
-  background-color: var(--orange-1);
-  box-shadow: 0 0 10px var(--p2-box-shadow-color);
+  background-color: color-mix(in srgb, var(--red-1), var(--orange-1));
+  box-shadow: 0 0 20px var(--p2-box-shadow-color);
 }
 
 .p2::after {
@@ -813,8 +809,8 @@ nav {
 /* Paragraph 3 */
 .p3 {
   grid-area: p3;
-  background-color: var(--purple-1);
-  box-shadow: 0 0 10px var(--p3-box-shadow-color);
+  background-color: var(--orange-1);
+  box-shadow: 0 0 20px var(--p3-box-shadow-color);
 }
 
 .p3::after {
@@ -832,7 +828,7 @@ nav {
   grid-template-columns: 1fr;
   gap: 1.75rem;
   background-color: var(--gray-a2);
-  border-radius: 1rem;
+  border-radius: 8px;
   margin: 1.5rem;
   padding: 2rem 1.5rem;
 }
@@ -845,9 +841,8 @@ nav {
 
 .skill-card {
   height: 100%;
-  border: 3px solid var(--skill-card-border);
-  border-radius: 1rem;
-  box-shadow: 0 4px 0 var(--skill-card-shadow);
+  border-block: 3px solid var(--skill-card-border);
+  box-shadow: 0 4px 16px var(--skill-card-shadow);
   padding: 1rem 1.5rem;
 }
 
@@ -861,7 +856,7 @@ nav {
 
 .skill-card-header img {
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: var(--clickable-hover-bg);
 }
 
@@ -893,12 +888,12 @@ nav {
   display: flex;
   flex-grow: 1;
   background-color: var(--gray-5);
-  border-radius: 0.175rem;
+  border-radius: 3px;
   height: 0.35rem;
 }
 
 .progress-bar {
-  border-radius: 0.175rem;
+  border-radius: 3px;
   height: 100%;
 }
 
@@ -946,7 +941,7 @@ nav {
 }
 
 .social-links a {
-  border-radius: 0.5rem;
+  border-radius: 8px;
   transition: background-color 0.1s ease-out;
   padding: 0.25rem;
 }
@@ -973,9 +968,11 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: var(--white-black);
+  border-top: 2px solid var(--nav-border);
+  background:
+  linear-gradient(var(--amber-1) 0%, transparent 100%) center / cover no-repeat,
+  linear-gradient(90deg, var(--orange-2), var(--red-2)) center / cover no-repeat;
   padding: 1rem 1rem 2rem 1rem;
-  border-radius: 1.5rem 1.5rem 0 0;
   box-shadow: 0 0 15px var(--footer-shadow);
 }
 

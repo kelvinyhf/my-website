@@ -195,6 +195,7 @@ blockquote {
 .hl { padding: 0 0.25rem; }
 .gray.hl { background: linear-gradient(var(--gray-hl), var(--gray-hl)) no-repeat 0% 100% / 100% 50%; }
 .red.hl { background: linear-gradient(var(--red-hl), var(--red-hl)) no-repeat 0% 100% / 100% 50%; }
+.red-orange.hl { background: linear-gradient(color-mix(in srgb, var(--red-hl), var(--orange-hl)), color-mix(in srgb, var(--red-hl), var(--orange-hl))) no-repeat 0% 100% / 100% 50%; }
 .orange.hl { background: linear-gradient(var(--orange-hl), var(--orange-hl)) no-repeat 0% 100% / 100% 50%; }
 .amber.hl { background: linear-gradient(var(--amber-hl), var(--amber-hl)) no-repeat 0% 100% / 100% 50%; }
 .yellow.hl { background: linear-gradient(var(--yellow-hl), var(--yellow-hl)) no-repeat 0% 100% / 100% 50%; }
