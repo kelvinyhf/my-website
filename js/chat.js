@@ -13,6 +13,11 @@ function appendMessage(message, sender) {
   messageDiv.classList.add('message', sender);
   messageP.textContent = message;
   
+  // If it's a thinking message
+  if (message === '• • •') {
+    messageDiv.classList.add('thinking');
+  }
+  
   // Append children
   messageDiv.appendChild(messageP);
   chatMessages.appendChild(messageDiv);
@@ -50,7 +55,7 @@ sendBtn.addEventListener('click', async function() {
   
   // Kelvin is thinking...
   await sleepR(250, 750);
-  appendMessage('Kelvin is thinking...', 'kelvin');
+  appendMessage('• • •', 'kelvin');
   
   try {
     
@@ -64,11 +69,6 @@ sendBtn.addEventListener('click', async function() {
     // Get the json
     const result = await response.json();
     
-    // Kelvin is not thinking anymore
-    if (chatMessages.lastChild.textContent === 'Kelvin is thinking...') {
-      chatMessages.removeChild(chatMessages.lastChild);
-    }
-    
     // Check if there's an error
     if (result.error) {
       
@@ -81,31 +81,26 @@ sendBtn.addEventListener('click', async function() {
     }
     
     // Append message of AI
-    const aiResponse = result.choices[0].message.content;
+    const aiResponse = result.response;
     appendMessage(aiResponse, 'kelvin');
     chatHistory.push({ role: "assistant", content: aiResponse });
     
     // Remove first conversation if there's more than 20 conversations
     while (chatHistory.length > 20) {
-      chatHistory.shift();
-      chatHistory.shift();
+      chatHistory.slice(-20);
     }
     
   } catch (error) {
     
-    // Delete the user message in the history
+    // Pop the message, append and log the error
     chatHistory.pop();
-    
-    // Kelvin cannot think anymore
-    if (chatMessages.lastChild.textContent === 'Kelvin is thinking...') {
-      chatMessages.removeChild(chatMessages.lastChild);
-    }
-    
-    // Append and log error
     appendMessage(`Error (catch): [${error.message}]`, 'kelvin');
     console.error(error);
     
   } finally {
+    
+    // Remove all thinking message
+    chatMessages.querySelectorAll('.thinking').forEach(node => node.remove());
     
     // Cool it down
     await sleep(500);

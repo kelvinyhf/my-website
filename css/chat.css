@@ -161,6 +161,26 @@ header {
   margin-left: 4rem;
 }
 
+.message.thinking p {
+  color: var(--gray-11);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.75;
+    transform: scale(0.9);
+  }
+}
+
 /* Chat Input */
 form {
   position: relative;
@@ -181,7 +201,7 @@ form {
 #userInput {
   flex-grow: 1;
   min-width: 3rem;
-  min-height: 0;
+  min-height: 100%;
   max-height: 7.5rem;
   font-family: "Inter", sans-serif;
   background-color: var(--white-black);
