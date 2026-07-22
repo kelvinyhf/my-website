@@ -23,7 +23,12 @@ function appendMessage(message, sender) {
   chatMessages.appendChild(messageDiv);
   
   // Auto scroll
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+  requestAnimationFrame(() => {
+    chatMessages.scrollTo({
+      top: chatMessages.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
   
 }
 

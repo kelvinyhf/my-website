@@ -509,36 +509,27 @@ nav {
 }
 
 /* Snk */
-.graph {
+.graph-card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.graph p {
+.graph-card p {
   display: inline-block;
   padding: 0 1rem 0.25rem 1rem;
   border-bottom: 1px solid var(--gray-8);
 }
 
-.snk-container {
-  display: grid;
-  grid-template-areas: "snk";
-  overflow: hidden;
-}
-
-.snk {
-  grid-area: snk;
-  height: 5rem;
-  margin: -3% 0 -5% 0;
+.graph {
+  height: 4rem;
+  margin: 0 1rem;
   padding-bottom: 0.5rem;
 }
 
-.snk.light { visibility: visible; }
-.snk.dark { visibility: hidden; }
-
-.dark .snk.light { visibility: hidden; }
-.dark .snk.dark { visibility: visible; }
+.dark .graph {
+  filter: invert(1) hue-rotate(180deg);
+}
 
 /* Error Message */
 .error-message {
@@ -562,12 +553,12 @@ nav {
 .print-hello-world {
   display: block;
   margin: 0.5rem;
-  white-space: pre-wrap;
 }
 
+.code-line { display: block; }
+.code-line.indent { padding-left: 2em; }
 .local-func { color: var(--red-10); }
 .func-name { color: var(--amber-10); }
-.indent-line { display: block; padding-left: 2em; }
 .print { color: var(--blue-10); }
 .hello-world { color: var(--green-10); }
 .end { color: var(--red-10); }
