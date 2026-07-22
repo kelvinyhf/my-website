@@ -91,8 +91,8 @@ sendBtn.addEventListener('click', async function() {
     chatHistory.push({ role: "assistant", content: aiResponse });
     
     // Remove first conversation if there's more than 20 conversations
-    while (chatHistory.length > 20) {
-      chatHistory.slice(-20);
+    if (chatHistory.length > 20) {
+      chatHistory.splice(0, chatHistory.length - 20);
     }
     
   } catch (error) {
@@ -137,3 +137,6 @@ userInput.addEventListener('keydown', function(event) {
   }
   
 });
+
+// Pre-warm fetch
+fetch('https://chatbot.kelviny.workers.dev', { method: 'GET' }).catch((error) => console.warn(error));
