@@ -119,8 +119,7 @@ sendBtn.addEventListener('click', async function() {
 userInput.addEventListener('keydown', function(event) {
   
   // Check if composing
-  if (event.isComposing) return;
-  
+  if (event.isComposing) { return; }
   if (event.key === 'Enter') {
     // If is touch device
     if (window.matchMedia("(pointer: coarse)").matches) {

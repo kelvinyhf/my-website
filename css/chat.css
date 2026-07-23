@@ -1,6 +1,6 @@
 /* Light and Dark Theme Variables */
 :root {
-  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --box-shadow-color: rgba(0, 0, 0, 0.05);
   --dot-color: var(--green-9);
   --message-kelvin-background-color: var(--red-4);
   --message-kelvin-shadow-color: var(--red-a2);
@@ -9,7 +9,7 @@
 }
 
 .dark {
-  --box-shadow-color: rgba(255, 255, 255, 0.1);
+  --box-shadow-color: rgba(255, 255, 255, 0.05);
   --dot-color: var(--green-9);
   --message-kelvin-background-color: var(--red-5);
   --message-kelvin-shadow-color: var(--red-a3);
@@ -25,7 +25,9 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(var(--red-2), var(--orange-2));
+  background:
+  linear-gradient(transparent 50%, var(--amber-1) 100%) center / cover no-repeat,
+  linear-gradient(90deg, color-mix(in srgb, var(--red-2), var(--red-3)), color-mix(in srgb, var(--orange-2), var(--orange-3))) center / cover no-repeat;
 }
 
 main {
@@ -40,8 +42,7 @@ header {
   flex-shrink: 0;
   padding: 0.75rem 2rem;
   background-color: var(--red-1);
-  border-radius: 0 0 1.5rem 1.5rem;
-  box-shadow: 0 0 10px var(--box-shadow-color);
+  box-shadow: 0 0 25px var(--box-shadow-color);
 }
 
 .chat-header {
@@ -89,10 +90,10 @@ header {
 }
 
 .return-btn {
-  padding: 0.25rem;
+  padding: 0.5rem;
   line-height: normal;
   margin-left: auto;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   transition: background-color 0.1s ease-out;
 }
 
@@ -147,7 +148,7 @@ header {
   background-color: var(--message-kelvin-background-color);
   box-shadow: 0 4px var(--message-kelvin-shadow-color);
   align-self: flex-start;
-  border-radius: 1rem 1rem 1rem 0;
+  border-radius: 12px 12px 12px 0;
   margin-right: 4rem;
 }
 
@@ -156,7 +157,7 @@ header {
   background-color: var(--message-user-background-color);
   box-shadow: 0 4px var(--message-user-shadow-color);
   align-self: flex-end;
-  border-radius: 1rem 1rem 0 1rem;
+  border-radius: 12px 12px 0 12px;
   margin-left: 4rem;
 }
 
@@ -184,10 +185,13 @@ header {
 form {
   position: relative;
   flex-shrink: 0;
-  background-color: var(--orange-1);
-  border-radius: 1.5rem 1.5rem 0 0;
-  box-shadow: 0 0 10px var(--box-shadow-color);
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--amber-1);
+  box-shadow: 0 0 25px var(--box-shadow-color);
+  padding: 1.5rem 1.5rem 0.75rem 1.5rem;
 }
 
 .chat-input {
@@ -200,8 +204,8 @@ form {
 #userInput {
   flex-grow: 1;
   min-width: 3rem;
-  min-height: 2.75rem;
-  max-height: 7.5rem;
+  min-height: 4rem;
+  max-height: 8rem;
   font-family: "Inter", sans-serif;
   background-color: var(--white-black);
   color: var(--text-color);
@@ -211,7 +215,7 @@ form {
   resize: none;
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--gray-6);
-  border-radius: 0.75rem;
+  border-radius: 12px;
   margin: 0;
 }
 
@@ -231,11 +235,15 @@ form {
   align-items: center;
   background-color: var(--green-8);
   border: none;
-  border-radius: 0.75rem;
+  border-radius: 12px;
   width: 2.25rem;
-  height: 2.75rem;
+  height: 2.5rem;
   margin: 0;
   padding: 0;
+}
+
+#sendBtn svg {
+  transform: translate(-5%, 5%);
 }
 
 @media (hover: hover) {
@@ -256,4 +264,10 @@ form {
 
 #sendBtn:disabled {
   background-color: var(--green-5);
+}
+
+.disclaimer {
+  font-size: 0.6rem;
+  color: var(--gray-8);
+  text-align: center;
 }

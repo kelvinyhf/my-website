@@ -276,9 +276,13 @@ nav {
   z-index: 4;
 }
 
+.cube {
+  z-index: 3;
+}
+
 .floating-cards {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 /* About Card */
@@ -508,7 +512,7 @@ nav {
   }
 }
 
-/* Snk */
+/* Graph */
 .graph-card {
   display: flex;
   flex-direction: column;
@@ -572,7 +576,6 @@ nav {
   height: 60px;
   animation: spin 7s infinite linear, float 3s infinite ease-in-out alternate;
   transform-style: preserve-3d;
-  z-index: 2;
 }
 
 .cube span {
