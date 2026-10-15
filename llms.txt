@@ -1,0 +1,7 @@
+# Kelvin's Website
+My personal website built with Tailwind CSS to showcase my interests and facts.
+
+## Links
+- [Live Demo](https://kelviny.dev)
+- [GitHub Repository](https://github.com/kelvinyhf/my-website)
+- [Developer Profile](https://github.com/kelvinyhf)

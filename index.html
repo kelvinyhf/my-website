@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- SEO Meta Tags -->
+  <title>Kelvin's Website</title>
+  <meta name="description" content="My very personal website :D">
+  <meta name="author" content="KelvinY">
+  <link rel="canonical" href="https://kelviny.dev/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kelvin's Website">
+  <meta property="og:description" content="My very personal website :D">
+  <meta property="og:url" content="https://kelviny.dev/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kelvin's Website">
+  <meta name="twitter:description" content="My very personal website :D">
+  
+  <!-- External Files -->
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/images/favicon.svg">
+  <link id="apple-touch-icon" rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/libraries/radix-colors.css">
+  <script>
+    const isDevEnv =
+      location.hostname === 'localhost' ||
+      location.hostname === '127.0.0.1' ||
+      location.hostname.endsWith('github.dev');
+    
+    if (isDevEnv) {
+      fetch('./input.css')
+        .then(res => res.text())
+        .then(cssContent => {
+          
+          const style = document.createElement('style');
+          style.type = 'text/tailwindcss';
+          style.textContent = cssContent;
+          document.head.appendChild(style);
+          
+          const cdnScript = document.createElement('script');
+          cdnScript.src = './assets/libraries/tailwindcss.js';
+          cdnScript.defer = true;
+          document.head.appendChild(cdnScript);
+          
+        })
+        .catch(err => console.error(err));
+    } else {
+      
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './output.css';
+      document.head.appendChild(link);
+      
+    }
+  </script>
+  
+  <!-- JavaScript -->
+  <script type="module" src="./index.js" defer></script>
+  
+</head>
+<body>
+  
+</body>
+</html>
