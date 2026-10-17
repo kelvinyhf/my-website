@@ -68,28 +68,38 @@
   <script type="module" src="./index.js" defer></script>
   
 </head>
-<body class="flex flex-col items-center">
-  
+<body class="flex flex-col items-center gap-9 h-screen bg-[linear-gradient(to_bottom,var(--blue-4)_1px,transparent_1px)] bg-[size:100%_32px] py-12">
+
   <!-- Greeting -->
-  <header class="p-3">
-    <h1 class="text-2xl">Hi, I'm Kelvin!</h1>
+  <header class="px-12 w-full">
+    <h1 class="text-3xl font-semibold">Hi, I'm Kelvin!</h1>
+    <p>And this is my website :)</p>
   </header>
 
-  <main class="flex flex-col items-center gap-3 p-3">
+  <main class="flex flex-col md:flex-row items-center gap-12 w-full px-9">
 
     <!-- About Me -->
-    <section class="rounded-lg border border-gray-11 p-3">
-      <h2>About Me</h2>
-      <p>This is an paragraph.</p>
+    <section class="bg-blue-1 shadow-md border-2 border-gray-9 w-full p-6 rotate-1">
+      <h2 class="text-xl font-semibold pb-2">About Me</h2>
+      <p>
+        I'm a passionate 15-year-old self-taught coder.
+        I started coding two years ago in Roblox Studio, but later transitioned into web development.
+        I also like chemistry, and I hope to become a great developer in the future :]
+      </p>
     </section>
 
     <!-- My Interests and Facts -->
-    <section class="rounded-lg border border-gray-11 p-3">
-      <h2>My Interests and Facts</h2>
-      <p>This is an paragraph.</p>
+    <section class="bg-blue-1 shadow-md border-2 border-gray-9 w-full p-6 -rotate-1">
+      <h2 class="text-xl font-semibold pb-4">My Interests and Facts</h2>
+      <p class="pb-4">Do you know that...</p>
+      <button id="roll-btn" class="bg-gray-5 font-semibold px-2 py-1 hover:bg-gray-7 cursor-pointer">Reroll :D</button>
     </section>
 
   </main>
+
+  <footer>
+    <p class="opacity-75">Thank you ❤️</p>
+  </footer>
 
 </body>
 </html>
