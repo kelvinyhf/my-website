@@ -267,14 +267,13 @@
   
   html {
     background-color: var(--gray-1);
-    font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     scroll-behavior: smooth;
   }
   
   body {
-    background-color: var(--gray-1);
+    font-family: 'Caveat', cursive;
     color: var(--gray-12);
   }
   
