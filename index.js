@@ -1,21 +1,35 @@
+// Touch screen active style fix
+document.addEventListener('touchstart', () => {}, { passive: true });
+
 // ------------------------------
 // Random Useless Facts
 // ------------------------------
+const now = new Date();
 const factsBox = document.getElementById("facts-box");
 const factLabel = document.getElementById("fact-label");
 const rollBtn = document.getElementById("roll-btn");
 const facts = [
-  { content: "I'm Kelvin", shown: false },
-  { content: "I'm not Bob", shown: false }
+  { content: "I'm Kelvin, not Kevin." },
+  { content: "My birthday is July 19" },
+  { content: `I'm a member of <a>Hack Club</a>!` },
+  { content: `I'm an INTJ :|` },
+  { content: "You'll be lucky today :]" },
+  { content: "This domain (kelviny.dev) costs $8 :v" },
+  { content: "Only 5% of this website is made by AI" },
+  { content: "Only 95% of this website is made by me" },
+  { content: "( ? )" },
+  { content: `It's ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')} now!` },
+  { content: "You unlocked something!" },
+  { content: "Why you're keep rolling >:(" }
 ];
 
 rollBtn.addEventListener("click", () => {
   
   // Get unshown facts
   const unshownFacts = facts.filter(fact => !fact.shown);
-  if (unshownFacts.length <= 0) {
-    facts.forEach(fact => fact.shown = false);
-    unshownFacts = facts;
+  if (unshownFacts.length <= 1) {
+    rollBtn.innerHTML = "You've viewed all :0";
+    rollBtn.disabled = true;
   }
 
   // Get random fact
@@ -23,7 +37,7 @@ rollBtn.addEventListener("click", () => {
   const randomFact = unshownFacts[randomIndex];
 
   // Show the fact
-  factLabel.innerText = randomFact.content;
+  factLabel.innerHTML = randomFact.content;
   randomFact.shown = true;
 
   // Make the box jumps
@@ -54,7 +68,7 @@ messageForm.addEventListener("submit", async (event) => {
   clickedSubmit = true;
   
   // Show sending text
-  messageSubmitBtn.innerText = "Sending...";
+  messageSubmitBtn.innerHTML = "Sending...";
   
   // Get form data
   const data = new FormData(event.target);
@@ -69,17 +83,17 @@ messageForm.addEventListener("submit", async (event) => {
     
     // Show success text and reset form if succeed
     if (response.ok) {
-      messageSubmitBtn.innerText = "Sent! Ty :3";
+      messageSubmitBtn.innerHTML = "Sent! Ty :3";
       messageForm.reset();
     } else {
-      messageSubmitBtn.innerText = "Something went wrong :(";
+      messageSubmitBtn.innerHTML = "Something went wrong :(";
     }
     
   } catch (error) {
-    messageSubmitBtn.innerText = "Something went wrong :(";
+    messageSubmitBtn.innerHTML = "Something went wrong :(";
   } finally {
     setTimeout(() => {
-      messageSubmitBtn.innerText = "Send Message";
+      messageSubmitBtn.innerHTML = "Send Message";
       messageSubmitBtn.disabled = true;
     }, 2000);
   }
