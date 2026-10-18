@@ -290,3 +290,10 @@
     display: none;
   }
 }
+
+@utility focus-outline {
+  &:focus-visible {
+    outline: 1px solid var(--gray-12);
+    outline-offset: 2px;
+  }
+}
