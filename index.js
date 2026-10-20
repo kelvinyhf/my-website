@@ -2,7 +2,7 @@
 document.addEventListener('touchstart', () => {}, { passive: true });
 
 // ------------------------------
-// Random Useless Facts
+// Random Facts
 // ------------------------------
 const factsBox = document.getElementById("facts-box");
 const factLabel = document.getElementById("fact-label");
@@ -10,8 +10,9 @@ const rollBtn = document.getElementById("roll-btn");
 const facts = [
   { content: "I'm Kelvin, not Kevin." },
   { content: "My birthday is July 19" },
-  { content: `I'm a member of <a href='https://hackclub.com' target="_blank" class='text-red-11 hover:text-red-12 active:text-red-12'>Hack Club</a>!` },
-  { content: `I'm an <a href='https://www.16personalities.com/intj-personality' target="_blank" class='text-purple-11 hover:text-purple-12 active:text-purple-12'>INTJ</a> :|` },
+  { content: "I love playing rhythm games" },
+  { content: `I'm a member of <a href='https://hackclub.com' target='_blank' class='text-red-11 hover:text-red-12 active:text-red-12'>Hack Club</a>!` },
+  { content: `I'm an <a href='https://www.16personalities.com/intj-personality' target='_blank' class='text-purple-11 hover:text-purple-12 active:text-purple-12'>INTJ</a> :|` },
   { content: "You'll be lucky today :]" },
   { content: "This domain (kelviny.dev) costs $8 :v" },
   { content: "Only 5% of this website is made by AI" },
