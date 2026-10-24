@@ -11,32 +11,29 @@ const facts = [
   { content: "I'm Kelvin, not Kevin." },
   { content: "My birthday is July 19" },
   { content: "I love playing rhythm games" },
-  { content: `I'm a member of <a href='https://hackclub.com' target='_blank' class='text-red-11 hover:text-red-12 active:text-red-12'>Hack Club</a>!` },
-  { content: `I'm an <a href='https://www.16personalities.com/intj-personality' target='_blank' class='text-purple-11 hover:text-purple-12 active:text-purple-12'>INTJ</a> :|` },
-  { content: "You'll be lucky today :]" },
+  { content: "I'm an INTJ :|" },
+  { content: "You'll be lucky today!" },
   { content: "This domain (kelviny.dev) costs $8 :v" },
   { content: "Only 5% of this website is made by AI" },
   { content: "Only 95% of this website is made by me" },
+  { content: "<img src='./assets/images/flork.jpeg' class='mx-auto w-15 h-15'>" },
+  { content: "Why do you keep rolling >:(" },
   { content: "( ? )" },
   {
     get content() {
       const now = new Date();
       const hours = String(now.getHours()).padStart(2, '0');
       const minutes = String(now.getMinutes()).padStart(2, '0');
-      return `It's ${hours}:${minutes} now!`;
+      return `It's ${hours}:${minutes}!`;
     }
-  },
-  { content: "Why you're keep rolling >:(" }
+  }
 ];
 
 rollBtn.addEventListener("click", () => {
   
   // Get unshown facts
   const unshownFacts = facts.filter(fact => !fact.shown);
-  if (unshownFacts.length <= 1) {
-    rollBtn.innerHTML = "You've viewed all :0";
-    rollBtn.disabled = true;
-  }
+  if (unshownFacts.length <= 1) rollBtn.disabled = true;
 
   // Get random fact
   const randomIndex = Math.floor(Math.random() * unshownFacts.length);
@@ -89,7 +86,7 @@ messageForm.addEventListener("submit", async (event) => {
     
     // Show success text and reset form if succeed
     if (response.ok) {
-      messageSubmitBtn.innerHTML = "Sent! Ty :3";
+      messageSubmitBtn.innerHTML = "Sent!";
       messageForm.reset();
     } else {
       messageSubmitBtn.innerHTML = "Something went wrong :(";
